@@ -15,4 +15,7 @@
 pyyaml>=6.0
 
 # Kafka 生产者支持（仅在 --output kafka://host:port/topic 模式时需要）
-kafka-python>=2.0
+# 推荐 confluent-kafka（基于 C 库 librdkafka，与企业 Kafka 完全兼容）
+# 备选 kafka-python（纯 Python 实现，协议层面兼容 Kafka 3.8.0）
+confluent-kafka>=2.0
+# kafka-python>=2.0    # 与 confluent-kafka 二选一，优先前者

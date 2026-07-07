@@ -8,7 +8,7 @@
 - 新增商品数据生成脚本（`product_generator.py`）：从预置商品库中按指定数量采样/生成商品数据，补充库存、销量、描述等模拟字段，支持 JSON 文件输出和 Kafka 生产者推送两种模式
 - 新增订单数据生成脚本（`order_generator.py`）：依赖商品数据，生成包含买家、收货地址、支付、物流等完整信息的订单数据，支持 JSON 文件输出和 Kafka 生产者推送两种模式
 - 新增公共工具模块（`data_utils.py`）：提供随机化工具函数、中文数据字典（姓名、地址、手机号格式等）、配置加载与命令行解析
-- 新增 Kafka 推送模块（`kafka_utils.py`）：封装 Kafka 生产者连接、消息序列化、批量发送与连接管理
+- 新增 Kafka 推送模块（`kafka_utils.py`）：封装 Kafka 生产者连接、消息序列化、批量发送与连接管理。优先使用 confluent-kafka（基于 C 库 librdkafka，与企业 Kafka 3.x 完全兼容），无安装时自动回退 kafka-python（纯 Python，协议层兼容 Kafka 3.8.0）
 - 新增配置文件（`config.yaml`）：支持自定义数据量、输出路径、随机种子、输出模式（file/kafka）、Kafka 连接参数等
 - 新增示例数据输出目录
 
@@ -27,5 +27,5 @@
 
 - 新增文件：`data/product_library.json`（预置商品库）、`scripts/data_utils.py`、`scripts/kafka_utils.py`、`scripts/product_generator.py`、`scripts/order_generator.py`、`config.yaml`
 - 新增输出：`output/products.json`（JSON 模式输出）、`output/orders.json`（JSON 模式输出）
-- 依赖：Python 3.8+，标准库（random, json, uuid, datetime），可选 `pyyaml`（YAML 配置增强），可选 `kafka-python`（Kafka 输出模式）
+- 依赖：Python 3.8+，标准库（random, json, uuid, datetime），可选 `pyyaml`（YAML 配置增强），可选 `confluent-kafka`（推荐，Kafka 输出）或 `kafka-python`（备选）
 - 网络：JSON 文件模式完全离线可用；Kafka 模式需连接 Kafka Broker

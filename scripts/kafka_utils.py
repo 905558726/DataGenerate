@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Kafka 推送模块：生产者连接、消息发送、连接管理
+
+同时支持 kafka-python（纯 Python）和 confluent-kafka（基于 librdkafka，性能更高）
+优先使用 confluent-kafka，回退 kafka-python，均未安装时给出提示。
 """
 
 import json
@@ -8,14 +11,30 @@ import re
 import os
 import sys
 
-# kafka-python 是可选依赖，延迟导入
+# ============================================================
+# 可选依赖检测：confluent-kafka（优先）> kafka-python（回退）
+# ============================================================
+_KAFKA_BACKEND = None  # 'confluent' | 'kafka-python' | None
 _KAFKA_AVAILABLE = False
+
+# 优先 confluent-kafka（C 库，与企业 Kafka 更兼容）
 try:
-    from kafka import KafkaProducer
-    from kafka.errors import KafkaError, NoBrokersAvailable
+    from confluent_kafka import Producer as ConfluentProducer
+    from confluent_kafka import KafkaException as ConfluentKafkaException
+    _KAFKA_BACKEND = 'confluent'
     _KAFKA_AVAILABLE = True
 except ImportError:
     pass
+
+# 回退 kafka-python（纯 Python）
+if not _KAFKA_AVAILABLE:
+    try:
+        from kafka import KafkaProducer
+        from kafka.errors import KafkaError, NoBrokersAvailable
+        _KAFKA_BACKEND = 'kafka-python'
+        _KAFKA_AVAILABLE = True
+    except ImportError:
+        pass
 
 # 输出 URI 正则：kafka://host:port/topic
 KAFKA_URI_PATTERN = re.compile(r'^kafka://([^:/]+)(?::(\d+))?/(.+)$')
@@ -40,25 +59,55 @@ def parse_output_uri(output_arg):
     return ('file', {'path': output_arg})
 
 
+def _create_producer_confluent(bootstrap_servers, timeout=10):
+    """使用 confluent-kafka 创建生产者"""
+    config = {
+        'bootstrap.servers': bootstrap_servers,
+        'client.id': 'datagenerate-python',
+        'socket.timeout.ms': timeout * 1000,
+        'socket.connection.setup.timeout.ms': timeout * 1000,
+        'request.timeout.ms': timeout * 1000,
+    }
+    try:
+        producer = ConfluentProducer(config)
+        # 快速验证连接：发送 metadata 请求
+        metadata = producer.list_topics(timeout=timeout)
+        return (producer, None)
+    except ConfluentKafkaException as e:
+        return (None, f"无法连接到 Kafka Broker: {bootstrap_servers} - {e}")
+    except Exception as e:
+        return (None, f"Kafka 连接失败: {e}")
+
+
+def _create_producer_kafka_python(bootstrap_servers, timeout=10):
+    """使用 kafka-python 创建生产者"""
+    producer = KafkaProducer(
+        bootstrap_servers=bootstrap_servers,
+        value_serializer=lambda v: json.dumps(v, ensure_ascii=False).encode('utf-8'),
+        key_serializer=lambda k: k.encode('utf-8') if k else None,
+        max_block_ms=timeout * 1000,
+        api_version_auto_timeout_ms=timeout * 1000,
+        request_timeout_ms=timeout * 1000,
+    )
+    return (producer, None)
+
+
 def create_kafka_producer(host, port, timeout=10):
     """
-    创建 Kafka 生产者连接
+    创建 Kafka 生产者连接（自动选择后端）
     返回 (producer, error_message)
     """
     if not _KAFKA_AVAILABLE:
-        return (None, "kafka-python 未安装。安装方式: pip install kafka-python")
+        return (None, "Kafka 客户端未安装。安装方式: pip install confluent-kafka  (或 pip install kafka-python)")
 
     bootstrap_servers = f"{host}:{port}"
+    print(f"[INFO] Kafka 后端: {_KAFKA_BACKEND}")
+
     try:
-        producer = KafkaProducer(
-            bootstrap_servers=bootstrap_servers,
-            value_serializer=lambda v: json.dumps(v, ensure_ascii=False).encode('utf-8'),
-            key_serializer=lambda k: k.encode('utf-8') if k else None,
-            max_block_ms=timeout * 1000,
-            api_version_auto_timeout_ms=timeout * 1000,
-            request_timeout_ms=timeout * 1000,
-        )
-        return (producer, None)
+        if _KAFKA_BACKEND == 'confluent':
+            return _create_producer_confluent(bootstrap_servers, timeout)
+        else:
+            return _create_producer_kafka_python(bootstrap_servers, timeout)
     except NoBrokersAvailable as e:
         return (None, f"无法连接到 Kafka Broker: {bootstrap_servers} - {e}")
     except Exception as e:
@@ -70,12 +119,20 @@ def send_to_kafka(producer, topic, key, value, max_retries=3):
     发送一条消息到 Kafka topic
     返回 (success, error_message)
     """
+    # 序列化
+    value_bytes = json.dumps(value, ensure_ascii=False).encode('utf-8')
+    key_bytes = key.encode('utf-8') if key else None
+
     for attempt in range(max_retries):
         try:
-            future = producer.send(topic, key=key, value=value)
-            # 等待单条确认（不阻塞整个 pipeline）
-            record_metadata = future.get(timeout=5)
-            return (True, None)
+            if _KAFKA_BACKEND == 'confluent':
+                producer.produce(topic, key=key_bytes, value=value_bytes)
+                producer.flush(timeout=5)
+                return (True, None)
+            else:
+                future = producer.send(topic, key=key, value=value)
+                future.get(timeout=5)
+                return (True, None)
         except Exception as e:
             if attempt < max_retries - 1:
                 continue
@@ -116,8 +173,6 @@ class KafkaOutputManager:
             self.backup_data.append(record)
 
         if not self._connected:
-            if self.file_backup_path:
-                self.success_count += 1
             return True
 
         success, error = send_to_kafka(self.producer, self.topic, key, record)
@@ -125,7 +180,7 @@ class KafkaOutputManager:
             self.success_count += 1
         else:
             self.error_count += 1
-            if self.error_count <= 10:  # 只打印前 10 个错误
+            if self.error_count <= 10:
                 print(f"[WARN] Kafka 发送失败 (key={key}): {error}")
 
         return success
@@ -134,7 +189,10 @@ class KafkaOutputManager:
         """刷新 Kafka 缓冲 + 写入本地备份文件"""
         if self._connected and self.producer:
             try:
-                self.producer.flush(timeout=30)
+                if _KAFKA_BACKEND == 'confluent':
+                    self.producer.flush(timeout=30)
+                else:
+                    self.producer.flush(timeout=30)
             except Exception as e:
                 print(f"[WARN] Kafka flush 失败: {e}")
 
@@ -149,7 +207,8 @@ class KafkaOutputManager:
         """关闭连接"""
         if self._connected and self.producer:
             try:
-                self.producer.close()
+                if hasattr(self.producer, 'close'):
+                    self.producer.close()
                 print(f"[INFO] Kafka 连接已关闭")
             except Exception:
                 pass
@@ -163,4 +222,5 @@ class KafkaOutputManager:
             'success_count': self.success_count,
             'error_count': self.error_count,
             'backup_count': len(self.backup_data),
+            'backend': _KAFKA_BACKEND,
         }

@@ -10,7 +10,19 @@
 pip install -r requirements.txt
 ```
 
-> 提示：`pyyaml` 和 `kafka-python` 为可选依赖。无 pyyaml 时自动回退 JSON 配置；仅在 Kafka 模式下需要 kafka-python。
+> 提示：`pyyaml` 和 `kafka` 相关库为可选依赖。无 pyyaml 时自动回退 JSON 配置；仅在 Kafka 模式下需要 Kafka 客户端。
+
+### Kafka 客户端选择
+
+推荐使用 **confluent-kafka**（基于 C 库 librdkafka，与 Kafka 3.8.0 完全兼容，性能更高）。无安装时自动回退 **kafka-python**（纯 Python 实现，通过协议版本协商兼容 Kafka 3.x）。
+
+```bash
+# 推荐：confluent-kafka（与企业 Kafka 最佳兼容）
+pip install confluent-kafka
+
+# 备选：kafka-python（纯 Python，零编译依赖）
+pip install kafka-python
+```
 
 ### File 模式（输出 JSON 文件）
 
@@ -48,7 +60,7 @@ DataGenerate/
 ├── scripts/
 │   ├── __init__.py
 │   ├── data_utils.py              # 公共工具（中文姓名/手机/邮箱/地址生成器、随机函数）
-│   ├── kafka_utils.py             # Kafka 工具（生产者连接、消息发送、连接管理）
+│   ├── kafka_utils.py             # Kafka 工具（confluent-kafka / kafka-python 双后端自动切换）
 │   ├── product_generator.py       # 商品生成器（file/kafka 双模式）
 │   └── order_generator.py         # 订单生成器（file/kafka 双模式）
 ├── output/                        # 数据输出目录
@@ -77,7 +89,8 @@ DataGenerate/
 |------|---------|------|
 | Python 3.8+ | 必需 | 核心语言版本 |
 | pyyaml >= 6.0 | 可选 | YAML 配置增强，无安装时自动回退 JSON |
-| kafka-python >= 2.0 | 可选 | 仅在 `--output kafka://...` 模式时需要 |
+| confluent-kafka >= 2.0 | 推荐 | Kafka 输出（基于 librdkafka，与企业 Kafka 3.x 完全兼容） |
+| kafka-python >= 2.0 | 备选 | Kafka 输出（纯 Python，协议层兼容 Kafka 3.8.0） |
 
 ```bash
 pip install -r requirements.txt
