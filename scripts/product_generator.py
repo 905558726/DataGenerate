@@ -185,8 +185,12 @@ def output_to_file(products, file_path):
     return file_path
 
 
-def output_to_kafka(products, kafka_cfg, file_backup_path=None):
-    """推送到 Kafka topic，同时可选本地备份"""
+def output_to_kafka(products, kafka_cfg, file_backup_path=None, file_output_path=None):
+    """推送到 Kafka topic，同时可选本地备份 + 始终写一份 JSON 供 order_generator 使用"""
+    # 始终写一份标准 JSON 文件（order_generator 依赖此文件）
+    if file_output_path:
+        output_to_file(products, file_output_path)
+
     host = kafka_cfg['host']
     port = kafka_cfg['port']
     topic = kafka_cfg['topic']
@@ -289,12 +293,17 @@ def main():
 
     # 输出
     if output_mode == 'kafka':
+        # 始终写一份标准 products.json 供 order_generator 使用
+        default_file = product_cfg.get('output_path', 'output/products.json')
+        if not args.file_backup and not args.output.startswith('kafka://'):
+            default_file = args.output
         file_backup = args.file_backup
         if not file_backup and kafka_cfg.get('file_backup', True):
             backup_dir = kafka_cfg.get('file_backup_dir', 'output')
             file_backup = os.path.join(backup_dir, f"products_{output_config['topic']}_backup.json")
         print(f"[INFO] 推送到 Kafka: {output_config['host']}:{output_config['port']}/{output_config['topic']}")
-        output_to_kafka(products, output_config, file_backup)
+        output_to_kafka(products, output_config, file_backup, file_output_path=default_file)
+        print(f"\n[INFO] 已同步写出商品文件: {default_file}")
     else:
         file_path = output_config['path']
         output_to_file(products, file_path)
