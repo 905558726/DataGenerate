@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Kafka 推送模块：生产者连接、消息发送、连接管理
