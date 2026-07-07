@@ -1,0 +1,22 @@
+# ============================================================
+# 数据生成脚本配置文件
+# ============================================================
+
+# --- 商品生成配置 ---
+product:
+  count: 100                  # 默认生成商品数量
+  output_path: "output/products.json"  # 输出路径
+  library_path: "data/product_library.json"  # 预置商品库路径
+
+# --- 订单生成配置 ---
+order:
+  count: 50                   # 默认生成订单数量
+  output_path: "output/orders.json"
+  products_path: "output/products.json"  # 依赖的商品数据文件
+  date_range_days: 90         # 订单时间分布范围（天），0 表示全部在今天
+
+# --- 随机种子（null 表示不固定） ---
+seed: null
+
+# --- 日志级别: DEBUG, INFO, WARNING, ERROR ---
+log_level: "INFO"

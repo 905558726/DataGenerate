@@ -1,0 +1,4558 @@
+[
+  {
+    "name": "iPhone 15 Pro Max",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 8999.0,
+    "price_max": 11999.0,
+    "image_url": "https://picsum.photos/seed/iphone15pm/400/400",
+    "keywords": [
+      "5G手机",
+      "旗舰",
+      "大屏",
+      "拍照",
+      "iOS"
+    ],
+    "variant_suffixes": [
+      "128GB",
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1000,
+      2000,
+      3000
+    ]
+  },
+  {
+    "name": "iPhone 15",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 5999.0,
+    "price_max": 7999.0,
+    "image_url": "https://picsum.photos/seed/iphone15/400/400",
+    "keywords": [
+      "5G手机",
+      "iOS",
+      "拍照",
+      "A16芯片"
+    ],
+    "variant_suffixes": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1000,
+      2000
+    ]
+  },
+  {
+    "name": "iPhone 14",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 4699.0,
+    "price_max": 6299.0,
+    "image_url": "https://picsum.photos/seed/iphone14/400/400",
+    "keywords": [
+      "5G手机",
+      "iOS",
+      "性价比",
+      "A15芯片"
+    ],
+    "variant_suffixes": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      800,
+      1600
+    ]
+  },
+  {
+    "name": "华为 Mate 60 Pro",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 6999.0,
+    "price_max": 8999.0,
+    "image_url": "https://picsum.photos/seed/mate60pro/400/400",
+    "keywords": [
+      "5G手机",
+      "鸿蒙",
+      "卫星通信",
+      "国产旗舰",
+      "麒麟芯片"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1000,
+      2000
+    ]
+  },
+  {
+    "name": "华为 Mate 60",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 5499.0,
+    "price_max": 6999.0,
+    "image_url": "https://picsum.photos/seed/mate60/400/400",
+    "keywords": [
+      "5G手机",
+      "鸿蒙",
+      "麒麟芯片",
+      "国产旗舰"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      800,
+      1500
+    ]
+  },
+  {
+    "name": "华为 Pura 70 Ultra",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 9999.0,
+    "price_max": 11999.0,
+    "image_url": "https://picsum.photos/seed/pura70u/400/400",
+    "keywords": [
+      "5G手机",
+      "拍照旗舰",
+      "鸿蒙",
+      "徕卡影像"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1000,
+      2000
+    ]
+  },
+  {
+    "name": "小米 14 Ultra",
+    "brand": "小米",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 5999.0,
+    "price_max": 7499.0,
+    "image_url": "https://picsum.photos/seed/xiaomi14u/400/400",
+    "keywords": [
+      "5G手机",
+      "徕卡影像",
+      "骁龙芯片",
+      "快充"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      800,
+      1500
+    ]
+  },
+  {
+    "name": "小米 14",
+    "brand": "小米",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 3999.0,
+    "price_max": 4999.0,
+    "image_url": "https://picsum.photos/seed/xiaomi14/400/400",
+    "keywords": [
+      "5G手机",
+      "小屏旗舰",
+      "徕卡影像",
+      "骁龙芯片"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      500,
+      1000
+    ]
+  },
+  {
+    "name": "Redmi K70 Pro",
+    "brand": "Redmi",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 2499.0,
+    "price_max": 3499.0,
+    "image_url": "https://picsum.photos/seed/k70pro/400/400",
+    "keywords": [
+      "5G手机",
+      "性价比",
+      "骁龙芯片",
+      "快充"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      400,
+      800
+    ]
+  },
+  {
+    "name": "Redmi Note 13 Pro",
+    "brand": "Redmi",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 1399.0,
+    "price_max": 1999.0,
+    "image_url": "https://picsum.photos/seed/note13pro/400/400",
+    "keywords": [
+      "5G手机",
+      "千元机皇",
+      "大电池",
+      "性价比"
+    ],
+    "variant_suffixes": [
+      "128GB",
+      "256GB",
+      "512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      300,
+      600
+    ]
+  },
+  {
+    "name": "OPPO Find X7 Ultra",
+    "brand": "OPPO",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 5999.0,
+    "price_max": 7499.0,
+    "image_url": "https://picsum.photos/seed/findx7u/400/400",
+    "keywords": [
+      "5G手机",
+      "拍照旗舰",
+      "哈苏影像",
+      "快充"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      800,
+      1500
+    ]
+  },
+  {
+    "name": "OPPO Reno 12 Pro",
+    "brand": "OPPO",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 2999.0,
+    "price_max": 3999.0,
+    "image_url": "https://picsum.photos/seed/reno12pro/400/400",
+    "keywords": [
+      "5G手机",
+      "人像拍照",
+      "轻薄",
+      "快充"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      500
+    ]
+  },
+  {
+    "name": "vivo X100 Pro",
+    "brand": "vivo",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 4999.0,
+    "price_max": 6499.0,
+    "image_url": "https://picsum.photos/seed/x100pro/400/400",
+    "keywords": [
+      "5G手机",
+      "蔡司影像",
+      "天玑芯片",
+      "快充"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      800,
+      1500
+    ]
+  },
+  {
+    "name": "vivo S19 Pro",
+    "brand": "vivo",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 2999.0,
+    "price_max": 3799.0,
+    "image_url": "https://picsum.photos/seed/s19pro/400/400",
+    "keywords": [
+      "5G手机",
+      "自拍",
+      "柔光环",
+      "轻薄"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      400
+    ]
+  },
+  {
+    "name": "荣耀 Magic6 Pro",
+    "brand": "荣耀",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 5499.0,
+    "price_max": 6999.0,
+    "image_url": "https://picsum.photos/seed/magic6pro/400/400",
+    "keywords": [
+      "5G手机",
+      "旗舰",
+      "护眼屏",
+      "青海湖电池"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      800,
+      1500
+    ]
+  },
+  {
+    "name": "三星 Galaxy S24 Ultra",
+    "brand": "Samsung",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 8999.0,
+    "price_max": 11999.0,
+    "image_url": "https://picsum.photos/seed/s24ultra/400/400",
+    "keywords": [
+      "5G手机",
+      "AI手机",
+      "S Pen",
+      "三星旗舰",
+      "长焦"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1500,
+      3000
+    ]
+  },
+  {
+    "name": "三星 Galaxy Z Flip 6",
+    "brand": "Samsung",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 6999.0,
+    "price_max": 8499.0,
+    "image_url": "https://picsum.photos/seed/zflip6/400/400",
+    "keywords": [
+      "折叠屏",
+      "5G手机",
+      "小巧",
+      "时尚"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      800
+    ]
+  },
+  {
+    "name": "一加 12",
+    "brand": "一加",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 4299.0,
+    "price_max": 5499.0,
+    "image_url": "https://picsum.photos/seed/oneplus12/400/400",
+    "keywords": [
+      "5G手机",
+      "哈苏影像",
+      "性能旗舰",
+      "快充"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      600,
+      1200
+    ]
+  },
+  {
+    "name": "realme GT5 Pro",
+    "brand": "realme",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 2999.0,
+    "price_max": 3999.0,
+    "image_url": "https://picsum.photos/seed/gt5pro/400/400",
+    "keywords": [
+      "5G手机",
+      "性能旗舰",
+      "快充",
+      "性价比"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      500,
+      1000
+    ]
+  },
+  {
+    "name": "iQOO Neo9 Pro",
+    "brand": "iQOO",
+    "category": "电子产品",
+    "sub_category": "手机",
+    "price_min": 2499.0,
+    "price_max": 3299.0,
+    "image_url": "https://picsum.photos/seed/neo9pro/400/400",
+    "keywords": [
+      "5G手机",
+      "电竞手机",
+      "快充",
+      "性能"
+    ],
+    "variant_suffixes": [
+      "256GB",
+      "512GB",
+      "1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      400,
+      800
+    ]
+  },
+  {
+    "name": "MacBook Pro 16英寸 M3 Pro",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 16999.0,
+    "price_max": 24999.0,
+    "image_url": "https://picsum.photos/seed/mbp16m3/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "M3芯片",
+      "专业创作",
+      "长续航",
+      "macOS"
+    ],
+    "variant_suffixes": [
+      "18GB+512GB",
+      "36GB+1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      5000
+    ]
+  },
+  {
+    "name": "MacBook Pro 14英寸 M3",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 12999.0,
+    "price_max": 17999.0,
+    "image_url": "https://picsum.photos/seed/mbp14m3/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "M3芯片",
+      "视网膜屏",
+      "macOS"
+    ],
+    "variant_suffixes": [
+      "16GB+512GB",
+      "24GB+1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      3000
+    ]
+  },
+  {
+    "name": "MacBook Air M3 15英寸",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 8999.0,
+    "price_max": 11999.0,
+    "image_url": "https://picsum.photos/seed/mba15m3/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "轻薄本",
+      "M3芯片",
+      "无风扇",
+      "长续航"
+    ],
+    "variant_suffixes": [
+      "16GB+256GB",
+      "16GB+512GB",
+      "24GB+1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1500,
+      3000
+    ]
+  },
+  {
+    "name": "MacBook Air M3 13英寸",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 7999.0,
+    "price_max": 9999.0,
+    "image_url": "https://picsum.photos/seed/mba13m3/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "轻薄本",
+      "M3芯片",
+      "便携"
+    ],
+    "variant_suffixes": [
+      "16GB+256GB",
+      "16GB+512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1500
+    ]
+  },
+  {
+    "name": "华为 MateBook X Pro 2024",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 8999.0,
+    "price_max": 14999.0,
+    "image_url": "https://picsum.photos/seed/matebookxpro/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "触控屏",
+      "轻薄本",
+      "华为生态"
+    ],
+    "variant_suffixes": [
+      "i7+16GB+1TB",
+      "i9+32GB+2TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      4000
+    ]
+  },
+  {
+    "name": "华为 MateBook 14 2024",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 5499.0,
+    "price_max": 7499.0,
+    "image_url": "https://picsum.photos/seed/matebook14/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "2K屏",
+      "轻薄本",
+      "华为生态"
+    ],
+    "variant_suffixes": [
+      "i5+16GB+512GB",
+      "i7+16GB+1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1500
+    ]
+  },
+  {
+    "name": "小米笔记本 Pro 16 2024",
+    "brand": "小米",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 5999.0,
+    "price_max": 8999.0,
+    "image_url": "https://picsum.photos/seed/mibookpro16/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "OLED屏",
+      "高性能",
+      "小米生态"
+    ],
+    "variant_suffixes": [
+      "i5+16GB+512GB",
+      "i7+32GB+1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      2000
+    ]
+  },
+  {
+    "name": "RedmiBook Pro 15 2024",
+    "brand": "Redmi",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 3999.0,
+    "price_max": 5499.0,
+    "image_url": "https://picsum.photos/seed/redmibook15/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "2.5K屏",
+      "性价比",
+      "学生本"
+    ],
+    "variant_suffixes": [
+      "i5+16GB+512GB",
+      "i7+16GB+1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1000
+    ]
+  },
+  {
+    "name": "联想 ThinkPad X1 Carbon Gen 12",
+    "brand": "联想",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 10999.0,
+    "price_max": 17999.0,
+    "image_url": "https://picsum.photos/seed/x1carbon12/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "商务本",
+      "轻薄",
+      "军工品质",
+      "键盘"
+    ],
+    "variant_suffixes": [
+      "i7+16GB+512GB",
+      "i7+32GB+1TB",
+      "i9+32GB+2TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      3000,
+      7000
+    ]
+  },
+  {
+    "name": "联想 小新 Pro 16 2024",
+    "brand": "联想",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 4999.0,
+    "price_max": 6999.0,
+    "image_url": "https://picsum.photos/seed/xiaoxinpro16/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "高性能",
+      "2.5K屏",
+      "学生本"
+    ],
+    "variant_suffixes": [
+      "R7+16GB+1TB",
+      "i7+32GB+1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1500
+    ]
+  },
+  {
+    "name": "联想 拯救者 Y9000P 2024",
+    "brand": "联想",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 8999.0,
+    "price_max": 14999.0,
+    "image_url": "https://picsum.photos/seed/y9000p/400/400",
+    "keywords": [
+      "游戏本",
+      "RTX4060",
+      "i9处理器",
+      "高刷屏",
+      "电竞"
+    ],
+    "variant_suffixes": [
+      "i9+RTX4060+16GB",
+      "i9+RTX4070+32GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      4000
+    ]
+  },
+  {
+    "name": "华硕 ROG 枪神8 Plus",
+    "brand": "华硕",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 11999.0,
+    "price_max": 19999.0,
+    "image_url": "https://picsum.photos/seed/rog8plus/400/400",
+    "keywords": [
+      "游戏本",
+      "RTX4080",
+      "i9处理器",
+      "RGB灯效",
+      "电竞"
+    ],
+    "variant_suffixes": [
+      "RTX4070+16GB",
+      "RTX4080+32GB",
+      "RTX4090+64GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      5000,
+      8000
+    ]
+  },
+  {
+    "name": "华硕 灵耀14 2024",
+    "brand": "华硕",
+    "category": "电子产品",
+    "sub_category": "笔记本电脑",
+    "price_min": 5999.0,
+    "price_max": 7999.0,
+    "image_url": "https://picsum.photos/seed/lingyao14/400/400",
+    "keywords": [
+      "笔记本电脑",
+      "OLED屏",
+      "轻薄本",
+      "长续航"
+    ],
+    "variant_suffixes": [
+      "Ultra5+16GB+512GB",
+      "Ultra7+32GB+1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1500
+    ]
+  },
+  {
+    "name": "华为 MatePad Pro 13.2",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "平板电脑",
+    "price_min": 4999.0,
+    "price_max": 6999.0,
+    "image_url": "https://picsum.photos/seed/matepadpro13/400/400",
+    "keywords": [
+      "平板电脑",
+      "OLED屏",
+      "鸿蒙",
+      "手写笔",
+      "办公"
+    ],
+    "variant_suffixes": [
+      "WiFi版 256GB",
+      "WiFi版 512GB",
+      "全网通 512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1000,
+      2000
+    ]
+  },
+  {
+    "name": "华为 MatePad Air",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "平板电脑",
+    "price_min": 2499.0,
+    "price_max": 3499.0,
+    "image_url": "https://picsum.photos/seed/matepadair/400/400",
+    "keywords": [
+      "平板电脑",
+      "轻薄",
+      "鸿蒙",
+      "学习",
+      "影音"
+    ],
+    "variant_suffixes": [
+      "WiFi版 128GB",
+      "WiFi版 256GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      500
+    ]
+  },
+  {
+    "name": "iPad Pro M4 12.9英寸",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "平板电脑",
+    "price_min": 8999.0,
+    "price_max": 16999.0,
+    "image_url": "https://picsum.photos/seed/ipadprom4/400/400",
+    "keywords": [
+      "平板电脑",
+      "M4芯片",
+      "OLED屏",
+      "Apple Pencil",
+      "专业创作"
+    ],
+    "variant_suffixes": [
+      "WiFi 256GB",
+      "WiFi 512GB",
+      "WiFi 1TB",
+      "蜂窝 1TB"
+    ],
+    "variant_price_deltas": [
+      0,
+      2000,
+      5000,
+      7000
+    ]
+  },
+  {
+    "name": "iPad Air M2 11英寸",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "平板电脑",
+    "price_min": 4799.0,
+    "price_max": 6599.0,
+    "image_url": "https://picsum.photos/seed/ipadairm2/400/400",
+    "keywords": [
+      "平板电脑",
+      "M2芯片",
+      "轻薄",
+      "学习"
+    ],
+    "variant_suffixes": [
+      "WiFi 128GB",
+      "WiFi 256GB",
+      "蜂窝 256GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      1000,
+      1800
+    ]
+  },
+  {
+    "name": "iPad 10代",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "平板电脑",
+    "price_min": 2999.0,
+    "price_max": 4299.0,
+    "image_url": "https://picsum.photos/seed/ipad10/400/400",
+    "keywords": [
+      "平板电脑",
+      "入门",
+      "学习",
+      "追剧"
+    ],
+    "variant_suffixes": [
+      "WiFi 64GB",
+      "WiFi 256GB",
+      "蜂窝 256GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      800,
+      1300
+    ]
+  },
+  {
+    "name": "小米平板6S Pro",
+    "brand": "小米",
+    "category": "电子产品",
+    "sub_category": "平板电脑",
+    "price_min": 2999.0,
+    "price_max": 3999.0,
+    "image_url": "https://picsum.photos/seed/mipad6spro/400/400",
+    "keywords": [
+      "平板电脑",
+      "骁龙芯片",
+      "高刷屏",
+      "小米生态"
+    ],
+    "variant_suffixes": [
+      "WiFi 256GB",
+      "WiFi 512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      600
+    ]
+  },
+  {
+    "name": "vivo Pad3 Pro",
+    "brand": "vivo",
+    "category": "电子产品",
+    "sub_category": "平板电脑",
+    "price_min": 2999.0,
+    "price_max": 3799.0,
+    "image_url": "https://picsum.photos/seed/vivopad3pro/400/400",
+    "keywords": [
+      "平板电脑",
+      "天玑芯片",
+      "影音",
+      "办公"
+    ],
+    "variant_suffixes": [
+      "WiFi 256GB",
+      "WiFi 512GB"
+    ],
+    "variant_price_deltas": [
+      0,
+      500
+    ]
+  },
+  {
+    "name": "AirPods Pro 2代",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "耳机",
+    "price_min": 1799.0,
+    "price_max": 1899.0,
+    "image_url": "https://picsum.photos/seed/airpodspro2/400/400",
+    "keywords": [
+      "真无线",
+      "主动降噪",
+      "空间音频",
+      "H2芯片",
+      "iOS生态"
+    ],
+    "variant_suffixes": [],
+    "variant_price_deltas": []
+  },
+  {
+    "name": "AirPods 3代",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "耳机",
+    "price_min": 1199.0,
+    "price_max": 1399.0,
+    "image_url": "https://picsum.photos/seed/airpods3/400/400",
+    "keywords": [
+      "真无线",
+      "空间音频",
+      "半入耳",
+      "iOS生态"
+    ],
+    "variant_suffixes": [],
+    "variant_price_deltas": []
+  },
+  {
+    "name": "华为 FreeBuds Pro 3",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "耳机",
+    "price_min": 1299.0,
+    "price_max": 1499.0,
+    "image_url": "https://picsum.photos/seed/freebudspro3/400/400",
+    "keywords": [
+      "真无线",
+      "主动降噪",
+      "鸿蒙生态",
+      "Hi-Res"
+    ],
+    "variant_suffixes": [],
+    "variant_price_deltas": []
+  },
+  {
+    "name": "小米 Buds 4 Pro",
+    "brand": "小米",
+    "category": "电子产品",
+    "sub_category": "耳机",
+    "price_min": 899.0,
+    "price_max": 999.0,
+    "image_url": "https://picsum.photos/seed/mibuds4pro/400/400",
+    "keywords": [
+      "真无线",
+      "主动降噪",
+      "空间音频",
+      "LDAC"
+    ],
+    "variant_suffixes": [],
+    "variant_price_deltas": []
+  },
+  {
+    "name": "索尼 WH-1000XM5",
+    "brand": "Sony",
+    "category": "电子产品",
+    "sub_category": "耳机",
+    "price_min": 2299.0,
+    "price_max": 2999.0,
+    "image_url": "https://picsum.photos/seed/wh1000xm5/400/400",
+    "keywords": [
+      "头戴式",
+      "主动降噪",
+      "Hi-Res",
+      "LDAC",
+      "长续航"
+    ],
+    "variant_suffixes": [],
+    "variant_price_deltas": []
+  },
+  {
+    "name": "索尼 WF-1000XM5",
+    "brand": "Sony",
+    "category": "电子产品",
+    "sub_category": "耳机",
+    "price_min": 1699.0,
+    "price_max": 1999.0,
+    "image_url": "https://picsum.photos/seed/wf1000xm5/400/400",
+    "keywords": [
+      "真无线",
+      "主动降噪",
+      "Hi-Res",
+      "LDAC"
+    ],
+    "variant_suffixes": [],
+    "variant_price_deltas": []
+  },
+  {
+    "name": "Bose QuietComfort Ultra",
+    "brand": "Bose",
+    "category": "电子产品",
+    "sub_category": "耳机",
+    "price_min": 2499.0,
+    "price_max": 2999.0,
+    "image_url": "https://picsum.photos/seed/boseqcu/400/400",
+    "keywords": [
+      "头戴式",
+      "主动降噪",
+      "空间音频",
+      "舒适佩戴"
+    ],
+    "variant_suffixes": [],
+    "variant_price_deltas": []
+  },
+  {
+    "name": "Apple Watch Series 9",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "智能手表",
+    "price_min": 2999.0,
+    "price_max": 4499.0,
+    "image_url": "https://picsum.photos/seed/aw9/400/400",
+    "keywords": [
+      "智能手表",
+      "健康监测",
+      "运动",
+      "iOS生态",
+      "血氧"
+    ],
+    "variant_suffixes": [
+      "GPS版 41mm",
+      "GPS版 45mm",
+      "蜂窝版 45mm"
+    ],
+    "variant_price_deltas": [
+      0,
+      500,
+      1500
+    ]
+  },
+  {
+    "name": "Apple Watch Ultra 2",
+    "brand": "Apple",
+    "category": "电子产品",
+    "sub_category": "智能手表",
+    "price_min": 6299.0,
+    "price_max": 6999.0,
+    "image_url": "https://picsum.photos/seed/awultra2/400/400",
+    "keywords": [
+      "智能手表",
+      "户外",
+      "潜水",
+      "长续航",
+      "钛合金"
+    ],
+    "variant_suffixes": [],
+    "variant_price_deltas": []
+  },
+  {
+    "name": "华为 Watch GT 4",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "智能手表",
+    "price_min": 1488.0,
+    "price_max": 2488.0,
+    "image_url": "https://picsum.photos/seed/wgt4/400/400",
+    "keywords": [
+      "智能手表",
+      "长续航",
+      "健康监测",
+      "鸿蒙生态"
+    ],
+    "variant_suffixes": [
+      "46mm",
+      "41mm"
+    ],
+    "variant_price_deltas": [
+      0,
+      -300
+    ]
+  },
+  {
+    "name": "小米 Watch S3",
+    "brand": "小米",
+    "category": "电子产品",
+    "sub_category": "智能手表",
+    "price_min": 799.0,
+    "price_max": 1099.0,
+    "image_url": "https://picsum.photos/seed/miwatchs3/400/400",
+    "keywords": [
+      "智能手表",
+      "长续航",
+      "运动",
+      "性价比"
+    ],
+    "variant_suffixes": [
+      "黑色",
+      "银色"
+    ],
+    "variant_price_deltas": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "华为 Watch Ultimate",
+    "brand": "华为",
+    "category": "电子产品",
+    "sub_category": "智能手表",
+    "price_min": 5999.0,
+    "price_max": 6999.0,
+    "image_url": "https://picsum.photos/seed/watchultimate/400/400",
+    "keywords": [
+      "智能手表",
+      "潜水",
+      "钛合金",
+      "卫星通信",
+      "户外"
+    ],
+    "variant_suffixes": [],
+    "variant_price_deltas": []
+  },
+  {
+    "name": "男士纯棉圆领短袖T恤",
+    "brand": "海澜之家",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 69.0,
+    "price_max": 159.0,
+    "image_url": "https://picsum.photos/seed/mt1/400/400",
+    "keywords": [
+      "纯棉",
+      "透气",
+      "休闲",
+      "夏季"
+    ],
+    "variant_suffixes": [
+      "白色 M",
+      "白色 L",
+      "黑色 M",
+      "黑色 L",
+      "灰色 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士商务休闲长裤",
+    "brand": "优衣库",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 199.0,
+    "price_max": 299.0,
+    "image_url": "https://picsum.photos/seed/mp1/400/400",
+    "keywords": [
+      "免烫",
+      "弹力",
+      "商务",
+      "四季款"
+    ],
+    "variant_suffixes": [
+      "藏青 30",
+      "深灰 32",
+      "黑色 34",
+      "卡其 31"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士轻薄羽绒服",
+    "brand": "波司登",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 499.0,
+    "price_max": 999.0,
+    "image_url": "https://picsum.photos/seed/mdown1/400/400",
+    "keywords": [
+      "羽绒",
+      "保暖",
+      "轻薄",
+      "冬季",
+      "防风"
+    ],
+    "variant_suffixes": [
+      "黑色 M",
+      "藏青 L",
+      "灰色 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士修身牛仔裤",
+    "brand": "Levi's",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 399.0,
+    "price_max": 799.0,
+    "image_url": "https://picsum.photos/seed/mjean1/400/400",
+    "keywords": [
+      "弹力",
+      "修身",
+      "牛仔",
+      "经典",
+      "四季款"
+    ],
+    "variant_suffixes": [
+      "蓝色 29",
+      "蓝色 30",
+      "蓝色 32",
+      "深蓝 30",
+      "深蓝 32"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士商务休闲西装外套",
+    "brand": "太平鸟",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 699.0,
+    "price_max": 1299.0,
+    "image_url": "https://picsum.photos/seed/msuit1/400/400",
+    "keywords": [
+      "修身",
+      "商务",
+      "羊毛混纺",
+      "春秋"
+    ],
+    "variant_suffixes": [
+      "深灰 M",
+      "深灰 L",
+      "藏青 L",
+      "藏青 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士运动连帽卫衣",
+    "brand": "Nike",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 299.0,
+    "price_max": 599.0,
+    "image_url": "https://picsum.photos/seed/mhoodie1/400/400",
+    "keywords": [
+      "棉质",
+      "加绒",
+      "运动",
+      "休闲",
+      "秋冬"
+    ],
+    "variant_suffixes": [
+      "黑色 M",
+      "灰色 L",
+      "白色 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士休闲运动鞋",
+    "brand": "Adidas",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 399.0,
+    "price_max": 999.0,
+    "image_url": "https://picsum.photos/seed/mshoe1/400/400",
+    "keywords": [
+      "Boost中底",
+      "透气",
+      "运动",
+      "百搭"
+    ],
+    "variant_suffixes": [
+      "黑白 39",
+      "黑白 40",
+      "黑白 42",
+      "全白 41"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士短袖Polo衫",
+    "brand": "Ralph Lauren",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 699.0,
+    "price_max": 1190.0,
+    "image_url": "https://picsum.photos/seed/mpolo1/400/400",
+    "keywords": [
+      "经典",
+      "刺绣",
+      "纯棉",
+      "商务休闲"
+    ],
+    "variant_suffixes": [
+      "白色 M",
+      "藏青 L",
+      "红色 M",
+      "浅蓝 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士休闲九分裤",
+    "brand": "森马",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 99.0,
+    "price_max": 199.0,
+    "image_url": "https://picsum.photos/seed/mcrop1/400/400",
+    "keywords": [
+      "棉麻",
+      "九分",
+      "休闲",
+      "夏季",
+      "直筒"
+    ],
+    "variant_suffixes": [
+      "卡其 M",
+      "黑色 L",
+      "军绿 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士冲锋衣三合一",
+    "brand": "探路者",
+    "category": "服装",
+    "sub_category": "男装",
+    "price_min": 599.0,
+    "price_max": 999.0,
+    "image_url": "https://picsum.photos/seed/mjacket1/400/400",
+    "keywords": [
+      "防风",
+      "防水",
+      "三合一",
+      "户外",
+      "抓绒内胆"
+    ],
+    "variant_suffixes": [
+      "藏青 M",
+      "军绿 L",
+      "黑色 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士碎花连衣裙",
+    "brand": "URBAN REVIVO",
+    "category": "服装",
+    "sub_category": "女装",
+    "price_min": 199.0,
+    "price_max": 399.0,
+    "image_url": "https://picsum.photos/seed/wd1/400/400",
+    "keywords": [
+      "碎花",
+      "收腰",
+      "V领",
+      "夏季",
+      "法式"
+    ],
+    "variant_suffixes": [
+      "蓝色碎花 S",
+      "蓝色碎花 M",
+      "白色碎花 M",
+      "粉色碎花 L"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士高腰阔腿裤",
+    "brand": "ZARA",
+    "category": "服装",
+    "sub_category": "女装",
+    "price_min": 199.0,
+    "price_max": 399.0,
+    "image_url": "https://picsum.photos/seed/wp1/400/400",
+    "keywords": [
+      "高腰",
+      "阔腿",
+      "垂感",
+      "通勤",
+      "四季款"
+    ],
+    "variant_suffixes": [
+      "黑色 S",
+      "黑色 M",
+      "卡其 L",
+      "深灰 M"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士羊毛双面呢大衣",
+    "brand": "伊芙丽",
+    "category": "服装",
+    "sub_category": "女装",
+    "price_min": 899.0,
+    "price_max": 1999.0,
+    "image_url": "https://picsum.photos/seed/wcoat1/400/400",
+    "keywords": [
+      "羊毛",
+      "双面呢",
+      "气质",
+      "冬季",
+      "中长款"
+    ],
+    "variant_suffixes": [
+      "驼色 S",
+      "黑色 M",
+      "米白 L",
+      "焦糖 M"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士修身针织衫",
+    "brand": "欧时力",
+    "category": "服装",
+    "sub_category": "女装",
+    "price_min": 259.0,
+    "price_max": 499.0,
+    "image_url": "https://picsum.photos/seed/wknit1/400/400",
+    "keywords": [
+      "羊绒混纺",
+      "修身",
+      "打底",
+      "春秋",
+      "百搭"
+    ],
+    "variant_suffixes": [
+      "黑色 S",
+      "米白 M",
+      "酒红 L",
+      "灰色 M"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士休闲小白鞋",
+    "brand": "百丽",
+    "category": "服装",
+    "sub_category": "女装",
+    "price_min": 299.0,
+    "price_max": 599.0,
+    "image_url": "https://picsum.photos/seed/wsneaker1/400/400",
+    "keywords": [
+      "真皮",
+      "厚底",
+      "百搭",
+      "舒适",
+      "休闲"
+    ],
+    "variant_suffixes": [
+      "白色 36",
+      "白色 37",
+      "白色 38",
+      "白色 39"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士长款羽绒服",
+    "brand": "波司登",
+    "category": "服装",
+    "sub_category": "女装",
+    "price_min": 899.0,
+    "price_max": 1999.0,
+    "image_url": "https://picsum.photos/seed/wdown1/400/400",
+    "keywords": [
+      "长款",
+      "鹅绒",
+      "保暖",
+      "冬季",
+      "防风"
+    ],
+    "variant_suffixes": [
+      "黑色 S",
+      "白色 M",
+      "军绿 L",
+      "雾霾蓝 M"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士通勤西装套装",
+    "brand": "Lily",
+    "category": "服装",
+    "sub_category": "女装",
+    "price_min": 599.0,
+    "price_max": 1099.0,
+    "image_url": "https://picsum.photos/seed/wsuit1/400/400",
+    "keywords": [
+      "通勤",
+      "西装",
+      "修身",
+      "OL",
+      "四季款"
+    ],
+    "variant_suffixes": [
+      "黑色 S",
+      "深灰 M",
+      "米白 L"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士雪纺衬衫",
+    "brand": "ONLY",
+    "category": "服装",
+    "sub_category": "女装",
+    "price_min": 199.0,
+    "price_max": 399.0,
+    "image_url": "https://picsum.photos/seed/wshirt1/400/400",
+    "keywords": [
+      "雪纺",
+      "飘带",
+      "通勤",
+      "法式",
+      "春夏"
+    ],
+    "variant_suffixes": [
+      "白色 S",
+      "蓝色 M",
+      "粉色 M",
+      "条纹 L"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士弹力小脚牛仔裤",
+    "brand": "Lee",
+    "category": "服装",
+    "sub_category": "女装",
+    "price_min": 349.0,
+    "price_max": 649.0,
+    "image_url": "https://picsum.photos/seed/wjean1/400/400",
+    "keywords": [
+      "弹力",
+      "小脚裤",
+      "显瘦",
+      "牛仔",
+      "百搭"
+    ],
+    "variant_suffixes": [
+      "中蓝 26",
+      "深蓝 27",
+      "黑色 28",
+      "浅蓝 29"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "儿童纯棉长袖T恤",
+    "brand": "巴拉巴拉",
+    "category": "服装",
+    "sub_category": "童装",
+    "price_min": 49.0,
+    "price_max": 119.0,
+    "image_url": "https://picsum.photos/seed/kt1/400/400",
+    "keywords": [
+      "纯棉",
+      "A类",
+      "透气",
+      "卡通",
+      "春秋"
+    ],
+    "variant_suffixes": [
+      "白色 110cm",
+      "蓝色 120cm",
+      "粉色 130cm",
+      "黄色 140cm"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "儿童运动套装",
+    "brand": "安踏儿童",
+    "category": "服装",
+    "sub_category": "童装",
+    "price_min": 159.0,
+    "price_max": 299.0,
+    "image_url": "https://picsum.photos/seed/ksuit1/400/400",
+    "keywords": [
+      "运动",
+      "透气",
+      "速干",
+      "套装",
+      "春秋"
+    ],
+    "variant_suffixes": [
+      "蓝色 120cm",
+      "黑色 130cm",
+      "粉色 140cm"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "儿童轻薄羽绒服",
+    "brand": "英氏",
+    "category": "服装",
+    "sub_category": "童装",
+    "price_min": 299.0,
+    "price_max": 599.0,
+    "image_url": "https://picsum.photos/seed/kdown1/400/400",
+    "keywords": [
+      "羽绒",
+      "轻薄",
+      "保暖",
+      "冬季",
+      "A类"
+    ],
+    "variant_suffixes": [
+      "粉色 100cm",
+      "蓝色 110cm",
+      "黄色 120cm",
+      "红色 130cm"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "儿童防滑运动鞋",
+    "brand": "江博士",
+    "category": "服装",
+    "sub_category": "童装",
+    "price_min": 199.0,
+    "price_max": 399.0,
+    "image_url": "https://picsum.photos/seed/kshoe1/400/400",
+    "keywords": [
+      "防滑",
+      "透气",
+      "轻便",
+      "护踝"
+    ],
+    "variant_suffixes": [
+      "蓝色 27码",
+      "粉色 28码",
+      "黑色 29码",
+      "灰色 30码"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "儿童休闲卫衣",
+    "brand": "Mini Peace",
+    "category": "服装",
+    "sub_category": "童装",
+    "price_min": 129.0,
+    "price_max": 259.0,
+    "image_url": "https://picsum.photos/seed/khoodie1/400/400",
+    "keywords": [
+      "加绒",
+      "卡通",
+      "保暖",
+      "秋冬",
+      "潮童"
+    ],
+    "variant_suffixes": [
+      "米白 110cm",
+      "黑色 120cm",
+      "灰色 130cm"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女童公主裙",
+    "brand": "笛莎",
+    "category": "服装",
+    "sub_category": "童装",
+    "price_min": 159.0,
+    "price_max": 329.0,
+    "image_url": "https://picsum.photos/seed/kdress1/400/400",
+    "keywords": [
+      "网纱",
+      "蓬蓬裙",
+      "公主风",
+      "派对",
+      "春夏"
+    ],
+    "variant_suffixes": [
+      "粉色 100cm",
+      "白色 110cm",
+      "紫色 120cm"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士内衣无钢圈文胸",
+    "brand": "Ubras",
+    "category": "服装",
+    "sub_category": "内衣",
+    "price_min": 149.0,
+    "price_max": 269.0,
+    "image_url": "https://picsum.photos/seed/bra1/400/400",
+    "keywords": [
+      "无钢圈",
+      "舒适",
+      "透气",
+      "无痕"
+    ],
+    "variant_suffixes": [
+      "肤色 M",
+      "黑色 M",
+      "灰蓝色 L"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士无痕内裤 3条装",
+    "brand": "蕉内",
+    "category": "服装",
+    "sub_category": "内衣",
+    "price_min": 69.0,
+    "price_max": 129.0,
+    "image_url": "https://picsum.photos/seed/underwear1/400/400",
+    "keywords": [
+      "无痕",
+      "纯棉",
+      "中腰",
+      "抗菌"
+    ],
+    "variant_suffixes": [
+      "肤色 M",
+      "黑色 L",
+      "浅粉 M"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "男士平角内裤 4条装",
+    "brand": "舒雅",
+    "category": "服装",
+    "sub_category": "内衣",
+    "price_min": 99.0,
+    "price_max": 199.0,
+    "image_url": "https://picsum.photos/seed/munderwear1/400/400",
+    "keywords": [
+      "莫代尔",
+      "透气",
+      "平角",
+      "舒适"
+    ],
+    "variant_suffixes": [
+      "深灰 L",
+      "藏青 XL",
+      "黑色 XXL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士家居服套装",
+    "brand": "红豆",
+    "category": "服装",
+    "sub_category": "内衣",
+    "price_min": 159.0,
+    "price_max": 329.0,
+    "image_url": "https://picsum.photos/seed/homewear1/400/400",
+    "keywords": [
+      "纯棉",
+      "舒适",
+      "家居",
+      "春秋",
+      "套装"
+    ],
+    "variant_suffixes": [
+      "粉色 M",
+      "浅灰 L",
+      "蓝色 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "女士运动内衣",
+    "brand": "Nike",
+    "category": "服装",
+    "sub_category": "内衣",
+    "price_min": 199.0,
+    "price_max": 399.0,
+    "image_url": "https://picsum.photos/seed/sportsbra1/400/400",
+    "keywords": [
+      "支撑",
+      "速干",
+      "透气",
+      "健身",
+      "瑜伽"
+    ],
+    "variant_suffixes": [
+      "黑色 M",
+      "白色 L",
+      "粉色 M"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "良品铺子 每日坚果 750g",
+    "brand": "良品铺子",
+    "category": "食品饮料",
+    "sub_category": "休闲零食",
+    "price_min": 69.0,
+    "price_max": 129.0,
+    "image_url": "https://picsum.photos/seed/nut1/400/400",
+    "keywords": [
+      "坚果",
+      "混合",
+      "每日坚果",
+      "健康",
+      "休闲零食"
+    ],
+    "variant_suffixes": [
+      "750g装",
+      "1.5kg家庭装"
+    ],
+    "variant_price_deltas": [
+      0,
+      60
+    ]
+  },
+  {
+    "name": "三只松鼠 巨型零食大礼包",
+    "brand": "三只松鼠",
+    "category": "食品饮料",
+    "sub_category": "休闲零食",
+    "price_min": 89.0,
+    "price_max": 199.0,
+    "image_url": "https://picsum.photos/seed/snackpack1/400/400",
+    "keywords": [
+      "零食",
+      "大礼包",
+      "混合装",
+      "送礼"
+    ],
+    "variant_suffixes": [
+      "1.5kg装",
+      "3kg超值装"
+    ],
+    "variant_price_deltas": [
+      0,
+      80
+    ]
+  },
+  {
+    "name": "乐事 薯片大礼包 12包装",
+    "brand": "乐事",
+    "category": "食品饮料",
+    "sub_category": "休闲零食",
+    "price_min": 29.9,
+    "price_max": 49.9,
+    "image_url": "https://picsum.photos/seed/chips1/400/400",
+    "keywords": [
+      "薯片",
+      "膨化",
+      "休闲",
+      "混合口味"
+    ],
+    "variant_suffixes": [
+      "12包装",
+      "24包装"
+    ],
+    "variant_price_deltas": [
+      0,
+      20
+    ]
+  },
+  {
+    "name": "奥利奥 夹心饼干 原味 388g",
+    "brand": "奥利奥",
+    "category": "食品饮料",
+    "sub_category": "休闲零食",
+    "price_min": 9.9,
+    "price_max": 19.9,
+    "image_url": "https://picsum.photos/seed/oreo1/400/400",
+    "keywords": [
+      "饼干",
+      "夹心",
+      "巧克力",
+      "休闲"
+    ],
+    "variant_suffixes": [
+      "388g",
+      "696g家庭装"
+    ],
+    "variant_price_deltas": [
+      0,
+      8
+    ]
+  },
+  {
+    "name": "百草味 猪肉脯 250g",
+    "brand": "百草味",
+    "category": "食品饮料",
+    "sub_category": "休闲零食",
+    "price_min": 29.9,
+    "price_max": 49.9,
+    "image_url": "https://picsum.photos/seed/pork1/400/400",
+    "keywords": [
+      "猪肉脯",
+      "肉类零食",
+      "高蛋白",
+      "蜜汁"
+    ],
+    "variant_suffixes": [
+      "250g",
+      "500g"
+    ],
+    "variant_price_deltas": [
+      0,
+      20
+    ]
+  },
+  {
+    "name": "伊利 安慕希 原味酸奶 205g×12盒",
+    "brand": "伊利",
+    "category": "食品饮料",
+    "sub_category": "饮料冲调",
+    "price_min": 59.9,
+    "price_max": 79.9,
+    "image_url": "https://picsum.photos/seed/yogurt1/400/400",
+    "keywords": [
+      "酸奶",
+      "常温",
+      "希腊风味",
+      "早餐"
+    ],
+    "variant_suffixes": [
+      "12盒装",
+      "24盒装"
+    ],
+    "variant_price_deltas": [
+      0,
+      30
+    ]
+  },
+  {
+    "name": "蒙牛 特仑苏 纯牛奶 250ml×12盒",
+    "brand": "蒙牛",
+    "category": "食品饮料",
+    "sub_category": "饮料冲调",
+    "price_min": 49.9,
+    "price_max": 69.9,
+    "image_url": "https://picsum.photos/seed/milk1/400/400",
+    "keywords": [
+      "纯牛奶",
+      "全脂",
+      "早餐",
+      "营养"
+    ],
+    "variant_suffixes": [
+      "12盒装",
+      "24盒装"
+    ],
+    "variant_price_deltas": [
+      0,
+      25
+    ]
+  },
+  {
+    "name": "农夫山泉 饮用天然水 550ml×24瓶",
+    "brand": "农夫山泉",
+    "category": "食品饮料",
+    "sub_category": "饮料冲调",
+    "price_min": 29.9,
+    "price_max": 39.9,
+    "image_url": "https://picsum.photos/seed/water1/400/400",
+    "keywords": [
+      "矿泉水",
+      "饮用水",
+      "天然",
+      "整箱"
+    ],
+    "variant_suffixes": [
+      "550ml×24瓶",
+      "1.5L×12瓶"
+    ],
+    "variant_price_deltas": [
+      0,
+      5
+    ]
+  },
+  {
+    "name": "星巴克 中度烘焙咖啡豆 200g",
+    "brand": "星巴克",
+    "category": "食品饮料",
+    "sub_category": "饮料冲调",
+    "price_min": 89.0,
+    "price_max": 128.0,
+    "image_url": "https://picsum.photos/seed/coffee1/400/400",
+    "keywords": [
+      "咖啡豆",
+      "中度烘焙",
+      "阿拉比卡",
+      "现磨"
+    ],
+    "variant_suffixes": [
+      "200g",
+      "500g"
+    ],
+    "variant_price_deltas": [
+      0,
+      40
+    ]
+  },
+  {
+    "name": "三得利 乌龙茶 500ml×15瓶",
+    "brand": "三得利",
+    "category": "食品饮料",
+    "sub_category": "饮料冲调",
+    "price_min": 49.9,
+    "price_max": 69.9,
+    "image_url": "https://picsum.photos/seed/oolong1/400/400",
+    "keywords": [
+      "乌龙茶",
+      "无糖",
+      "茶饮",
+      "整箱"
+    ],
+    "variant_suffixes": [
+      "500ml×15瓶",
+      "1.25L×6瓶"
+    ],
+    "variant_price_deltas": [
+      0,
+      15
+    ]
+  },
+  {
+    "name": "佳沛 新西兰阳光金奇异果 12个装",
+    "brand": "佳沛",
+    "category": "食品饮料",
+    "sub_category": "生鲜水果",
+    "price_min": 49.9,
+    "price_max": 89.9,
+    "image_url": "https://picsum.photos/seed/kiwifruit1/400/400",
+    "keywords": [
+      "奇异果",
+      "进口",
+      "水果",
+      "维C",
+      "新鲜"
+    ],
+    "variant_suffixes": [
+      "12个装 大果",
+      "22个装 中果"
+    ],
+    "variant_price_deltas": [
+      0,
+      30
+    ]
+  },
+  {
+    "name": "智利进口车厘子 JJ级 1kg",
+    "brand": "京鲜生",
+    "category": "食品饮料",
+    "sub_category": "生鲜水果",
+    "price_min": 79.0,
+    "price_max": 159.0,
+    "image_url": "https://picsum.photos/seed/cherry1/400/400",
+    "keywords": [
+      "车厘子",
+      "进口",
+      "智利",
+      "新鲜水果",
+      "送礼"
+    ],
+    "variant_suffixes": [
+      "1kg JJ级",
+      "2kg JJJ级"
+    ],
+    "variant_price_deltas": [
+      0,
+      80
+    ]
+  },
+  {
+    "name": "金龙鱼 稻米油 5L",
+    "brand": "金龙鱼",
+    "category": "食品饮料",
+    "sub_category": "粮油调味",
+    "price_min": 79.9,
+    "price_max": 119.0,
+    "image_url": "https://picsum.photos/seed/oil1/400/400",
+    "keywords": [
+      "食用油",
+      "稻米油",
+      "烹饪",
+      "健康"
+    ],
+    "variant_suffixes": [
+      "1.8L",
+      "5L"
+    ],
+    "variant_price_deltas": [
+      0,
+      40
+    ]
+  },
+  {
+    "name": "海天 金标生抽 1.9L",
+    "brand": "海天",
+    "category": "食品饮料",
+    "sub_category": "粮油调味",
+    "price_min": 18.9,
+    "price_max": 29.9,
+    "image_url": "https://picsum.photos/seed/soysauce1/400/400",
+    "keywords": [
+      "酱油",
+      "生抽",
+      "调味",
+      "烹饪"
+    ],
+    "variant_suffixes": [
+      "500ml",
+      "1.9L"
+    ],
+    "variant_price_deltas": [
+      0,
+      12
+    ]
+  },
+  {
+    "name": "十月稻田 五常大米 5kg",
+    "brand": "十月稻田",
+    "category": "食品饮料",
+    "sub_category": "粮油调味",
+    "price_min": 39.9,
+    "price_max": 69.9,
+    "image_url": "https://picsum.photos/seed/rice1/400/400",
+    "keywords": [
+      "大米",
+      "五常",
+      "东北大米",
+      "主食"
+    ],
+    "variant_suffixes": [
+      "2.5kg",
+      "5kg",
+      "10kg"
+    ],
+    "variant_price_deltas": [
+      0,
+      25,
+      45
+    ]
+  },
+  {
+    "name": "海底捞 火锅底料 麻辣味 200g",
+    "brand": "海底捞",
+    "category": "食品饮料",
+    "sub_category": "粮油调味",
+    "price_min": 12.9,
+    "price_max": 19.9,
+    "image_url": "https://picsum.photos/seed/hotpot1/400/400",
+    "keywords": [
+      "火锅底料",
+      "麻辣",
+      "调味",
+      "川味"
+    ],
+    "variant_suffixes": [
+      "200g",
+      "400g"
+    ],
+    "variant_price_deltas": [
+      0,
+      8
+    ]
+  },
+  {
+    "name": "青岛啤酒 经典 500ml×12罐",
+    "brand": "青岛啤酒",
+    "category": "食品饮料",
+    "sub_category": "酒类",
+    "price_min": 49.9,
+    "price_max": 79.9,
+    "image_url": "https://picsum.photos/seed/beer1/400/400",
+    "keywords": [
+      "啤酒",
+      "经典",
+      "国产",
+      "聚会"
+    ],
+    "variant_suffixes": [
+      "500ml×12罐",
+      "330ml×24罐"
+    ],
+    "variant_price_deltas": [
+      0,
+      30
+    ]
+  },
+  {
+    "name": "茅台 飞天 53度 500ml",
+    "brand": "贵州茅台",
+    "category": "食品饮料",
+    "sub_category": "酒类",
+    "price_min": 1499.0,
+    "price_max": 2999.0,
+    "image_url": "https://picsum.photos/seed/moutai1/400/400",
+    "keywords": [
+      "白酒",
+      "酱香型",
+      "茅台",
+      "收藏",
+      "送礼"
+    ],
+    "variant_suffixes": [
+      "500ml",
+      "1L"
+    ],
+    "variant_price_deltas": [
+      0,
+      500
+    ]
+  },
+  {
+    "name": "拉菲 传奇 波尔多干红葡萄酒 750ml",
+    "brand": "拉菲",
+    "category": "食品饮料",
+    "sub_category": "酒类",
+    "price_min": 169.0,
+    "price_max": 299.0,
+    "image_url": "https://picsum.photos/seed/wine1/400/400",
+    "keywords": [
+      "红酒",
+      "法国",
+      "波尔多",
+      "干红",
+      "佐餐"
+    ],
+    "variant_suffixes": [
+      "单瓶",
+      "双支礼盒"
+    ],
+    "variant_price_deltas": [
+      0,
+      100
+    ]
+  },
+  {
+    "name": "RIO 锐澳 微醺鸡尾酒 330ml×8罐",
+    "brand": "RIO",
+    "category": "食品饮料",
+    "sub_category": "酒类",
+    "price_min": 39.9,
+    "price_max": 59.9,
+    "image_url": "https://picsum.photos/seed/rio1/400/400",
+    "keywords": [
+      "鸡尾酒",
+      "微醺",
+      "低度",
+      "果味",
+      "聚会"
+    ],
+    "variant_suffixes": [
+      "8罐混合装",
+      "16罐混合装"
+    ],
+    "variant_price_deltas": [
+      0,
+      25
+    ]
+  },
+  {
+    "name": "水星家纺 纯棉四件套 1.8m床",
+    "brand": "水星家纺",
+    "category": "家居生活",
+    "sub_category": "家纺",
+    "price_min": 299.0,
+    "price_max": 599.0,
+    "image_url": "https://picsum.photos/seed/bedding1/400/400",
+    "keywords": [
+      "纯棉",
+      "四件套",
+      "双人",
+      "亲肤",
+      "四季通用"
+    ],
+    "variant_suffixes": [
+      "1.5m床 简约灰",
+      "1.8m床 水蓝",
+      "2.0m床 米白"
+    ],
+    "variant_price_deltas": [
+      0,
+      50,
+      100
+    ]
+  },
+  {
+    "name": "罗莱 蚕丝被 200×230cm",
+    "brand": "罗莱",
+    "category": "家居生活",
+    "sub_category": "家纺",
+    "price_min": 799.0,
+    "price_max": 1599.0,
+    "image_url": "https://picsum.photos/seed/silkquilt1/400/400",
+    "keywords": [
+      "蚕丝被",
+      "冬被",
+      "保暖",
+      "高端",
+      "送礼"
+    ],
+    "variant_suffixes": [
+      "200×230cm 1斤",
+      "220×240cm 2斤"
+    ],
+    "variant_price_deltas": [
+      0,
+      400
+    ]
+  },
+  {
+    "name": "梦洁 乳胶枕 一对装",
+    "brand": "梦洁",
+    "category": "家居生活",
+    "sub_category": "家纺",
+    "price_min": 199.0,
+    "price_max": 399.0,
+    "image_url": "https://picsum.photos/seed/pillow1/400/400",
+    "keywords": [
+      "乳胶枕",
+      "护颈",
+      "防螨",
+      "泰国进口"
+    ],
+    "variant_suffixes": [
+      "标准款",
+      "升级款 按摩颗粒"
+    ],
+    "variant_price_deltas": [
+      0,
+      100
+    ]
+  },
+  {
+    "name": "南极人 法兰绒毛毯 150×200cm",
+    "brand": "南极人",
+    "category": "家居生活",
+    "sub_category": "家纺",
+    "price_min": 69.0,
+    "price_max": 129.0,
+    "image_url": "https://picsum.photos/seed/blanket1/400/400",
+    "keywords": [
+      "法兰绒",
+      "毛毯",
+      "保暖",
+      "午睡毯",
+      "沙发毯"
+    ],
+    "variant_suffixes": [
+      "150×200cm",
+      "200×230cm"
+    ],
+    "variant_price_deltas": [
+      0,
+      40
+    ]
+  },
+  {
+    "name": "苏泊尔 不粘炒锅 32cm",
+    "brand": "苏泊尔",
+    "category": "家居生活",
+    "sub_category": "厨具",
+    "price_min": 199.0,
+    "price_max": 399.0,
+    "image_url": "https://picsum.photos/seed/wok1/400/400",
+    "keywords": [
+      "不粘锅",
+      "炒锅",
+      "加深",
+      "燃气灶",
+      "电磁炉通用"
+    ],
+    "variant_suffixes": [
+      "28cm",
+      "32cm",
+      "34cm"
+    ],
+    "variant_price_deltas": [
+      0,
+      50,
+      100
+    ]
+  },
+  {
+    "name": "九阳 破壁机 多功能",
+    "brand": "九阳",
+    "category": "家居生活",
+    "sub_category": "厨具",
+    "price_min": 399.0,
+    "price_max": 999.0,
+    "image_url": "https://picsum.photos/seed/blender1/400/400",
+    "keywords": [
+      "破壁机",
+      "豆浆机",
+      "榨汁",
+      "辅食",
+      "加热"
+    ],
+    "variant_suffixes": [
+      "基础款 1.2L",
+      "升级款 1.75L 静音"
+    ],
+    "variant_price_deltas": [
+      0,
+      300
+    ]
+  },
+  {
+    "name": "双立人 刀具套装 7件套",
+    "brand": "双立人",
+    "category": "家居生活",
+    "sub_category": "厨具",
+    "price_min": 699.0,
+    "price_max": 1599.0,
+    "image_url": "https://picsum.photos/seed/knifeset1/400/400",
+    "keywords": [
+      "刀具",
+      "德国",
+      "不锈钢",
+      "套装",
+      "厨房必备"
+    ],
+    "variant_suffixes": [
+      "7件套",
+      "12件套"
+    ],
+    "variant_price_deltas": [
+      0,
+      500
+    ]
+  },
+  {
+    "name": "膳魔师 不锈钢保温杯 500ml",
+    "brand": "膳魔师",
+    "category": "家居生活",
+    "sub_category": "厨具",
+    "price_min": 199.0,
+    "price_max": 349.0,
+    "image_url": "https://picsum.photos/seed/thermos1/400/400",
+    "keywords": [
+      "保温杯",
+      "不锈钢",
+      "真空",
+      "便携"
+    ],
+    "variant_suffixes": [
+      "500ml 黑色",
+      "500ml 白色",
+      "750ml 黑色"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      50
+    ]
+  },
+  {
+    "name": "小米 米家IH电饭煲 4L",
+    "brand": "小米",
+    "category": "家居生活",
+    "sub_category": "厨具",
+    "price_min": 349.0,
+    "price_max": 599.0,
+    "image_url": "https://picsum.photos/seed/ricecooker1/400/400",
+    "keywords": [
+      "电饭煲",
+      "IH电磁加热",
+      "智能",
+      "预约"
+    ],
+    "variant_suffixes": [
+      "3L版",
+      "4L版"
+    ],
+    "variant_price_deltas": [
+      0,
+      100
+    ]
+  },
+  {
+    "name": "林氏家居 实木餐桌 1.4m",
+    "brand": "林氏家居",
+    "category": "家居生活",
+    "sub_category": "家具",
+    "price_min": 899.0,
+    "price_max": 2199.0,
+    "image_url": "https://picsum.photos/seed/diningtable1/400/400",
+    "keywords": [
+      "餐桌",
+      "实木",
+      "北欧",
+      "简约",
+      "餐厅"
+    ],
+    "variant_suffixes": [
+      "1.2m 胡桃色",
+      "1.4m 原木色",
+      "1.6m 白色"
+    ],
+    "variant_price_deltas": [
+      0,
+      200,
+      600
+    ]
+  },
+  {
+    "name": "源氏木语 实木双人床 1.8m",
+    "brand": "源氏木语",
+    "category": "家居生活",
+    "sub_category": "家具",
+    "price_min": 1999.0,
+    "price_max": 3999.0,
+    "image_url": "https://picsum.photos/seed/bed1/400/400",
+    "keywords": [
+      "实木床",
+      "双人床",
+      "北欧",
+      "橡木",
+      "卧室"
+    ],
+    "variant_suffixes": [
+      "1.5m 原木色",
+      "1.8m 胡桃色",
+      "1.8m 白色"
+    ],
+    "variant_price_deltas": [
+      0,
+      300,
+      300
+    ]
+  },
+  {
+    "name": "全友 布艺沙发 三人位",
+    "brand": "全友家居",
+    "category": "家居生活",
+    "sub_category": "家具",
+    "price_min": 1999.0,
+    "price_max": 3999.0,
+    "image_url": "https://picsum.photos/seed/sofa1/400/400",
+    "keywords": [
+      "布艺沙发",
+      "三人位",
+      "客厅",
+      "北欧",
+      "可拆洗"
+    ],
+    "variant_suffixes": [
+      "三人位 深灰",
+      "三人位+贵妃榻 浅灰"
+    ],
+    "variant_price_deltas": [
+      0,
+      1500
+    ]
+  },
+  {
+    "name": "网易严选 人体工学椅",
+    "brand": "网易严选",
+    "category": "家居生活",
+    "sub_category": "家具",
+    "price_min": 799.0,
+    "price_max": 1599.0,
+    "image_url": "https://picsum.photos/seed/chair1/400/400",
+    "keywords": [
+      "人体工学椅",
+      "办公椅",
+      "电竞椅",
+      "久坐",
+      "腰部支撑"
+    ],
+    "variant_suffixes": [
+      "标准版",
+      "升级版 网布+脚托"
+    ],
+    "variant_price_deltas": [
+      0,
+      400
+    ]
+  },
+  {
+    "name": "太力 真空压缩袋 11件套",
+    "brand": "太力",
+    "category": "家居生活",
+    "sub_category": "收纳用品",
+    "price_min": 39.9,
+    "price_max": 79.9,
+    "image_url": "https://picsum.photos/seed/storagebag1/400/400",
+    "keywords": [
+      "压缩袋",
+      "收纳",
+      "换季",
+      "省空间",
+      "防潮"
+    ],
+    "variant_suffixes": [
+      "11件套 含手动泵",
+      "15件套 含电动泵"
+    ],
+    "variant_price_deltas": [
+      0,
+      40
+    ]
+  },
+  {
+    "name": "爱丽思 抽屉式收纳柜 5层",
+    "brand": "爱丽思",
+    "category": "家居生活",
+    "sub_category": "收纳用品",
+    "price_min": 199.0,
+    "price_max": 399.0,
+    "image_url": "https://picsum.photos/seed/drawer1/400/400",
+    "keywords": [
+      "收纳柜",
+      "抽屉式",
+      "塑料",
+      "卧室",
+      "衣柜"
+    ],
+    "variant_suffixes": [
+      "5层",
+      "7层"
+    ],
+    "variant_price_deltas": [
+      0,
+      120
+    ]
+  },
+  {
+    "name": "飞利浦 LED吸顶灯 36W",
+    "brand": "飞利浦",
+    "category": "家居生活",
+    "sub_category": "灯具",
+    "price_min": 199.0,
+    "price_max": 499.0,
+    "image_url": "https://picsum.photos/seed/ceilinglight1/400/400",
+    "keywords": [
+      "LED",
+      "吸顶灯",
+      "客厅",
+      "三色调光",
+      "遥控"
+    ],
+    "variant_suffixes": [
+      "36W 圆形",
+      "48W 方形",
+      "72W 大客厅"
+    ],
+    "variant_price_deltas": [
+      0,
+      150,
+      300
+    ]
+  },
+  {
+    "name": "小米 米家台灯 Pro",
+    "brand": "小米",
+    "category": "家居生活",
+    "sub_category": "灯具",
+    "price_min": 199.0,
+    "price_max": 349.0,
+    "image_url": "https://picsum.photos/seed/desklamp1/400/400",
+    "keywords": [
+      "台灯",
+      "护眼",
+      "智能",
+      "无频闪",
+      "阅读"
+    ],
+    "variant_suffixes": [
+      "白色",
+      "黑色"
+    ],
+    "variant_price_deltas": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "洁丽雅 纯棉毛巾 3条装",
+    "brand": "洁丽雅",
+    "category": "家居生活",
+    "sub_category": "家纺",
+    "price_min": 29.9,
+    "price_max": 59.9,
+    "image_url": "https://picsum.photos/seed/towel1/400/400",
+    "keywords": [
+      "毛巾",
+      "纯棉",
+      "柔软",
+      "吸水",
+      "家用"
+    ],
+    "variant_suffixes": [
+      "3条装 混色",
+      "6条装 混色"
+    ],
+    "variant_price_deltas": [
+      0,
+      25
+    ]
+  },
+  {
+    "name": "雅诗兰黛 小棕瓶精华 50ml",
+    "brand": "雅诗兰黛",
+    "category": "美妆个护",
+    "sub_category": "护肤",
+    "price_min": 699.0,
+    "price_max": 990.0,
+    "image_url": "https://picsum.photos/seed/anr1/400/400",
+    "keywords": [
+      "精华",
+      "抗老",
+      "修护",
+      "夜间",
+      "明星产品"
+    ],
+    "variant_suffixes": [
+      "30ml",
+      "50ml",
+      "75ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      200,
+      400
+    ]
+  },
+  {
+    "name": "兰蔻 小黑瓶肌底精华 50ml",
+    "brand": "兰蔻",
+    "category": "美妆个护",
+    "sub_category": "护肤",
+    "price_min": 699.0,
+    "price_max": 1080.0,
+    "image_url": "https://picsum.photos/seed/lancome1/400/400",
+    "keywords": [
+      "肌底液",
+      "精华",
+      "维稳",
+      "修护",
+      "抗初老"
+    ],
+    "variant_suffixes": [
+      "30ml",
+      "50ml",
+      "100ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      250,
+      500
+    ]
+  },
+  {
+    "name": "SK-II 神仙水 230ml",
+    "brand": "SK-II",
+    "category": "美妆个护",
+    "sub_category": "护肤",
+    "price_min": 999.0,
+    "price_max": 1590.0,
+    "image_url": "https://picsum.photos/seed/skii1/400/400",
+    "keywords": [
+      "精华水",
+      "Pitera",
+      "保湿",
+      "提亮",
+      "明星产品"
+    ],
+    "variant_suffixes": [
+      "75ml",
+      "160ml",
+      "230ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      300,
+      500
+    ]
+  },
+  {
+    "name": "资生堂 红腰子精华 50ml",
+    "brand": "资生堂",
+    "category": "美妆个护",
+    "sub_category": "护肤",
+    "price_min": 599.0,
+    "price_max": 860.0,
+    "image_url": "https://picsum.photos/seed/shiseido1/400/400",
+    "keywords": [
+      "精华",
+      "维稳",
+      "保湿",
+      "修护屏障"
+    ],
+    "variant_suffixes": [
+      "30ml",
+      "50ml",
+      "75ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      180,
+      300
+    ]
+  },
+  {
+    "name": "海蓝之谜 经典面霜 60ml",
+    "brand": "海蓝之谜",
+    "category": "美妆个护",
+    "sub_category": "护肤",
+    "price_min": 1999.0,
+    "price_max": 3350.0,
+    "image_url": "https://picsum.photos/seed/lamer1/400/400",
+    "keywords": [
+      "面霜",
+      "修护",
+      "贵妇",
+      "保湿",
+      "抗老"
+    ],
+    "variant_suffixes": [
+      "30ml",
+      "60ml",
+      "100ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      1000,
+      2000
+    ]
+  },
+  {
+    "name": "科颜氏 高保湿面霜 125ml",
+    "brand": "科颜氏",
+    "category": "美妆个护",
+    "sub_category": "护肤",
+    "price_min": 299.0,
+    "price_max": 580.0,
+    "image_url": "https://picsum.photos/seed/kiehls1/400/400",
+    "keywords": [
+      "面霜",
+      "保湿",
+      "干皮救星",
+      "冬季必备"
+    ],
+    "variant_suffixes": [
+      "50ml",
+      "125ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      150
+    ]
+  },
+  {
+    "name": "薇诺娜 舒敏保湿特护霜 50g",
+    "brand": "薇诺娜",
+    "category": "美妆个护",
+    "sub_category": "护肤",
+    "price_min": 189.0,
+    "price_max": 298.0,
+    "image_url": "https://picsum.photos/seed/winona1/400/400",
+    "keywords": [
+      "修护",
+      "敏感肌",
+      "保湿",
+      "国货",
+      "药妆"
+    ],
+    "variant_suffixes": [
+      "15g",
+      "50g"
+    ],
+    "variant_price_deltas": [
+      0,
+      80
+    ]
+  },
+  {
+    "name": "完美日记 小细跟口红 L01",
+    "brand": "完美日记",
+    "category": "美妆个护",
+    "sub_category": "彩妆",
+    "price_min": 59.9,
+    "price_max": 99.9,
+    "image_url": "https://picsum.photos/seed/perfdiary1/400/400",
+    "keywords": [
+      "口红",
+      "丝绒",
+      "哑光",
+      "平价",
+      "国货"
+    ],
+    "variant_suffixes": [
+      "L01 蜜桃色",
+      "L02 玫瑰色",
+      "L04 红棕色"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "MAC 子弹头口红 #Chili",
+    "brand": "MAC",
+    "category": "美妆个护",
+    "sub_category": "彩妆",
+    "price_min": 175.0,
+    "price_max": 230.0,
+    "image_url": "https://picsum.photos/seed/mac1/400/400",
+    "keywords": [
+      "口红",
+      "小辣椒",
+      "哑光",
+      "经典",
+      "显白"
+    ],
+    "variant_suffixes": [
+      "Chili 铁锈红",
+      "Ruby Woo 正红",
+      "Marrakesh 棕红"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "DIOR 烈艳蓝金唇膏 #999",
+    "brand": "Dior",
+    "category": "美妆个护",
+    "sub_category": "彩妆",
+    "price_min": 350.0,
+    "price_max": 420.0,
+    "image_url": "https://picsum.photos/seed/dior999/400/400",
+    "keywords": [
+      "口红",
+      "正红色",
+      "经典",
+      "传奇红",
+      "送礼"
+    ],
+    "variant_suffixes": [
+      "缎光 999",
+      "哑光 999",
+      "金属 999"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "花西子 空气蜜粉 03号",
+    "brand": "花西子",
+    "category": "美妆个护",
+    "sub_category": "彩妆",
+    "price_min": 129.0,
+    "price_max": 189.0,
+    "image_url": "https://picsum.photos/seed/florasis1/400/400",
+    "keywords": [
+      "蜜粉",
+      "定妆",
+      "控油",
+      "国货",
+      "细腻"
+    ],
+    "variant_suffixes": [
+      "03 透明色",
+      "04 自然色"
+    ],
+    "variant_price_deltas": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "阿玛尼 权力持妆粉底液 30ml",
+    "brand": "Giorgio Armani",
+    "category": "美妆个护",
+    "sub_category": "彩妆",
+    "price_min": 520.0,
+    "price_max": 690.0,
+    "image_url": "https://picsum.photos/seed/armani1/400/400",
+    "keywords": [
+      "粉底液",
+      "持妆",
+      "遮瑕",
+      "控油",
+      "哑光"
+    ],
+    "variant_suffixes": [
+      "#2 暖调白皙",
+      "#3 冷调白皙",
+      "#4 自然色"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "珀莱雅 双抗精华 30ml",
+    "brand": "珀莱雅",
+    "category": "美妆个护",
+    "sub_category": "护肤",
+    "price_min": 189.0,
+    "price_max": 329.0,
+    "image_url": "https://picsum.photos/seed/proya1/400/400",
+    "keywords": [
+      "精华",
+      "抗氧",
+      "抗糖",
+      "国货",
+      "早C晚A"
+    ],
+    "variant_suffixes": [
+      "30ml",
+      "50ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      80
+    ]
+  },
+  {
+    "name": "潘婷 3分钟奇迹护发素 180ml",
+    "brand": "潘婷",
+    "category": "美妆个护",
+    "sub_category": "洗护",
+    "price_min": 39.9,
+    "price_max": 79.9,
+    "image_url": "https://picsum.photos/seed/pantene1/400/400",
+    "keywords": [
+      "护发素",
+      "修护",
+      "顺滑",
+      "毛躁"
+    ],
+    "variant_suffixes": [
+      "180ml",
+      "340ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      25
+    ]
+  },
+  {
+    "name": "施华蔻 多效修护洗发水 600ml",
+    "brand": "施华蔻",
+    "category": "美妆个护",
+    "sub_category": "洗护",
+    "price_min": 59.9,
+    "price_max": 119.0,
+    "image_url": "https://picsum.photos/seed/schwarzkopf1/400/400",
+    "keywords": [
+      "洗发水",
+      "修护",
+      "受损发质",
+      "无硅油"
+    ],
+    "variant_suffixes": [
+      "400ml",
+      "600ml 双瓶装"
+    ],
+    "variant_price_deltas": [
+      0,
+      40
+    ]
+  },
+  {
+    "name": "多芬 滋润沐浴露 1kg",
+    "brand": "多芬",
+    "category": "美妆个护",
+    "sub_category": "洗护",
+    "price_min": 39.9,
+    "price_max": 59.9,
+    "image_url": "https://picsum.photos/seed/dove1/400/400",
+    "keywords": [
+      "沐浴露",
+      "滋润",
+      "温和",
+      "大瓶",
+      "家庭装"
+    ],
+    "variant_suffixes": [
+      "720g",
+      "1kg"
+    ],
+    "variant_price_deltas": [
+      0,
+      15
+    ]
+  },
+  {
+    "name": "舒肤佳 纯白清香沐浴露 720ml",
+    "brand": "舒肤佳",
+    "category": "美妆个护",
+    "sub_category": "洗护",
+    "price_min": 29.9,
+    "price_max": 49.9,
+    "image_url": "https://picsum.photos/seed/safeguard1/400/400",
+    "keywords": [
+      "沐浴露",
+      "抑菌",
+      "经典",
+      "家庭装"
+    ],
+    "variant_suffixes": [
+      "400ml",
+      "720ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      15
+    ]
+  },
+  {
+    "name": "云南白药 牙膏 薄荷清爽 180g",
+    "brand": "云南白药",
+    "category": "美妆个护",
+    "sub_category": "口腔护理",
+    "price_min": 25.9,
+    "price_max": 42.9,
+    "image_url": "https://picsum.photos/seed/toothpaste1/400/400",
+    "keywords": [
+      "牙膏",
+      "护龈",
+      "去火",
+      "国货",
+      "中华老字号"
+    ],
+    "variant_suffixes": [
+      "180g 单支",
+      "180g×3支装"
+    ],
+    "variant_price_deltas": [
+      0,
+      20
+    ]
+  },
+  {
+    "name": "飞利浦 电动牙刷 HX6730",
+    "brand": "飞利浦",
+    "category": "美妆个护",
+    "sub_category": "口腔护理",
+    "price_min": 299.0,
+    "price_max": 459.0,
+    "image_url": "https://picsum.photos/seed/toothbrush1/400/400",
+    "keywords": [
+      "电动牙刷",
+      "声波",
+      "清洁",
+      "护龈",
+      "充电"
+    ],
+    "variant_suffixes": [
+      "HX6730 标准版",
+      "HX6850 升级版"
+    ],
+    "variant_price_deltas": [
+      0,
+      120
+    ]
+  },
+  {
+    "name": "吉列 锋隐致顺 剃须刀 1刀架+5刀头",
+    "brand": "吉列",
+    "category": "美妆个护",
+    "sub_category": "男士护理",
+    "price_min": 149.0,
+    "price_max": 269.0,
+    "image_url": "https://picsum.photos/seed/gillette1/400/400",
+    "keywords": [
+      "剃须刀",
+      "手动",
+      "5层刀片",
+      "顺滑",
+      "男士"
+    ],
+    "variant_suffixes": [
+      "1刀架+4刀头",
+      "1刀架+8刀头"
+    ],
+    "variant_price_deltas": [
+      0,
+      80
+    ]
+  },
+  {
+    "name": "妮维雅 男士水活多效洁面乳 100g",
+    "brand": "妮维雅",
+    "category": "美妆个护",
+    "sub_category": "男士护理",
+    "price_min": 29.9,
+    "price_max": 59.9,
+    "image_url": "https://picsum.photos/seed/nivea1/400/400",
+    "keywords": [
+      "洗面奶",
+      "男士",
+      "控油",
+      "清爽",
+      "平价"
+    ],
+    "variant_suffixes": [
+      "100g",
+      "100g×2支装"
+    ],
+    "variant_price_deltas": [
+      0,
+      20
+    ]
+  },
+  {
+    "name": "爱他美 卓萃 幼儿配方奶粉 3段 800g",
+    "brand": "爱他美",
+    "category": "母婴",
+    "sub_category": "奶粉辅食",
+    "price_min": 298.0,
+    "price_max": 398.0,
+    "image_url": "https://picsum.photos/seed/aptamil1/400/400",
+    "keywords": [
+      "奶粉",
+      "3段",
+      "进口",
+      "幼儿",
+      "1-3岁"
+    ],
+    "variant_suffixes": [
+      "800g",
+      "800g×2罐"
+    ],
+    "variant_price_deltas": [
+      0,
+      150
+    ]
+  },
+  {
+    "name": "飞鹤 星飞帆 婴幼儿配方奶粉 3段 900g",
+    "brand": "飞鹤",
+    "category": "母婴",
+    "sub_category": "奶粉辅食",
+    "price_min": 248.0,
+    "price_max": 348.0,
+    "image_url": "https://picsum.photos/seed/feihe1/400/400",
+    "keywords": [
+      "奶粉",
+      "3段",
+      "国产",
+      "更适合中国宝宝",
+      "1-3岁"
+    ],
+    "variant_suffixes": [
+      "700g",
+      "900g"
+    ],
+    "variant_price_deltas": [
+      0,
+      60
+    ]
+  },
+  {
+    "name": "美素佳儿 皇家 婴儿配方奶粉 2段 800g",
+    "brand": "美素佳儿",
+    "category": "母婴",
+    "sub_category": "奶粉辅食",
+    "price_min": 358.0,
+    "price_max": 478.0,
+    "image_url": "https://picsum.photos/seed/friso1/400/400",
+    "keywords": [
+      "奶粉",
+      "2段",
+      "荷兰进口",
+      "6-12个月"
+    ],
+    "variant_suffixes": [
+      "400g",
+      "800g"
+    ],
+    "variant_price_deltas": [
+      0,
+      150
+    ]
+  },
+  {
+    "name": "嘉宝 米粉 钙铁锌 225g",
+    "brand": "嘉宝",
+    "category": "母婴",
+    "sub_category": "奶粉辅食",
+    "price_min": 39.9,
+    "price_max": 69.9,
+    "image_url": "https://picsum.photos/seed/gerber1/400/400",
+    "keywords": [
+      "米粉",
+      "辅食",
+      "钙铁锌",
+      "6个月+"
+    ],
+    "variant_suffixes": [
+      "225g",
+      "225g×2罐"
+    ],
+    "variant_price_deltas": [
+      0,
+      25
+    ]
+  },
+  {
+    "name": "花王 妙而舒 纸尿裤 L码 54片",
+    "brand": "花王",
+    "category": "母婴",
+    "sub_category": "纸尿裤",
+    "price_min": 99.0,
+    "price_max": 169.0,
+    "image_url": "https://picsum.photos/seed/diaper1/400/400",
+    "keywords": [
+      "纸尿裤",
+      "日本进口",
+      "透气",
+      "L码",
+      "9-14kg"
+    ],
+    "variant_suffixes": [
+      "L码 54片",
+      "L码 108片"
+    ],
+    "variant_price_deltas": [
+      0,
+      60
+    ]
+  },
+  {
+    "name": "帮宝适 一级帮 拉拉裤 XL码 40片",
+    "brand": "帮宝适",
+    "category": "母婴",
+    "sub_category": "纸尿裤",
+    "price_min": 119.0,
+    "price_max": 199.0,
+    "image_url": "https://picsum.photos/seed/pampers1/400/400",
+    "keywords": [
+      "拉拉裤",
+      "XL码",
+      "透气",
+      "12kg+"
+    ],
+    "variant_suffixes": [
+      "XL码 40片",
+      "XL码 80片"
+    ],
+    "variant_price_deltas": [
+      0,
+      70
+    ]
+  },
+  {
+    "name": "babycare 婴儿湿巾 80抽×6包",
+    "brand": "babycare",
+    "category": "母婴",
+    "sub_category": "纸尿裤",
+    "price_min": 49.9,
+    "price_max": 89.9,
+    "image_url": "https://picsum.photos/seed/wipes1/400/400",
+    "keywords": [
+      "湿巾",
+      "手口专用",
+      "无酒精",
+      "加厚",
+      "新生儿"
+    ],
+    "variant_suffixes": [
+      "80抽×6包",
+      "80抽×12包"
+    ],
+    "variant_price_deltas": [
+      0,
+      30
+    ]
+  },
+  {
+    "name": "好孩子 婴儿推车 轻便折叠",
+    "brand": "好孩子",
+    "category": "母婴",
+    "sub_category": "童车童床",
+    "price_min": 699.0,
+    "price_max": 1599.0,
+    "image_url": "https://picsum.photos/seed/stroller1/400/400",
+    "keywords": [
+      "婴儿推车",
+      "轻便",
+      "折叠",
+      "可坐可躺",
+      "避震"
+    ],
+    "variant_suffixes": [
+      "基础款",
+      "升级款 双向"
+    ],
+    "variant_price_deltas": [
+      0,
+      400
+    ]
+  },
+  {
+    "name": "Cybex 婴儿安全座椅 Sirona S",
+    "brand": "Cybex",
+    "category": "母婴",
+    "sub_category": "童车童床",
+    "price_min": 2999.0,
+    "price_max": 4599.0,
+    "image_url": "https://picsum.photos/seed/carseat1/400/400",
+    "keywords": [
+      "安全座椅",
+      "360度旋转",
+      "0-4岁",
+      "德国",
+      "ISOFIX"
+    ],
+    "variant_suffixes": [
+      "Sirona S",
+      "Sirona S i-Size"
+    ],
+    "variant_price_deltas": [
+      0,
+      800
+    ]
+  },
+  {
+    "name": "贝亲 宽口径玻璃奶瓶 240ml",
+    "brand": "贝亲",
+    "category": "母婴",
+    "sub_category": "孕产用品",
+    "price_min": 89.0,
+    "price_max": 169.0,
+    "image_url": "https://picsum.photos/seed/pigeon1/400/400",
+    "keywords": [
+      "奶瓶",
+      "玻璃",
+      "宽口径",
+      "防胀气",
+      "新生儿"
+    ],
+    "variant_suffixes": [
+      "160ml",
+      "240ml"
+    ],
+    "variant_price_deltas": [
+      0,
+      30
+    ]
+  },
+  {
+    "name": "美德乐 丝韵翼 双边电动吸奶器",
+    "brand": "美德乐",
+    "category": "母婴",
+    "sub_category": "孕产用品",
+    "price_min": 1599.0,
+    "price_max": 2499.0,
+    "image_url": "https://picsum.photos/seed/medela1/400/400",
+    "keywords": [
+      "吸奶器",
+      "电动",
+      "双边",
+      "瑞士",
+      "产后"
+    ],
+    "variant_suffixes": [
+      "丝韵翼",
+      "享韵 旗舰版"
+    ],
+    "variant_price_deltas": [
+      0,
+      600
+    ]
+  },
+  {
+    "name": "Nike Air Force 1 '07 经典板鞋",
+    "brand": "Nike",
+    "category": "运动户外",
+    "sub_category": "运动鞋",
+    "price_min": 699.0,
+    "price_max": 899.0,
+    "image_url": "https://picsum.photos/seed/af1/400/400",
+    "keywords": [
+      "板鞋",
+      "经典",
+      "百搭",
+      "Air气垫"
+    ],
+    "variant_suffixes": [
+      "白色 40",
+      "白色 42",
+      "黑色 41"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "Adidas Ultraboost 跑鞋",
+    "brand": "Adidas",
+    "category": "运动户外",
+    "sub_category": "运动鞋",
+    "price_min": 899.0,
+    "price_max": 1299.0,
+    "image_url": "https://picsum.photos/seed/ultraboost1/400/400",
+    "keywords": [
+      "跑鞋",
+      "Boost科技",
+      "缓震",
+      "透气"
+    ],
+    "variant_suffixes": [
+      "黑白 41",
+      "全白 42",
+      "黑色 40"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "New Balance 574 经典复古跑鞋",
+    "brand": "New Balance",
+    "category": "运动户外",
+    "sub_category": "运动鞋",
+    "price_min": 599.0,
+    "price_max": 799.0,
+    "image_url": "https://picsum.photos/seed/nb574/400/400",
+    "keywords": [
+      "复古跑鞋",
+      "经典",
+      "元祖灰",
+      "舒适"
+    ],
+    "variant_suffixes": [
+      "灰色 41",
+      "藏青 42",
+      "黑色 40"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "安踏 C37 软跑鞋",
+    "brand": "安踏",
+    "category": "运动户外",
+    "sub_category": "运动鞋",
+    "price_min": 399.0,
+    "price_max": 599.0,
+    "image_url": "https://picsum.photos/seed/anta1/400/400",
+    "keywords": [
+      "跑鞋",
+      "软底",
+      "国产",
+      "日常",
+      "通勤"
+    ],
+    "variant_suffixes": [
+      "黑白 41",
+      "灰色 42",
+      "黑色 40"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "李宁 超轻21 跑鞋",
+    "brand": "李宁",
+    "category": "运动户外",
+    "sub_category": "运动鞋",
+    "price_min": 499.0,
+    "price_max": 699.0,
+    "image_url": "https://picsum.photos/seed/lining1/400/400",
+    "keywords": [
+      "跑鞋",
+      "超轻",
+      "竞速",
+      "透气",
+      "国产"
+    ],
+    "variant_suffixes": [
+      "白色 41",
+      "荧光绿 42"
+    ],
+    "variant_price_deltas": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "特步 160X 5.0 碳板竞速跑鞋",
+    "brand": "特步",
+    "category": "运动户外",
+    "sub_category": "运动鞋",
+    "price_min": 799.0,
+    "price_max": 1099.0,
+    "image_url": "https://picsum.photos/seed/xtep1/400/400",
+    "keywords": [
+      "碳板跑鞋",
+      "竞速",
+      "马拉松",
+      "国产"
+    ],
+    "variant_suffixes": [
+      "荧光黄 41",
+      "白色 42"
+    ],
+    "variant_price_deltas": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "Keep 智能跑步机 K3",
+    "brand": "Keep",
+    "category": "运动户外",
+    "sub_category": "健身器材",
+    "price_min": 1999.0,
+    "price_max": 2999.0,
+    "image_url": "https://picsum.photos/seed/treadmill1/400/400",
+    "keywords": [
+      "跑步机",
+      "智能",
+      "课程",
+      "家用",
+      "折叠"
+    ],
+    "variant_suffixes": [
+      "K3 标准版",
+      "K3 Pro"
+    ],
+    "variant_price_deltas": [
+      0,
+      800
+    ]
+  },
+  {
+    "name": "麦瑞克 划船机 MR-950",
+    "brand": "麦瑞克",
+    "category": "运动户外",
+    "sub_category": "健身器材",
+    "price_min": 1999.0,
+    "price_max": 3599.0,
+    "image_url": "https://picsum.photos/seed/rower1/400/400",
+    "keywords": [
+      "划船机",
+      "家用",
+      "水阻",
+      "折叠",
+      "全身燃脂"
+    ],
+    "variant_suffixes": [
+      "MR-950 水阻",
+      "MR-960 磁控"
+    ],
+    "variant_price_deltas": [
+      0,
+      500
+    ]
+  },
+  {
+    "name": "迪卡侬 可调节哑铃 20kg",
+    "brand": "迪卡侬",
+    "category": "运动户外",
+    "sub_category": "健身器材",
+    "price_min": 299.0,
+    "price_max": 599.0,
+    "image_url": "https://picsum.photos/seed/dumbbell1/400/400",
+    "keywords": [
+      "哑铃",
+      "可调节",
+      "家用",
+      "力量训练"
+    ],
+    "variant_suffixes": [
+      "10kg",
+      "20kg"
+    ],
+    "variant_price_deltas": [
+      0,
+      150
+    ]
+  },
+  {
+    "name": "YOTTOY 瑜伽垫 加厚 185×80cm",
+    "brand": "YOTTOY",
+    "category": "运动户外",
+    "sub_category": "健身器材",
+    "price_min": 79.0,
+    "price_max": 199.0,
+    "image_url": "https://picsum.photos/seed/yogamat1/400/400",
+    "keywords": [
+      "瑜伽垫",
+      "加厚",
+      "防滑",
+      "TPE",
+      "健身"
+    ],
+    "variant_suffixes": [
+      "6mm 基础款",
+      "10mm 加厚款"
+    ],
+    "variant_price_deltas": [
+      0,
+      50
+    ]
+  },
+  {
+    "name": "北面 1996 经典羽绒服 户外冲锋衣",
+    "brand": "北面",
+    "category": "运动户外",
+    "sub_category": "户外装备",
+    "price_min": 1999.0,
+    "price_max": 2998.0,
+    "image_url": "https://picsum.photos/seed/northface1/400/400",
+    "keywords": [
+      "羽绒服",
+      "户外",
+      "保暖",
+      "经典",
+      "冬季"
+    ],
+    "variant_suffixes": [
+      "黑色 M",
+      "藏青 L",
+      "卡其 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "哥伦比亚 三合一冲锋衣",
+    "brand": "哥伦比亚",
+    "category": "运动户外",
+    "sub_category": "户外装备",
+    "price_min": 1299.0,
+    "price_max": 2299.0,
+    "image_url": "https://picsum.photos/seed/columbia1/400/400",
+    "keywords": [
+      "冲锋衣",
+      "三合一",
+      "防水",
+      "透气",
+      "户外"
+    ],
+    "variant_suffixes": [
+      "深蓝 M",
+      "军绿 L",
+      "黑色 XL"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "迪卡侬 速干T恤 MH500",
+    "brand": "迪卡侬",
+    "category": "运动户外",
+    "sub_category": "户外装备",
+    "price_min": 49.9,
+    "price_max": 99.9,
+    "image_url": "https://picsum.photos/seed/decathlon1/400/400",
+    "keywords": [
+      "速干",
+      "T恤",
+      "户外",
+      "透气",
+      "性价比"
+    ],
+    "variant_suffixes": [
+      "男款 黑色 M",
+      "男款 蓝色 L",
+      "女款 粉色 M"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "佳明 Forerunner 965 运动手表",
+    "brand": "佳明",
+    "category": "运动户外",
+    "sub_category": "户外装备",
+    "price_min": 3999.0,
+    "price_max": 4999.0,
+    "image_url": "https://picsum.photos/seed/garmin965/400/400",
+    "keywords": [
+      "运动手表",
+      "GPS",
+      "跑步",
+      "铁三",
+      "AMOLED"
+    ],
+    "variant_suffixes": [
+      "黑色",
+      "白色"
+    ],
+    "variant_price_deltas": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "大疆 Osmo Action 5 Pro 运动相机",
+    "brand": "DJI",
+    "category": "运动户外",
+    "sub_category": "户外装备",
+    "price_min": 2499.0,
+    "price_max": 3199.0,
+    "image_url": "https://picsum.photos/seed/osmoaction5/400/400",
+    "keywords": [
+      "运动相机",
+      "防抖",
+      "防水",
+      "4K",
+      "Vlog"
+    ],
+    "variant_suffixes": [
+      "标准套装",
+      "全能套装"
+    ],
+    "variant_price_deltas": [
+      0,
+      500
+    ]
+  },
+  {
+    "name": "捷安特 ATX 860 山地自行车",
+    "brand": "捷安特",
+    "category": "运动户外",
+    "sub_category": "骑行",
+    "price_min": 2499.0,
+    "price_max": 3299.0,
+    "image_url": "https://picsum.photos/seed/giant1/400/400",
+    "keywords": [
+      "山地车",
+      "27速",
+      "油压碟刹",
+      "铝合金"
+    ],
+    "variant_suffixes": [
+      "26寸 消光黑",
+      "27.5寸 亮白"
+    ],
+    "variant_price_deltas": [
+      0,
+      300
+    ]
+  },
+  {
+    "name": "凤凰 折叠自行车 20寸",
+    "brand": "凤凰",
+    "category": "运动户外",
+    "sub_category": "骑行",
+    "price_min": 599.0,
+    "price_max": 999.0,
+    "image_url": "https://picsum.photos/seed/phoenix1/400/400",
+    "keywords": [
+      "折叠车",
+      "20寸",
+      "通勤",
+      "轻便",
+      "学生"
+    ],
+    "variant_suffixes": [
+      "黑色",
+      "白色",
+      "蓝色"
+    ],
+    "variant_price_deltas": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "崔克 Marlin 5 山地车",
+    "brand": "Trek",
+    "category": "运动户外",
+    "sub_category": "骑行",
+    "price_min": 2999.0,
+    "price_max": 4299.0,
+    "image_url": "https://picsum.photos/seed/trek1/400/400",
+    "keywords": [
+      "山地车",
+      "美国",
+      "轻量",
+      "入门越野"
+    ],
+    "variant_suffixes": [
+      "哑光黑 S",
+      "亮蓝 M"
+    ],
+    "variant_price_deltas": [
+      0,
+      200
+    ]
+  },
+  {
+    "name": "三体 全集 刘慈欣 科幻小说",
+    "brand": "重庆出版社",
+    "category": "图书文娱",
+    "sub_category": "小说",
+    "price_min": 68.0,
+    "price_max": 128.0,
+    "image_url": "https://picsum.photos/seed/threebody1/400/400",
+    "keywords": [
+      "科幻",
+      "刘慈欣",
+      "雨果奖",
+      "经典",
+      "中国科幻"
+    ],
+    "variant_suffixes": [
+      "平装版",
+      "精装典藏版"
+    ],
+    "variant_price_deltas": [
+      0,
+      50
+    ]
+  },
+  {
+    "name": "活着 余华 长篇小说",
+    "brand": "北京十月文艺出版社",
+    "category": "图书文娱",
+    "sub_category": "小说",
+    "price_min": 28.0,
+    "price_max": 45.0,
+    "image_url": "https://picsum.photos/seed/huozhe1/400/400",
+    "keywords": [
+      "余华",
+      "活着",
+      "经典文学",
+      "人生",
+      "推荐"
+    ],
+    "variant_suffixes": [
+      "平装",
+      "精装"
+    ],
+    "variant_price_deltas": [
+      0,
+      15
+    ]
+  },
+  {
+    "name": "百年孤独 加西亚·马尔克斯",
+    "brand": "南海出版公司",
+    "category": "图书文娱",
+    "sub_category": "小说",
+    "price_min": 39.8,
+    "price_max": 69.8,
+    "image_url": "https://picsum.photos/seed/100years1/400/400",
+    "keywords": [
+      "马尔克斯",
+      "魔幻现实主义",
+      "诺贝尔文学奖",
+      "经典"
+    ],
+    "variant_suffixes": [
+      "平装",
+      "插图纪念版"
+    ],
+    "variant_price_deltas": [
+      0,
+      30
+    ]
+  },
+  {
+    "name": "平凡的世界 路遥 全三册",
+    "brand": "北京十月文艺出版社",
+    "category": "图书文娱",
+    "sub_category": "小说",
+    "price_min": 79.0,
+    "price_max": 128.0,
+    "image_url": "https://picsum.photos/seed/pingfan1/400/400",
+    "keywords": [
+      "路遥",
+      "茅盾文学奖",
+      "经典",
+      "人生",
+      "励志"
+    ],
+    "variant_suffixes": [
+      "平装 全三册",
+      "精装 全三册"
+    ],
+    "variant_price_deltas": [
+      0,
+      40
+    ]
+  },
+  {
+    "name": "围城 钱钟书",
+    "brand": "人民文学出版社",
+    "category": "图书文娱",
+    "sub_category": "小说",
+    "price_min": 29.0,
+    "price_max": 49.0,
+    "image_url": "https://picsum.photos/seed/weicheng1/400/400",
+    "keywords": [
+      "钱钟书",
+      "围城",
+      "经典",
+      "讽刺",
+      "婚姻"
+    ],
+    "variant_suffixes": [
+      "平装",
+      "精装"
+    ],
+    "variant_price_deltas": [
+      0,
+      18
+    ]
+  },
+  {
+    "name": "明朝那些事儿 全集 当年明月",
+    "brand": "浙江人民出版社",
+    "category": "图书文娱",
+    "sub_category": "小说",
+    "price_min": 168.0,
+    "price_max": 298.0,
+    "image_url": "https://picsum.photos/seed/mingchao1/400/400",
+    "keywords": [
+      "历史",
+      "明朝",
+      "当年明月",
+      "通俗",
+      "畅销"
+    ],
+    "variant_suffixes": [
+      "平装 全7册",
+      "精装 全9册"
+    ],
+    "variant_price_deltas": [
+      0,
+      100
+    ]
+  },
+  {
+    "name": "新东方 考研英语词汇 词根+联想",
+    "brand": "新东方",
+    "category": "图书文娱",
+    "sub_category": "教辅",
+    "price_min": 28.0,
+    "price_max": 49.8,
+    "image_url": "https://picsum.photos/seed/kaoyan1/400/400",
+    "keywords": [
+      "考研",
+      "英语",
+      "词汇",
+      "新东方",
+      "备考"
+    ],
+    "variant_suffixes": [
+      "便携版",
+      "乱序版"
+    ],
+    "variant_price_deltas": [
+      0,
+      10
+    ]
+  },
+  {
+    "name": "五年高考三年模拟 数学",
+    "brand": "曲一线",
+    "category": "图书文娱",
+    "sub_category": "教辅",
+    "price_min": 49.8,
+    "price_max": 79.8,
+    "image_url": "https://picsum.photos/seed/wusan1/400/400",
+    "keywords": [
+      "高考",
+      "数学",
+      "五三",
+      "必刷",
+      "教辅"
+    ],
+    "variant_suffixes": [
+      "A版",
+      "B版"
+    ],
+    "variant_price_deltas": [
+      0,
+      15
+    ]
+  },
+  {
+    "name": "新华字典 第12版 双色本",
+    "brand": "商务印书馆",
+    "category": "图书文娱",
+    "sub_category": "教辅",
+    "price_min": 19.9,
+    "price_max": 39.9,
+    "image_url": "https://picsum.photos/seed/xinhua1/400/400",
+    "keywords": [
+      "字典",
+      "工具书",
+      "学生",
+      "必备",
+      "经典"
+    ],
+    "variant_suffixes": [
+      "双色本",
+      "大字本"
+    ],
+    "variant_price_deltas": [
+      0,
+      15
+    ]
+  },
+  {
+    "name": "猜猜我有多爱你 绘本",
+    "brand": "明天出版社",
+    "category": "图书文娱",
+    "sub_category": "少儿图书",
+    "price_min": 29.8,
+    "price_max": 49.8,
+    "image_url": "https://picsum.photos/seed/guesslove1/400/400",
+    "keywords": [
+      "绘本",
+      "亲子",
+      "经典",
+      "3-6岁",
+      "睡前故事"
+    ],
+    "variant_suffixes": [
+      "精装",
+      "平装"
+    ],
+    "variant_price_deltas": [
+      0,
+      -10
+    ]
+  },
+  {
+    "name": "不一样的卡梅拉 第一季 全套12册",
+    "brand": "二十一世纪出版社",
+    "category": "图书文娱",
+    "sub_category": "少儿图书",
+    "price_min": 99.0,
+    "price_max": 168.0,
+    "image_url": "https://picsum.photos/seed/kameila1/400/400",
+    "keywords": [
+      "绘本",
+      "冒险",
+      "畅销",
+      "3-8岁",
+      "桥梁书"
+    ],
+    "variant_suffixes": [
+      "平装 12册",
+      "礼盒装 12册"
+    ],
+    "variant_price_deltas": [
+      0,
+      50
+    ]
+  },
+  {
+    "name": "哈利波特 全集 中文版 全7册",
+    "brand": "人民文学出版社",
+    "category": "图书文娱",
+    "sub_category": "少儿图书",
+    "price_min": 298.0,
+    "price_max": 498.0,
+    "image_url": "https://picsum.photos/seed/harrypotter1/400/400",
+    "keywords": [
+      "哈利波特",
+      "魔法",
+      "J.K.罗琳",
+      "经典",
+      "青少年"
+    ],
+    "variant_suffixes": [
+      "平装 全7册",
+      "英汉对照版 全7册"
+    ],
+    "variant_price_deltas": [
+      0,
+      150
+    ]
+  },
+  {
+    "name": "Kindle Paperwhite 电子书阅读器 第11代",
+    "brand": "Amazon",
+    "category": "图书文娱",
+    "sub_category": "电子设备",
+    "price_min": 999.0,
+    "price_max": 1299.0,
+    "image_url": "https://picsum.photos/seed/kindle1/400/400",
+    "keywords": [
+      "电子书",
+      "阅读器",
+      "墨水屏",
+      "护眼",
+      "长续航"
+    ],
+    "variant_suffixes": [
+      "8GB",
+      "16GB 签名版"
+    ],
+    "variant_price_deltas": [
+      0,
+      200
+    ]
+  },
+  {
+    "name": "晨光 按动中性笔 0.5mm 12支装",
+    "brand": "晨光",
+    "category": "图书文娱",
+    "sub_category": "文具",
+    "price_min": 9.9,
+    "price_max": 24.9,
+    "image_url": "https://picsum.photos/seed/chenguang1/400/400",
+    "keywords": [
+      "中性笔",
+      "按动",
+      "0.5mm",
+      "学生",
+      "办公"
+    ],
+    "variant_suffixes": [
+      "黑色 12支",
+      "蓝黑混色 12支"
+    ],
+    "variant_price_deltas": [
+      0,
+      0
+    ]
+  },
+  {
+    "name": "国誉 Campus笔记本 5本装 A5",
+    "brand": "国誉",
+    "category": "图书文娱",
+    "sub_category": "文具",
+    "price_min": 29.9,
+    "price_max": 49.9,
+    "image_url": "https://picsum.photos/seed/kokuyo1/400/400",
+    "keywords": [
+      "笔记本",
+      "日本",
+      "无线装订",
+      "学生",
+      "顺滑"
+    ],
+    "variant_suffixes": [
+      "A5 5本装",
+      "B5 5本装"
+    ],
+    "variant_price_deltas": [
+      0,
+      10
+    ]
+  },
+  {
+    "name": "乐高 机械组 兰博基尼 42161",
+    "brand": "LEGO",
+    "category": "图书文娱",
+    "sub_category": "玩具",
+    "price_min": 499.0,
+    "price_max": 999.0,
+    "image_url": "https://picsum.photos/seed/lego1/400/400",
+    "keywords": [
+      "乐高",
+      "机械组",
+      "兰博基尼",
+      "拼装",
+      "收藏"
+    ],
+    "variant_suffixes": [
+      "42161 兰博基尼",
+      "42151 布加迪"
+    ],
+    "variant_price_deltas": [
+      0,
+      200
+    ]
+  },
+  {
+    "name": "泡泡玛特 盲盒 毕奇系列",
+    "brand": "泡泡玛特",
+    "category": "图书文娱",
+    "sub_category": "玩具",
+    "price_min": 59.0,
+    "price_max": 79.0,
+    "image_url": "https://picsum.photos/seed/popmart1/400/400",
+    "keywords": [
+      "盲盒",
+      "潮玩",
+      "收藏",
+      "摆件",
+      "礼物"
+    ],
+    "variant_suffixes": [
+      "单盒",
+      "整盒 12个"
+    ],
+    "variant_price_deltas": [
+      0,
+      500
+    ]
+  }
+]
