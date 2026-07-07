@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 商品数据生成器
-从预置商品库中采样/生成商品数据，补充模拟字段后输出 JSON 文件。
+从预置商品库中采样/生成商品数据，补充模拟字段后输出。
+支持两种输出模式：
+  - file:  --output output/products.json       → JSON 文件
+  - kafka: --output kafka://localhost:9092/products → Kafka topic + 本地备份
 """
 
 import json
@@ -9,14 +12,16 @@ import sys
 import os
 import argparse
 import random
+import time
 from datetime import datetime, timedelta
 
-# 添加 scripts 目录到 path 以导入 data_utils
+# 添加 scripts 目录到 path 以导入本地模块
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from data_utils import (
-    load_config, build_arg_parser, set_seed,
+    load_config, set_seed,
     random_float, random_int, random_datetime, generate_product_uuid,
 )
+from kafka_utils import parse_output_uri, KafkaOutputManager
 
 
 def load_product_library(library_path):
@@ -33,7 +38,6 @@ def load_product_library(library_path):
         print(f"[ERROR] Product library is empty or invalid: {library_path}")
         sys.exit(1)
 
-    # 验证必填字段
     required_fields = ['name', 'brand', 'category', 'sub_category', 'price_min', 'price_max']
     for i, item in enumerate(library):
         for field in required_fields:
@@ -58,13 +62,11 @@ def generate_stock():
 def generate_sales_volume(stock):
     """生成模拟销量，与库存大致正相关"""
     if stock == 0:
-        # 缺货商品也有可能有历史销量
         return random_int(0, 5000)
     elif stock < 100:
         base = stock * random_int(50, 200) // 100
         return max(0, base + random_int(-50, 200))
     else:
-        # 正常库存：销量可以是库存的一定倍数
         ratio = random_float(0.3, 5.0, 1)
         return int(stock * ratio) + random_int(0, 1000)
 
@@ -75,8 +77,6 @@ def generate_description(item, is_variant=False, variant_suffix=""):
     name = item.get('name', '')
     category = item.get('sub_category', item.get('category', ''))
     keywords = item.get('keywords', [])
-
-    # 组合关键词
     kw_text = '、'.join(random.sample(keywords, min(3, len(keywords)))) if keywords else ''
 
     name_with_variant = name
@@ -92,7 +92,6 @@ def generate_description(item, is_variant=False, variant_suffix=""):
     ]
 
     desc = random.choice(templates)
-    # 确保至少 10 个字符
     if len(desc) < 10:
         desc = f"{brand} {name_with_variant}，{kw_text}，{category}热销商品。" if kw_text else f"{brand} {name_with_variant}，{category}热销推荐商品，正品保证。"
     return desc
@@ -138,23 +137,19 @@ def generate_products(library, count):
     lib_size = len(library)
 
     if count <= lib_size:
-        # 无放回随机采样
         sampled = random.sample(library, count)
         for item in sampled:
             product = generate_product(item, is_variant=False)
             products.append(product)
             seen_ids.add(product['product_id'])
     else:
-        # 先用完整个库
         for item in library:
             product = generate_product(item, is_variant=False)
             products.append(product)
             seen_ids.add(product['product_id'])
 
-        # 剩余数量用变体填充
         remaining = count - lib_size
-        variant_count = 0
-        max_attempts = remaining * 3  # 防止死循环
+        max_attempts = remaining * 3
         attempts = 0
 
         while len(products) < count and attempts < max_attempts:
@@ -163,7 +158,6 @@ def generate_products(library, count):
             suffixes = item.get('variant_suffixes', [])
             deltas = item.get('variant_price_deltas', [])
             if not suffixes:
-                # 没有预设变体，用简单的规格后缀
                 suffixes = ["标准版", "升级版", "Pro版", "Lite版"]
                 deltas = [0, 50, 100, -30]
 
@@ -175,7 +169,6 @@ def generate_products(library, count):
             if product['product_id'] not in seen_ids:
                 seen_ids.add(product['product_id'])
                 products.append(product)
-                variant_count += 1
 
         if len(products) < count:
             print(f"[WARNING] Only generated {len(products)}/{count} products (ran out of variants)")
@@ -183,14 +176,44 @@ def generate_products(library, count):
     return products
 
 
-def print_summary(products):
+def output_to_file(products, file_path):
+    """输出到 JSON 文件"""
+    os.makedirs(os.path.dirname(file_path) or '.', exist_ok=True)
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(products, f, ensure_ascii=False, indent=2)
+    return file_path
+
+
+def output_to_kafka(products, kafka_cfg, file_backup_path=None):
+    """推送到 Kafka topic，同时可选本地备份"""
+    host = kafka_cfg['host']
+    port = kafka_cfg['port']
+    topic = kafka_cfg['topic']
+
+    manager = KafkaOutputManager(host, port, topic, file_backup_path)
+    if not manager.connect():
+        print("[WARN] Kafka 连接失败，仅写本地备份文件")
+        if file_backup_path:
+            output_to_file(products, file_backup_path)
+        return
+
+    for product in products:
+        key = product['product_id']
+        manager.send(key, product)
+
+    manager.flush()
+    stats = manager.get_stats()
+    print(f"  Kafka 发送: {stats['success_count']} 成功, {stats['error_count']} 失败")
+    manager.close()
+
+
+def print_summary(products, output_mode='file'):
     """打印生成摘要"""
     print(f"\n{'='*60}")
-    print(f"  商品生成摘要")
+    print(f"  商品生成摘要  (模式: {output_mode})")
     print(f"{'='*60}")
     print(f"  总数量: {len(products)}")
 
-    # 分类统计
     from collections import Counter
     cat_counter = Counter(p['category'] for p in products)
     is_variant_count = sum(1 for p in products if p.get('is_variant'))
@@ -201,18 +224,15 @@ def print_summary(products):
         bar = '#' * min(cnt // max(1, len(products) // 20), 20)
         print(f"    {cat:8s}: {cnt:4d} {bar}")
 
-    # 价格统计
     prices = [p['price'] for p in products]
     print(f"  价格区间: RMB{min(prices):.2f} ~ RMB{max(prices):.2f}")
     print(f"  平均价格: RMB{sum(prices)/len(prices):.2f}")
 
-    # 库存统计
     stocks = [p['stock'] for p in products]
     zero_stock = sum(1 for s in stocks if s == 0)
     low_stock = sum(1 for s in stocks if 0 < s < 100)
     print(f"  缺货商品: {zero_stock}, 低库存: {low_stock}")
 
-    # ID 唯一性
     ids = [p['product_id'] for p in products]
     dupes = len(ids) - len(set(ids))
     if dupes > 0:
@@ -225,22 +245,28 @@ def main():
     parser = argparse.ArgumentParser(description='商品数据生成器 - 从预置商品库采样生成')
     parser.add_argument('--count', '-n', type=int, default=None, help='生成商品数量')
     parser.add_argument('--seed', '-s', type=int, default=None, help='随机种子')
-    parser.add_argument('--output', '-o', type=str, default=None, help='输出文件路径')
+    parser.add_argument('--output', '-o', type=str, default=None,
+                        help='输出目标: JSON文件路径 或 kafka://host:port/topic')
     parser.add_argument('--library', '-l', type=str, default=None, help='商品库文件路径')
+    parser.add_argument('--file-backup', type=str, default=None,
+                        help='Kafka模式下本地备份文件路径（默认自动生成）')
     parser.add_argument('--config', '-c', type=str, default='config.yaml', help='配置文件路径')
     args = parser.parse_args()
 
     # 加载配置
     config = load_config(args.config)
     product_cfg = config.get('product', {})
+    kafka_cfg = config.get('kafka', {})
 
     # 命令行参数优先
     count = args.count or product_cfg.get('count', 100)
-    output_path = args.output or product_cfg.get('output_path', 'output/products.json')
+    output_arg = args.output or product_cfg.get('output_path', 'output/products.json')
     library_path = args.library or product_cfg.get('library_path', 'data/product_library.json')
     seed = args.seed if args.seed is not None else config.get('seed')
 
-    # 设置随机种子
+    # 解析输出模式
+    output_mode, output_config = parse_output_uri(output_arg)
+
     if set_seed(seed):
         print(f"[INFO] 随机种子: {seed}")
 
@@ -248,32 +274,33 @@ def main():
     library = load_product_library(library_path)
     print(f"[INFO] 商品库条目数: {len(library)}")
 
-    # 如果 count 为 0 或负数，用库大小
     if count <= 0:
         count = len(library)
-        print(f"[INFO] count=0，使用库全部条目: {count}")
 
-    print(f"[INFO] 目标生成数量: {count}")
+    print(f"[INFO] 目标生成数量: {count}, 输出模式: {output_mode}")
     if count > len(library):
         print(f"[INFO] 请求数量 ({count}) > 库大小 ({len(library)})，将使用变体扩展")
 
     # 生成
-    import time
     start = time.time()
     products = generate_products(library, count)
     elapsed = time.time() - start
 
-    # 确保输出目录存在
-    os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
+    # 输出
+    if output_mode == 'kafka':
+        file_backup = args.file_backup
+        if not file_backup and kafka_cfg.get('file_backup', True):
+            backup_dir = kafka_cfg.get('file_backup_dir', 'output')
+            file_backup = os.path.join(backup_dir, f"products_{output_config['topic']}_backup.json")
+        print(f"[INFO] 推送到 Kafka: {output_config['host']}:{output_config['port']}/{output_config['topic']}")
+        output_to_kafka(products, output_config, file_backup)
+    else:
+        file_path = output_config['path']
+        output_to_file(products, file_path)
+        print(f"\n[INFO] 输出文件: {file_path}")
 
-    # 输出 JSON
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(products, f, ensure_ascii=False, indent=2)
-
-    print(f"\n[INFO] 输出文件: {output_path}")
     print(f"[INFO] 耗时: {elapsed:.2f} 秒")
-
-    print_summary(products)
+    print_summary(products, output_mode)
 
 
 if __name__ == '__main__':

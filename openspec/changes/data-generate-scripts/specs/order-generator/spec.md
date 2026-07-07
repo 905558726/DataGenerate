@@ -9,6 +9,10 @@ The system SHALL read product data from a product JSON file and generate order r
 - **WHEN** the user runs `python order_generator.py --products output/products.json --count 200`
 - **THEN** the system reads the product file, generates 200 orders each containing at least one product line item, and writes to `output/orders.json`
 
+#### Scenario: Generate orders to Kafka
+- **WHEN** the user runs `python order_generator.py --products output/products.json --output kafka://localhost:9092/orders --count 200`
+- **THEN** the system reads the product file, generates 200 orders, sends each as a JSON message to Kafka topic `orders`, and writes a local backup JSON file
+
 #### Scenario: Error on missing product file
 - **WHEN** the user runs `python order_generator.py --products nonexistent.json`
 - **THEN** the system exits with an error message indicating the product file does not exist

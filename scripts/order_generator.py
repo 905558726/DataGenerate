@@ -2,6 +2,9 @@
 """
 订单数据生成器
 基于已有商品数据生成完整订单（买家、收货地址、支付、物流）。
+支持两种输出模式：
+  - file:  --output output/orders.json       → JSON 文件
+  - kafka: --output kafka://localhost:9092/orders → Kafka topic + 本地备份
 """
 
 import json
@@ -9,17 +12,19 @@ import sys
 import os
 import argparse
 import random
+import time
 from datetime import datetime, timedelta
 
-# 添加 scripts 目录到 path 以导入 data_utils
+# 添加 scripts 目录到 path 以导入本地模块
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from data_utils import (
-    load_config, build_arg_parser, set_seed,
+    load_config, set_seed,
     random_float, random_int, random_datetime, generate_order_id,
     generate_name, generate_phone, generate_email, generate_address,
     get_payment_method, get_logistics_company, generate_tracking_number,
     ORDER_REMARKS, weighted_choice,
 )
+from kafka_utils import parse_output_uri, KafkaOutputManager
 
 
 def load_products(products_path):
@@ -266,10 +271,10 @@ def validate_orders(orders, products):
     return errors
 
 
-def print_summary(orders):
+def print_summary(orders, output_mode='file'):
     """打印生成摘要"""
     print(f"\n{'='*60}")
-    print(f"  订单生成摘要")
+    print(f"  订单生成摘要  (模式: {output_mode})")
     print(f"{'='*60}")
     print(f"  总数量: {len(orders)}")
 
@@ -305,13 +310,47 @@ def print_summary(orders):
         print(f"  [OK] 所有 order_id 唯一")
 
 
+def output_to_file(orders, file_path):
+    """输出到 JSON 文件"""
+    os.makedirs(os.path.dirname(file_path) or '.', exist_ok=True)
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(orders, f, ensure_ascii=False, indent=2)
+    return file_path
+
+
+def output_to_kafka(orders, kafka_cfg, file_backup_path=None):
+    """推送到 Kafka topic，同时可选本地备份"""
+    host = kafka_cfg['host']
+    port = kafka_cfg['port']
+    topic = kafka_cfg['topic']
+
+    manager = KafkaOutputManager(host, port, topic, file_backup_path)
+    if not manager.connect():
+        print("[WARN] Kafka 连接失败，仅写本地备份文件")
+        if file_backup_path:
+            output_to_file(orders, file_backup_path)
+        return
+
+    for order in orders:
+        key = order['order_id']
+        manager.send(key, order)
+
+    manager.flush()
+    stats = manager.get_stats()
+    print(f"  Kafka 发送: {stats['success_count']} 成功, {stats['error_count']} 失败")
+    manager.close()
+
+
 def main():
     parser = argparse.ArgumentParser(description='订单数据生成器 - 基于商品数据生成订单')
     parser.add_argument('--count', '-n', type=int, default=None, help='生成订单数量')
     parser.add_argument('--seed', '-s', type=int, default=None, help='随机种子')
-    parser.add_argument('--output', '-o', type=str, default=None, help='输出文件路径')
+    parser.add_argument('--output', '-o', type=str, default=None,
+                        help='输出目标: JSON文件路径 或 kafka://host:port/topic')
     parser.add_argument('--products', '-p', type=str, default=None, help='商品数据文件路径')
     parser.add_argument('--date-range', '-d', type=int, default=None, help='订单时间分布范围（天）')
+    parser.add_argument('--file-backup', type=str, default=None,
+                        help='Kafka模式下本地备份文件路径')
     parser.add_argument('--config', '-c', type=str, default='config.yaml', help='配置文件路径')
     parser.add_argument('--skip-validation', action='store_true', help='跳过数据验证')
     args = parser.parse_args()
@@ -319,13 +358,17 @@ def main():
     # 加载配置
     config = load_config(args.config)
     order_cfg = config.get('order', {})
+    kafka_cfg = config.get('kafka', {})
 
     # 命令行参数优先
     count = args.count or order_cfg.get('count', 50)
-    output_path = args.output or order_cfg.get('output_path', 'output/orders.json')
+    output_arg = args.output or order_cfg.get('output_path', 'output/orders.json')
     products_path = args.products or order_cfg.get('products_path', 'output/products.json')
     date_range_days = args.date_range or order_cfg.get('date_range_days', 90)
     seed = args.seed if args.seed is not None else config.get('seed')
+
+    # 解析输出模式
+    output_mode, output_config = parse_output_uri(output_arg)
 
     # 设置随机种子
     if set_seed(seed):
@@ -334,11 +377,10 @@ def main():
     print(f"[INFO] 加载商品数据: {products_path}")
     products = load_products(products_path)
 
-    print(f"[INFO] 目标生成数量: {count}")
+    print(f"[INFO] 目标生成数量: {count}, 输出模式: {output_mode}")
     print(f"[INFO] 日期范围: 近 {date_range_days} 天")
 
     # 生成
-    import time
     start = time.time()
     orders = generate_orders(products, count, date_range_days)
     elapsed = time.time() - start
@@ -349,22 +391,27 @@ def main():
         errors = validate_orders(orders, products)
         if errors:
             print(f"[WARNING] 发现 {len(errors)} 个问题:")
-            for e in errors[:10]:  # 只显示前 10 个
+            for e in errors[:10]:
                 print(e)
         else:
             print(f"  [OK] 数据验证通过")
 
-    # 确保输出目录存在
-    os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
+    # 输出
+    if output_mode == 'kafka':
+        file_backup = args.file_backup
+        if not file_backup and kafka_cfg.get('file_backup', True):
+            backup_dir = kafka_cfg.get('file_backup_dir', 'output')
+            file_backup = os.path.join(backup_dir, f"orders_{output_config['topic']}_backup.json")
+        print(f"[INFO] 推送到 Kafka: {output_config['host']}:{output_config['port']}/{output_config['topic']}")
+        output_to_kafka(orders, output_config, file_backup)
+    else:
+        file_path = output_config['path']
+        output_to_file(orders, file_path)
+        print(f"\n[INFO] 输出文件: {file_path}")
 
-    # 输出 JSON
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(orders, f, ensure_ascii=False, indent=2)
-
-    print(f"\n[INFO] 输出文件: {output_path}")
     print(f"[INFO] 耗时: {elapsed:.2f} 秒")
 
-    print_summary(orders)
+    print_summary(orders, output_mode)
 
 
 if __name__ == '__main__':

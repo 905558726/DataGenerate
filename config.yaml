@@ -4,16 +4,23 @@
 
 # --- 商品生成配置 ---
 product:
-  count: 100                  # 默认生成商品数量
-  output_path: "output/products.json"  # 输出路径
-  library_path: "data/product_library.json"  # 预置商品库路径
+  count: 100                                    # 默认生成商品数量
+  output_path: "output/products.json"            # 输出路径（file 模式为 JSON 文件路径，kafka 模式为 kafka://host:port/topic）
+  library_path: "data/product_library.json"      # 预置商品库路径
 
 # --- 订单生成配置 ---
 order:
-  count: 50                   # 默认生成订单数量
-  output_path: "output/orders.json"
-  products_path: "output/products.json"  # 依赖的商品数据文件
-  date_range_days: 90         # 订单时间分布范围（天），0 表示全部在今天
+  count: 50                                     # 默认生成订单数量
+  output_path: "output/orders.json"             # 输出路径（file 模式为 JSON 文件路径，kafka 模式为 kafka://host:port/topic）
+  products_path: "output/products.json"          # 依赖的商品数据文件
+  date_range_days: 90                            # 订单时间分布范围（天），0 = 全部今天
+
+# --- Kafka 配置（仅在 output_path 使用 kafka:// 协议时生效） ---
+kafka:
+  batch_size: 1                                  # 批量发送大小，1 = 逐条，增大可提升吞吐
+  connection_timeout: 10                          # 连接超时（秒）
+  file_backup: true                               # 推送到 Kafka 的同时是否写本地 JSON 备份文件
+  file_backup_dir: "output"                       # 本地备份文件目录
 
 # --- 随机种子（null 表示不固定） ---
 seed: null

@@ -1,8 +1,18 @@
 # DataGenerate - 中文电商模拟数据生成工具
 
-基于预置商品库的 Python 数据生成工具，一键生成符合中文电商场景的商品和订单模拟数据（JSON 格式）。
+基于预置商品库的 Python 数据生成工具，一键生成符合中文电商场景的商品和订单模拟数据。支持 **JSON 文件**和 **Kafka 生产者推送**两种输出模式。
 
 ## 快速开始
+
+### 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+> 提示：`pyyaml` 和 `kafka-python` 为可选依赖。无 pyyaml 时自动回退 JSON 配置；仅在 Kafka 模式下需要 kafka-python。
+
+### File 模式（输出 JSON 文件）
 
 ```bash
 # 1. 生成商品数据（100 条）
@@ -14,22 +24,34 @@ python scripts/order_generator.py --count 50
 
 生成的 JSON 文件位于 `output/` 目录下。
 
+### Kafka 模式（推送到 Kafka Topic）
+
+```bash
+# 商品数据推送到 Kafka（同时写本地备份文件）
+python scripts/product_generator.py --output kafka://localhost:9092/products --count 100
+
+# 订单数据推送到 Kafka
+python scripts/order_generator.py --output kafka://localhost:9092/orders --count 50
+```
+
+Kafka URI 格式：`kafka://host:port/topic`，程序会自动识别协议切换到 Kafka 输出模式。Kafka 模式下每条数据作为独立 JSON 消息发送，同时自动生成本地 JSON 备份文件。
+
 ## 项目结构
 
 ```
 DataGenerate/
-├── config.yaml                    # 默认配置文件（商品/订单数量、输出路径、随机种子）
+├── config.yaml                    # 默认配置文件（输出模式、数据量、Kafka 参数等）
+├── requirements.txt               # Python 依赖
+├── README.md
 ├── data/
 │   └── product_library.json       # 预置商品库（8大品类，187+条参考真实行情商品）
 ├── scripts/
 │   ├── __init__.py
-│   ├── data_utils.py              # 公共工具模块（中文姓名/手机/邮箱/地址生成器、随机函数）
-│   ├── product_generator.py       # 商品生成器（采样+变体扩展+模拟字段）
-│   └── order_generator.py         # 订单生成器（完整订单+买家+地址+支付+物流）
-├── output/
-│   ├── .gitkeep
-│   ├── products.json              # 商品数据输出
-│   └── orders.json                # 订单数据输出
+│   ├── data_utils.py              # 公共工具（中文姓名/手机/邮箱/地址生成器、随机函数）
+│   ├── kafka_utils.py             # Kafka 工具（生产者连接、消息发送、连接管理）
+│   ├── product_generator.py       # 商品生成器（file/kafka 双模式）
+│   └── order_generator.py         # 订单生成器（file/kafka 双模式）
+├── output/                        # 数据输出目录
 └── openspec/                      # OpenSpec 方案文档
     └── changes/data-generate-scripts/
         ├── proposal.md            # 需求提案
@@ -40,7 +62,9 @@ DataGenerate/
 
 ## 功能特性
 
-- **纯离线运行**：无网络依赖，无强制第三方库（pyyaml 可选，无安装时回退 JSON 配置）
+- **双输出模式**：`--output` 参数自动识别 `file` 模式（JSON 文件路径）和 `kafka` 模式（`kafka://host:port/topic` URI）
+- **Kafka 本地备份**：Kafka 模式下自动写本地 JSON 备份文件，防数据丢失
+- **纯离线可用**：File 模式零网络依赖，零强制第三方库
 - **真实感商品库**：8 大品类（电子产品、服装、食品饮料、家居生活、美妆个护、母婴、运动户外、图书文娱），品牌/品名/价格参考真实市场行情
 - **智能变体扩展**：请求数量超过库大小时自动生成不同规格/颜色/容量变体
 - **完整订单生成**：买家信息、收货地址（省市区三级联动）、支付信息、物流信息、订单状态，所有字段状态逻辑一致
@@ -49,11 +73,14 @@ DataGenerate/
 
 ## 依赖
 
-- Python 3.8+
-- 可选：`pyyaml`（用于 YAML 配置，无安装时自动回退 JSON）
+| 依赖 | 是否必需 | 说明 |
+|------|---------|------|
+| Python 3.8+ | 必需 | 核心语言版本 |
+| pyyaml >= 6.0 | 可选 | YAML 配置增强，无安装时自动回退 JSON |
+| kafka-python >= 2.0 | 可选 | 仅在 `--output kafka://...` 模式时需要 |
 
 ```bash
-pip install pyyaml  # 可选
+pip install -r requirements.txt
 ```
 
 ## 配置
@@ -62,17 +89,23 @@ pip install pyyaml  # 可选
 
 ```yaml
 product:
-  count: 100                  # 默认生成商品数量
-  output_path: "output/products.json"
-  library_path: "data/product_library.json"
+  count: 100                                    # 默认生成商品数量
+  output_path: "output/products.json"            # 输出路径（file 或 kafka://host:port/topic）
+  library_path: "data/product_library.json"      # 预置商品库路径
 
 order:
-  count: 50                   # 默认生成订单数量
-  output_path: "output/orders.json"
-  products_path: "output/products.json"
-  date_range_days: 90         # 订单时间分布范围
+  count: 50                                     # 默认生成订单数量
+  output_path: "output/orders.json"             # 输出路径（file 或 kafka://host:port/topic）
+  products_path: "output/products.json"          # 依赖的商品数据文件
+  date_range_days: 90                            # 订单时间分布范围（天）
 
-seed: null                    # 随机种子（null = 不固定）
+kafka:
+  batch_size: 1                                  # 批量发送大小，1=逐条
+  connection_timeout: 10                          # 连接超时（秒）
+  file_backup: true                               # Kafka 模式是否写本地 JSON 备份
+  file_backup_dir: "output"                       # 本地备份文件目录
+
+seed: null                                        # 随机种子（null = 不固定）
 ```
 
 ## 命令行参数
@@ -81,42 +114,62 @@ seed: null                    # 随机种子（null = 不固定）
 
 | 参数 | 说明 | 默认值 |
 |------|------|--------|
-| `--count, -n` | 生成商品数量 | config.yaml 中的值 |
-| `--seed, -s` | 随机种子（固定后结果可复现） | config.yaml 中的值 |
-| `--output, -o` | 输出文件路径 | config.yaml 中的值 |
-| `--library, -l` | 商品库文件路径 | config.yaml 中的值 |
+| `--count, -n` | 生成商品数量 | config.yaml |
+| `--seed, -s` | 随机种子 | config.yaml |
+| `--output, -o` | 输出目标：文件路径 或 `kafka://host:port/topic` | config.yaml |
+| `--library, -l` | 商品库文件路径 | config.yaml |
+| `--file-backup` | Kafka 模式下本地备份文件路径 | 自动生成 |
 | `--config, -c` | 配置文件路径 | config.yaml |
 
 示例：
 
 ```bash
-# 生成 500 个商品
-python scripts/product_generator.py --count 500
+# File 模式：生成 500 个商品到指定文件
+python scripts/product_generator.py --count 500 --output output/my_products.json
 
-# 固定种子 + 自定义输出路径
-python scripts/product_generator.py --count 200 --seed 42 --output data/my_products.json
+# Kafka 模式：推送到指定 topic，同时写本地备份
+python scripts/product_generator.py --output kafka://192.168.1.100:9092/products --count 1000
+
+# 使用自定义端口
+python scripts/product_generator.py --output kafka://localhost:9093/products --count 100
 ```
 
 ### 订单生成器 (order_generator.py)
 
 | 参数 | 说明 | 默认值 |
 |------|------|--------|
-| `--count, -n` | 生成订单数量 | config.yaml 中的值 |
-| `--seed, -s` | 随机种子 | config.yaml 中的值 |
-| `--output, -o` | 输出文件路径 | config.yaml 中的值 |
-| `--products, -p` | 商品数据文件路径 | config.yaml 中的值 |
-| `--date-range, -d` | 订单时间分布范围（天） | 90 |
+| `--count, -n` | 生成订单数量 | config.yaml |
+| `--seed, -s` | 随机种子 | config.yaml |
+| `--output, -o` | 输出目标：文件路径 或 `kafka://host:port/topic` | config.yaml |
+| `--products, -p` | 商品数据文件路径 | config.yaml |
+| `--date-range, -d` | 订单时间分布范围（天） | config.yaml |
+| `--file-backup` | Kafka 模式下本地备份文件路径 | 自动生成 |
 | `--skip-validation` | 跳过数据验证 | false |
+| `--config, -c` | 配置文件路径 | config.yaml |
 
 示例：
 
 ```bash
-# 生成 200 个订单，时间范围为近 30 天
+# File 模式
 python scripts/order_generator.py --count 200 --date-range 30
 
-# 从指定商品文件生成订单
-python scripts/order_generator.py --products output/my_products.json --count 1000
+# Kafka 模式
+python scripts/order_generator.py --output kafka://localhost:9092/orders --count 500
+
+# Kafka 模式 + 自定义备份路径
+python scripts/order_generator.py --output kafka://localhost:9092/orders --file-backup data/backup_orders.json --count 1000
 ```
+
+## 输出模式对比
+
+| 特性 | File 模式 | Kafka 模式 |
+|------|---------|-----------|
+| `--output` 格式 | `path/to/file.json` | `kafka://host:port/topic` |
+| 数据格式 | JSON 数组（一次性写入） | 逐条 JSON 消息 |
+| 网络依赖 | 无 | 需连接 Kafka Broker |
+| 额外依赖 | 无 | `kafka-python` |
+| 本地备份 | 就是本地文件 | 默认自动备份 |
+| 适用场景 | 离线开发/测试 | 实时数据流/集成测试 |
 
 ## 数据格式
 

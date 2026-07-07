@@ -75,6 +75,25 @@ The system SHALL support a random seed parameter for reproducible generation.
 - **WHEN** the user runs `python product_generator.py --count 10 --seed 42` twice
 - **THEN** both runs produce identical product records
 
+### Requirement: Dual output mode (file / kafka)
+The system SHALL support two output modes selected automatically by the `--output` parameter format.
+
+#### Scenario: File output mode (default)
+- **WHEN** the user runs `python product_generator.py --output output/products.json`
+- **THEN** the system generates product records and writes them as a JSON array file to the specified path
+
+#### Scenario: Kafka output mode
+- **WHEN** the user runs `python product_generator.py --output kafka://localhost:9092/products --count 100`
+- **THEN** the system connects to Kafka broker at `localhost:9092`, sends each product record as a JSON message to topic `products` (key = product_id), and also writes a local backup file to the default file output path
+
+#### Scenario: Kafka mode with custom file backup
+- **WHEN** the user runs `python product_generator.py --output kafka://localhost:9092/products --file-backup output/backup_products.json --count 100`
+- **THEN** the system pushes to Kafka topic `products` AND writes a JSON array backup file to `output/backup_products.json`
+
+#### Scenario: Kafka not available
+- **WHEN** the user specifies a kafka:// URI but the kafka-python library is not installed or the broker is unreachable
+- **THEN** the system SHALL print a clear error message indicating the issue and exit with code 1
+
 ### Requirement: Deduplication
 The system SHALL ensure all generated product records have unique product_ids.
 

@@ -5,18 +5,19 @@
 ## What Changes
 
 - 新增商品库数据文件（`data/product_library.json`）：预置的仿真实商品库，涵盖多个品类、数百个商品条目（品牌名、商品名、价格参考真实市场），作为永久可复用的数据基座
-- 新增商品数据生成脚本（`product_generator.py`）：从预置商品库中按指定数量采样/生成商品数据，补充库存、销量、描述等模拟字段，输出 JSON
-- 新增订单数据生成脚本（`order_generator.py`）：依赖商品数据，生成包含买家、收货地址、支付、物流等完整信息的订单数据，输出 JSON
+- 新增商品数据生成脚本（`product_generator.py`）：从预置商品库中按指定数量采样/生成商品数据，补充库存、销量、描述等模拟字段，支持 JSON 文件输出和 Kafka 生产者推送两种模式
+- 新增订单数据生成脚本（`order_generator.py`）：依赖商品数据，生成包含买家、收货地址、支付、物流等完整信息的订单数据，支持 JSON 文件输出和 Kafka 生产者推送两种模式
 - 新增公共工具模块（`data_utils.py`）：提供随机化工具函数、中文数据字典（姓名、地址、手机号格式等）、配置加载与命令行解析
-- 新增配置文件（`config.yaml`）：支持自定义数据量、输出路径、随机种子等参数
+- 新增 Kafka 推送模块（`kafka_utils.py`）：封装 Kafka 生产者连接、消息序列化、批量发送与连接管理
+- 新增配置文件（`config.yaml`）：支持自定义数据量、输出路径、随机种子、输出模式（file/kafka）、Kafka 连接参数等
 - 新增示例数据输出目录
 
 ## Capabilities
 
 ### New Capabilities
 
-- `product-generator`: 商品数据生成器，从预置商品库中采样并按需补充模拟字段（库存、销量、描述等），按指定数量输出为 JSON
-- `order-generator`: 订单数据生成器，基于已有商品数据生成订单，包括订单ID、关联商品明细、买家信息、收货地址、订单状态、支付信息、物流信息等字段，输出 JSON
+- `product-generator`: 商品数据生成器，从预置商品库中采样并按需补充模拟字段（库存、销量、描述等），按指定数量输出，支持 file（JSON 文件）和 kafka（Kafka 推送到指定 topic）两种输出模式
+- `order-generator`: 订单数据生成器，基于已有商品数据生成订单，包括订单ID、关联商品明细、买家信息、收货地址、订单状态、支付信息、物流信息等字段，支持 file（JSON 文件）和 kafka（Kafka 推送到指定 topic）两种输出模式
 
 ### Modified Capabilities
 
@@ -24,7 +25,7 @@
 
 ## Impact
 
-- 新增文件：`data/product_library.json`（预置商品库，静态数据）、`scripts/product_generator.py`、`scripts/order_generator.py`、`scripts/data_utils.py`、`config.yaml`
-- 新增输出：`output/products.json`（生成的商品数据）、`output/orders.json`（生成的订单数据）
-- 依赖：Python 3.8+，标准库（random, json, uuid, datetime），可选 `pyyaml` 用于 YAML 配置读取（无 pyyaml 时回退到 JSON 配置）
-- 网络：无需网络，完全离线可用
+- 新增文件：`data/product_library.json`（预置商品库）、`scripts/data_utils.py`、`scripts/kafka_utils.py`、`scripts/product_generator.py`、`scripts/order_generator.py`、`config.yaml`
+- 新增输出：`output/products.json`（JSON 模式输出）、`output/orders.json`（JSON 模式输出）
+- 依赖：Python 3.8+，标准库（random, json, uuid, datetime），可选 `pyyaml`（YAML 配置增强），可选 `kafka-python`（Kafka 输出模式）
+- 网络：JSON 文件模式完全离线可用；Kafka 模式需连接 Kafka Broker
