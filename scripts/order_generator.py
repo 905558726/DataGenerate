@@ -85,6 +85,7 @@ def select_order_items(products):
             "original_price": product['price'],
             "price": item_price,
             "quantity": quantity,
+            "sales_volume": quantity,
             "subtotal": subtotal,
         })
 
@@ -307,6 +308,13 @@ def validate_orders(orders, products):
                     f"  Order {order['order_id']}: item {pid} missing original_price field"
                 )
 
+            # 检查 sales_volume 与 quantity 一致
+            if item.get('sales_volume') != item.get('quantity'):
+                errors.append(
+                    f"  Order {order['order_id']}: item {pid} "
+                    f"sales_volume={item.get('sales_volume')} != quantity={item.get('quantity')}"
+                )
+
             # 检查订单价格在商品库价格的 ±10% 范围内（模拟促销/调价）
             if 'original_price' in item and item['original_price'] > 0:
                 price_ratio = item['price'] / item['original_price']
@@ -329,14 +337,6 @@ def validate_orders(orders, products):
                         )
                 except ValueError:
                     pass  # 跳过格式异常的时间
-
-            # 检查订单数量不超过商品库存（宽松检查：如果商品有库存记录）
-            if product.get('stock') is not None and product['stock'] > 0:
-                if item['quantity'] > product['stock'] * 3:  # 库存可能快速补货，允许3倍
-                    errors.append(
-                        f"  Order {order['order_id']}: item {pid} quantity {item['quantity']} "
-                        f"exceeds reasonable limit (stock={product['stock']})"
-                    )
 
         # 检查 order_amount 与 items subtotal 一致
         expected_amount = round(sum(item['subtotal'] for item in order['items']), 2)

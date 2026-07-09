@@ -21,7 +21,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from data_utils import (
     load_config, set_seed,
     random_float, random_int, random_datetime, generate_product_uuid,
-    weighted_choice,
 )
 from kafka_utils import parse_output_uri, KafkaOutputManager
 
@@ -48,41 +47,6 @@ def load_product_library(library_path):
                 sys.exit(1)
 
     return library
-
-
-def generate_stock():
-    """生成模拟库存：80% 100-9999, 15% 1-99, 5% 0"""
-    r = random.random()
-    if r < 0.05:
-        return 0
-    elif r < 0.20:
-        return random_int(1, 99)
-    else:
-        return random_int(100, 9999)
-
-
-def generate_sales_volume(stock):
-    """生成模拟销量，与库存大致正相关，逻辑更合理"""
-    if stock == 0:
-        # 缺货商品：要么卖完了（历史销量中高），要么滞销品（销量低）
-        return weighted_choice([
-            (random_int(0, 100), 40),       # 40% 滞销品，销量低
-            (random_int(100, 1000), 35),    # 35% 正常波动
-            (random_int(1000, 5000), 25),   # 25% 热销品刚卖完
-        ])
-    elif stock < 100:
-        # 低库存：销量与库存基本持平或略高，模拟即将售罄
-        base = max(0, int(stock * random_float(0.8, 2.0, 2)))
-        return base + random_int(0, 500)
-    else:
-        # 正常库存：销量通常为库存的一定比例
-        # 30% chance: 销量很高（高周转率），ratio 1.0-3.0
-        # 70% chance: 正常周转，ratio 0.3-1.5
-        if random.random() < 0.3:
-            ratio = random_float(1.0, 3.0, 2)
-        else:
-            ratio = random_float(0.3, 1.5, 2)
-        return int(stock * ratio) + random_int(0, 1000)
 
 
 def generate_description(item, is_variant=False, variant_suffix=""):
@@ -119,9 +83,6 @@ def generate_product(item, is_variant=False, variant_suffix="", variant_price_de
         if price < item['price_min'] * 0.9:
             price = random_float(item['price_min'], item['price_max'])
 
-    stock = generate_stock()
-    sales_volume = generate_sales_volume(stock)
-
     name = item['name']
     if is_variant and variant_suffix:
         name = f"{item['name']} {variant_suffix}"
@@ -138,11 +99,9 @@ def generate_product(item, is_variant=False, variant_suffix="", variant_price_de
         "category": item.get('category', ''),
         "sub_category": item.get('sub_category', ''),
         "price": price,
-        "stock": stock,
         "description": generate_description(item, is_variant, variant_suffix),
         "image_url": item.get('image_url', f"https://picsum.photos/seed/{random.randint(1, 9999)}/400/400"),
         "keywords": item.get('keywords', []),
-        "sales_volume": sales_volume,
         "created_at": random_datetime(days_back=365).strftime("%Y-%m-%dT%H:%M:%S"),
         "is_variant": is_variant,
     }
@@ -250,11 +209,6 @@ def print_summary(products, output_mode='file'):
     prices = [p['price'] for p in products]
     print(f"  价格区间: RMB{min(prices):.2f} ~ RMB{max(prices):.2f}")
     print(f"  平均价格: RMB{sum(prices)/len(prices):.2f}")
-
-    stocks = [p['stock'] for p in products]
-    zero_stock = sum(1 for s in stocks if s == 0)
-    low_stock = sum(1 for s in stocks if 0 < s < 100)
-    print(f"  缺货商品: {zero_stock}, 低库存: {low_stock}")
 
     ids = [p['product_id'] for p in products]
     dupes = len(ids) - len(set(ids))

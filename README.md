@@ -190,17 +190,15 @@ python scripts/order_generator.py --output kafka://localhost:9092/orders --file-
 
 ```json
 {
-  "product_id": "a1b2c3d4-...",
+  "product_id": "8d682670-2334-4883-bc3b-4105620c1d78",
   "name": "iPhone 15 Pro Max 256GB",
   "brand": "Apple",
   "category": "电子产品",
   "sub_category": "手机",
   "price": 9999.00,
-  "stock": 1500,
   "description": "Apple iPhone 15 Pro Max 256GB，手机类热销商品...",
   "image_url": "https://picsum.photos/seed/iphone15pm/400/400",
   "keywords": ["5G手机", "旗舰", "大屏", "拍照"],
-  "sales_volume": 28500,
   "created_at": "2026-05-12T10:30:00",
   "is_variant": false
 }
@@ -212,12 +210,15 @@ python scripts/order_generator.py --output kafka://localhost:9092/orders --file-
 {
   "order_id": "ORD20260707143052001",
   "items": [{
-    "product_id": "a1b2c3d4-...",
+    "product_id": "8d682670-2334-4883-bc3b-4105620c1d78",
     "product_name": "iPhone 15 Pro Max 256GB",
     "brand": "Apple",
     "category": "电子产品",
+    "sub_category": "手机",
+    "original_price": 9999.00,
     "price": 9899.00,
     "quantity": 1,
+    "sales_volume": 1,
     "subtotal": 9899.00
   }],
   "item_count": 1,
