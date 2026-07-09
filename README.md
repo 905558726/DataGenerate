@@ -85,12 +85,12 @@ DataGenerate/
 
 ## 依赖
 
-| 依赖 | 是否必需 | 说明 |
-|------|---------|------|
-| Python 3.8+ | 必需 | 核心语言版本 |
-| pyyaml >= 6.0 | 可选 | YAML 配置增强，无安装时自动回退 JSON |
-| confluent-kafka >= 2.0 | 推荐 | Kafka 输出（基于 librdkafka，与企业 Kafka 3.x 完全兼容） |
-| kafka-python >= 2.0 | 备选 | Kafka 输出（纯 Python，协议层兼容 Kafka 3.8.0） |
+| 依赖                     | 是否必需 | 说明                                         |
+| ---------------------- | ---- | ------------------------------------------ |
+| Python 3.8+            | 必需   | 核心语言版本                                     |
+| pyyaml >= 6.0          | 可选   | YAML 配置增强，无安装时自动回退 JSON                    |
+| confluent-kafka >= 2.0 | 推荐   | Kafka 输出（基于 librdkafka，与企业 Kafka 3.x 完全兼容） |
+| kafka-python >= 2.0    | 备选   | Kafka 输出（纯 Python，协议层兼容 Kafka 3.8.0）       |
 
 ```bash
 pip install -r requirements.txt
@@ -125,14 +125,14 @@ seed: null                                        # 随机种子（null = 不固
 
 ### 商品生成器 (product_generator.py)
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| `--count, -n` | 生成商品数量 | config.yaml |
-| `--seed, -s` | 随机种子 | config.yaml |
-| `--output, -o` | 输出目标：文件路径 或 `kafka://host:port/topic` | config.yaml |
-| `--library, -l` | 商品库文件路径 | config.yaml |
-| `--file-backup` | Kafka 模式下本地备份文件路径 | 自动生成 |
-| `--config, -c` | 配置文件路径 | config.yaml |
+| 参数              | 说明                                    | 默认值         |
+| --------------- | ------------------------------------- | ----------- |
+| `--count, -n`   | 生成商品数量                                | config.yaml |
+| `--seed, -s`    | 随机种子                                  | config.yaml |
+| `--output, -o`  | 输出目标：文件路径 或 `kafka://host:port/topic` | config.yaml |
+| `--library, -l` | 商品库文件路径                               | config.yaml |
+| `--file-backup` | Kafka 模式下本地备份文件路径                     | 自动生成        |
+| `--config, -c`  | 配置文件路径                                | config.yaml |
 
 示例：
 
@@ -149,16 +149,16 @@ python scripts/product_generator.py --output kafka://localhost:9093/products --c
 
 ### 订单生成器 (order_generator.py)
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| `--count, -n` | 生成订单数量 | config.yaml |
-| `--seed, -s` | 随机种子 | config.yaml |
-| `--output, -o` | 输出目标：文件路径 或 `kafka://host:port/topic` | config.yaml |
-| `--products, -p` | 商品数据文件路径 | config.yaml |
-| `--date-range, -d` | 订单时间分布范围（天） | config.yaml |
-| `--file-backup` | Kafka 模式下本地备份文件路径 | 自动生成 |
-| `--skip-validation` | 跳过数据验证 | false |
-| `--config, -c` | 配置文件路径 | config.yaml |
+| 参数                  | 说明                                    | 默认值         |
+| ------------------- | ------------------------------------- | ----------- |
+| `--count, -n`       | 生成订单数量                                | config.yaml |
+| `--seed, -s`        | 随机种子                                  | config.yaml |
+| `--output, -o`      | 输出目标：文件路径 或 `kafka://host:port/topic` | config.yaml |
+| `--products, -p`    | 商品数据文件路径                              | config.yaml |
+| `--date-range, -d`  | 订单时间分布范围（天）                           | config.yaml |
+| `--file-backup`     | Kafka 模式下本地备份文件路径                     | 自动生成        |
+| `--skip-validation` | 跳过数据验证                                | false       |
+| `--config, -c`      | 配置文件路径                                | config.yaml |
 
 示例：
 
@@ -175,14 +175,14 @@ python scripts/order_generator.py --output kafka://localhost:9092/orders --file-
 
 ## 输出模式对比
 
-| 特性 | File 模式 | Kafka 模式 |
-|------|---------|-----------|
+| 特性            | File 模式             | Kafka 模式                  |
+| ------------- | ------------------- | ------------------------- |
 | `--output` 格式 | `path/to/file.json` | `kafka://host:port/topic` |
-| 数据格式 | JSON 数组（一次性写入） | 逐条 JSON 消息 |
-| 网络依赖 | 无 | 需连接 Kafka Broker |
-| 额外依赖 | 无 | `kafka-python` |
-| 本地备份 | 就是本地文件 | 默认自动备份 |
-| 适用场景 | 离线开发/测试 | 实时数据流/集成测试 |
+| 数据格式          | JSON 数组（一次性写入）      | 逐条 JSON 消息                |
+| 网络依赖          | 无                   | 需连接 Kafka Broker          |
+| 额外依赖          | 无                   | `kafka-python`            |
+| 本地备份          | 就是本地文件              | 默认自动备份                    |
+| 适用场景          | 离线开发/测试             | 实时数据流/集成测试                |
 
 ## 数据格式
 
@@ -220,7 +220,7 @@ python scripts/order_generator.py --output kafka://localhost:9092/orders --file-
     "quantity": 1,
     "subtotal": 9899.00
   }],
-  "item_count": 2,
+  "item_count": 1,
   "buyer": {
     "name": "王伟",
     "phone": "13800138000",
@@ -257,23 +257,23 @@ python scripts/order_generator.py --output kafka://localhost:9092/orders --file-
 
 ## 预置商品库品类
 
-| 品类 | 子类 | 商品数 |
-|------|------|--------|
-| 电子产品 | 手机、笔记本电脑、平板、耳机、智能手表 | 52 |
-| 服装 | 男装、女装、童装、内衣 | 30 |
-| 食品饮料 | 休闲零食、饮料冲调、生鲜水果、粮油调味、酒类 | 20 |
-| 家居生活 | 家纺、厨具、家具、收纳用品、灯具 | 18 |
-| 美妆个护 | 护肤、彩妆、洗护、口腔护理、男士护理 | 21 |
-| 母婴 | 奶粉辅食、纸尿裤、童车童床、孕产用品 | 11 |
-| 运动户外 | 运动鞋、健身器材、户外装备、骑行 | 18 |
-| 图书文娱 | 小说、教辅、少儿图书、文具、玩具 | 17 |
+| 品类   | 子类                     | 商品数 |
+| ---- | ---------------------- | --- |
+| 电子产品 | 手机、笔记本电脑、平板、耳机、智能手表    | 52  |
+| 服装   | 男装、女装、童装、内衣            | 30  |
+| 食品饮料 | 休闲零食、饮料冲调、生鲜水果、粮油调味、酒类 | 20  |
+| 家居生活 | 家纺、厨具、家具、收纳用品、灯具       | 18  |
+| 美妆个护 | 护肤、彩妆、洗护、口腔护理、男士护理     | 21  |
+| 母婴   | 奶粉辅食、纸尿裤、童车童床、孕产用品     | 11  |
+| 运动户外 | 运动鞋、健身器材、户外装备、骑行       | 18  |
+| 图书文娱 | 小说、教辅、少儿图书、文具、玩具       | 17  |
 
 ## 订单状态逻辑
 
-| 状态 | 支付 | 物流 | 实际金额 |
-|------|------|------|----------|
-| 待付款 | 已选支付方式，未付 | 无物流 | = 订单金额 |
-| 已付款 | 已支付 | 无物流 | = 订单金额 - 折扣 |
-| 已发货 | 已支付 | 已发货（含物流单号） | = 订单金额 - 折扣 |
-| 已完成 | 已支付 | 已签收 | = 订单金额 - 折扣 |
-| 已取消 | 未付 | 无物流 | 0 |
+| 状态  | 支付        | 物流         | 实际金额        |
+| --- | --------- | ---------- | ----------- |
+| 待付款 | 已选支付方式，未付 | 无物流        | = 订单金额      |
+| 已付款 | 已支付       | 无物流        | = 订单金额 - 折扣 |
+| 已发货 | 已支付       | 已发货（含物流单号） | = 订单金额 - 折扣 |
+| 已完成 | 已支付       | 已签收        | = 订单金额 - 折扣 |
+| 已取消 | 未付        | 无物流        | 0           |
