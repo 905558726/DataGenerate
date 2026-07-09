@@ -503,7 +503,6 @@ def main():
         print(f"[INFO] 推送到 Kafka: {output_config['host']}:{output_config['port']}/{output_config['topic']}")
         output_to_kafka(orders, output_config, file_backup, file_output_path=default_file)
         print(f"\n[INFO] 已同步写出订单文件: {default_file}")
-        output_to_kafka(orders, output_config, file_backup)
     else:
         file_path = output_config['path']
         output_to_file(orders, file_path)
