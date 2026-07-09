@@ -81,6 +81,8 @@ def select_order_items(products):
             "product_name": product['name'],
             "brand": product.get('brand', ''),
             "category": product.get('category', ''),
+            "sub_category": product.get('sub_category', ''),
+            "original_price": product['price'],
             "price": item_price,
             "quantity": quantity,
             "subtotal": subtotal,
@@ -178,7 +180,40 @@ def generate_order(products, date_range_days=90):
         actual_amount = 0
         discount = order_amount
 
-    created_at_dt = random_datetime(days_back=date_range_days)
+    # 确定订单创建时间：必须晚于所有选中商品的创建时间
+    now = datetime.now()
+    earliest_start = now - timedelta(days=date_range_days)
+
+    # 找到选中商品中最晚的创建时间作为订单时间下限
+    latest_product_created = None
+    product_map = {p['product_id']: p for p in products}
+    for item in items:
+        pid = item['product_id']
+        prod = product_map.get(pid)
+        if prod and prod.get('created_at'):
+            try:
+                prod_dt = datetime.strptime(prod['created_at'], "%Y-%m-%dT%H:%M:%S")
+                if latest_product_created is None or prod_dt > latest_product_created:
+                    latest_product_created = prod_dt
+            except ValueError:
+                pass
+
+    # 订单时间下限：不早于商品创建时间 + 1秒（保证严格晚于）
+    if latest_product_created and latest_product_created > earliest_start:
+        order_start = latest_product_created + timedelta(seconds=1)
+    else:
+        order_start = earliest_start
+
+    # 如果订单时间下限已经晚于 now，则使用 now 前 1 小时
+    if order_start >= now:
+        order_start = now - timedelta(hours=1)
+
+    # 在有效时间范围内随机
+    delta_seconds = int((now - order_start).total_seconds())
+    if delta_seconds <= 0:
+        delta_seconds = 3600  # 至少 1 小时的范围
+    random_seconds = random.randint(0, delta_seconds)
+    created_at_dt = order_start + timedelta(seconds=random_seconds)
     created_at = created_at_dt.strftime("%Y-%m-%dT%H:%M:%S")
 
     buyer = generate_buyer()
@@ -236,14 +271,72 @@ def generate_orders(products, count, date_range_days=90):
 
 def validate_orders(orders, products):
     """验证订单数据"""
-    product_ids = {p['product_id'] for p in products}
+    product_map = {p['product_id']: p for p in products}
+    product_ids = set(product_map.keys())
     errors = []
 
     for order in orders:
         # 检查 items 中的 product_id 都在商品库中
         for item in order['items']:
-            if item['product_id'] not in product_ids:
-                errors.append(f"  Order {order['order_id']}: item {item['product_id']} not found in products")
+            pid = item['product_id']
+            if pid not in product_ids:
+                errors.append(f"  Order {order['order_id']}: item {pid} not found in products")
+                continue
+
+            product = product_map[pid]
+
+            # 检查 item 的 brand/category/sub_category 与商品一致
+            for field in ['brand', 'category', 'sub_category']:
+                item_val = item.get(field, '')
+                prod_val = product.get(field, '')
+                if item_val != prod_val:
+                    errors.append(
+                        f"  Order {order['order_id']}: item {pid} {field} mismatch "
+                        f"'{item_val}' (order) vs '{prod_val}' (product)"
+                    )
+
+            # 检查 original_price 与商品库价格一致
+            if 'original_price' in item:
+                if abs(item['original_price'] - product['price']) > 0.01:
+                    errors.append(
+                        f"  Order {order['order_id']}: item {pid} original_price "
+                        f"{item['original_price']} != product price {product['price']}"
+                    )
+            else:
+                errors.append(
+                    f"  Order {order['order_id']}: item {pid} missing original_price field"
+                )
+
+            # 检查订单价格在商品库价格的 ±10% 范围内（模拟促销/调价）
+            if 'original_price' in item and item['original_price'] > 0:
+                price_ratio = item['price'] / item['original_price']
+                if price_ratio < 0.85 or price_ratio > 1.15:
+                    errors.append(
+                        f"  Order {order['order_id']}: item {pid} price {item['price']} "
+                        f"deviates too much from original {item['original_price']} "
+                        f"(ratio: {price_ratio:.2%})"
+                    )
+
+            # 检查订单创建时间是否晚于商品创建时间
+            if product.get('created_at') and order.get('created_at'):
+                try:
+                    prod_created = datetime.strptime(product['created_at'], "%Y-%m-%dT%H:%M:%S")
+                    order_created = datetime.strptime(order['created_at'], "%Y-%m-%dT%H:%M:%S")
+                    if order_created < prod_created:
+                        errors.append(
+                            f"  Order {order['order_id']}: created_at {order['created_at']} "
+                            f"is before product {pid} created_at {product['created_at']}"
+                        )
+                except ValueError:
+                    pass  # 跳过格式异常的时间
+
+            # 检查订单数量不超过商品库存（宽松检查：如果商品有库存记录）
+            if product.get('stock') is not None and product['stock'] > 0:
+                if item['quantity'] > product['stock'] * 3:  # 库存可能快速补货，允许3倍
+                    errors.append(
+                        f"  Order {order['order_id']}: item {pid} quantity {item['quantity']} "
+                        f"exceeds reasonable limit (stock={product['stock']})"
+                    )
 
         # 检查 order_amount 与 items subtotal 一致
         expected_amount = round(sum(item['subtotal'] for item in order['items']), 2)

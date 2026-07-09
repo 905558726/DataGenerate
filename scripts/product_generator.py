@@ -21,6 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from data_utils import (
     load_config, set_seed,
     random_float, random_int, random_datetime, generate_product_uuid,
+    weighted_choice,
 )
 from kafka_utils import parse_output_uri, KafkaOutputManager
 
@@ -61,14 +62,26 @@ def generate_stock():
 
 
 def generate_sales_volume(stock):
-    """生成模拟销量，与库存大致正相关"""
+    """生成模拟销量，与库存大致正相关，逻辑更合理"""
     if stock == 0:
-        return random_int(0, 5000)
+        # 缺货商品：要么卖完了（历史销量中高），要么滞销品（销量低）
+        return weighted_choice([
+            (random_int(0, 100), 40),       # 40% 滞销品，销量低
+            (random_int(100, 1000), 35),    # 35% 正常波动
+            (random_int(1000, 5000), 25),   # 25% 热销品刚卖完
+        ])
     elif stock < 100:
-        base = stock * random_int(50, 200) // 100
-        return max(0, base + random_int(-50, 200))
+        # 低库存：销量与库存基本持平或略高，模拟即将售罄
+        base = max(0, int(stock * random_float(0.8, 2.0, 2)))
+        return base + random_int(0, 500)
     else:
-        ratio = random_float(0.3, 5.0, 1)
+        # 正常库存：销量通常为库存的一定比例
+        # 30% chance: 销量很高（高周转率），ratio 1.0-3.0
+        # 70% chance: 正常周转，ratio 0.3-1.5
+        if random.random() < 0.3:
+            ratio = random_float(1.0, 3.0, 2)
+        else:
+            ratio = random_float(0.3, 1.5, 2)
         return int(stock * ratio) + random_int(0, 1000)
 
 
