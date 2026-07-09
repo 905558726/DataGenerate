@@ -126,8 +126,13 @@ def generate_product(item, is_variant=False, variant_suffix="", variant_price_de
     if is_variant and variant_suffix:
         name = f"{item['name']} {variant_suffix}"
 
+    # 使用商品库中预置的 product_id，变体才生成新 ID
+    pid = item.get('product_id')
+    if not pid or is_variant:
+        pid = generate_product_uuid()
+
     product = {
-        "product_id": generate_product_uuid(),
+        "product_id": pid,
         "name": name,
         "brand": item.get('brand', ''),
         "category": item.get('category', ''),

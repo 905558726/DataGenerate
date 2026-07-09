@@ -25,7 +25,8 @@
       1000,
       2000,
       3000
-    ]
+    ],
+    "product_id": "2cd414ca-0b30-4a5c-a322-b280806c6622"
   },
   {
     "name": "iPhone 15",
@@ -50,7 +51,8 @@
       0,
       1000,
       2000
-    ]
+    ],
+    "product_id": "24c72984-12b8-4634-8526-413e32252886"
   },
   {
     "name": "iPhone 14",
@@ -75,7 +77,8 @@
       0,
       800,
       1600
-    ]
+    ],
+    "product_id": "fec4eeb4-14a7-4fd9-9719-56936a8219b3"
   },
   {
     "name": "华为 Mate 60 Pro",
@@ -101,7 +104,8 @@
       0,
       1000,
       2000
-    ]
+    ],
+    "product_id": "775a6dbc-14f4-4ca1-9bfd-ece942e9d975"
   },
   {
     "name": "华为 Mate 60",
@@ -126,7 +130,8 @@
       0,
       800,
       1500
-    ]
+    ],
+    "product_id": "4e7de9cc-c265-499f-bb83-283462b4380d"
   },
   {
     "name": "华为 Pura 70 Ultra",
@@ -151,7 +156,8 @@
       0,
       1000,
       2000
-    ]
+    ],
+    "product_id": "64fc82f4-4e44-459d-a5da-6be3c504f4df"
   },
   {
     "name": "小米 14 Ultra",
@@ -176,7 +182,8 @@
       0,
       800,
       1500
-    ]
+    ],
+    "product_id": "20ed0ce0-6c23-4c75-a5aa-356992e238b2"
   },
   {
     "name": "小米 14",
@@ -201,7 +208,8 @@
       0,
       500,
       1000
-    ]
+    ],
+    "product_id": "73961be9-e5ed-483b-9f3f-5ae90f436092"
   },
   {
     "name": "Redmi K70 Pro",
@@ -226,7 +234,8 @@
       0,
       400,
       800
-    ]
+    ],
+    "product_id": "289c475a-9f5d-42d7-b034-c0577f95cb0a"
   },
   {
     "name": "Redmi Note 13 Pro",
@@ -251,7 +260,8 @@
       0,
       300,
       600
-    ]
+    ],
+    "product_id": "f331e798-2163-455b-b464-5114a135e8b6"
   },
   {
     "name": "OPPO Find X7 Ultra",
@@ -276,7 +286,8 @@
       0,
       800,
       1500
-    ]
+    ],
+    "product_id": "7143c168-2707-4cc0-a71e-94160ebac4e1"
   },
   {
     "name": "OPPO Reno 12 Pro",
@@ -299,7 +310,8 @@
     "variant_price_deltas": [
       0,
       500
-    ]
+    ],
+    "product_id": "f6101b90-bb66-4f69-9e11-a57b04911b27"
   },
   {
     "name": "vivo X100 Pro",
@@ -324,7 +336,8 @@
       0,
       800,
       1500
-    ]
+    ],
+    "product_id": "83bc8c5d-e4eb-4a05-82a3-8d2b612dd769"
   },
   {
     "name": "vivo S19 Pro",
@@ -347,7 +360,8 @@
     "variant_price_deltas": [
       0,
       400
-    ]
+    ],
+    "product_id": "e448357c-5533-49c7-98de-62670bd7f507"
   },
   {
     "name": "荣耀 Magic6 Pro",
@@ -372,7 +386,8 @@
       0,
       800,
       1500
-    ]
+    ],
+    "product_id": "d00633c0-16fe-4118-b362-161a406ed251"
   },
   {
     "name": "三星 Galaxy S24 Ultra",
@@ -398,7 +413,8 @@
       0,
       1500,
       3000
-    ]
+    ],
+    "product_id": "aba128db-8dd7-44ef-b182-648f7fa6cf96"
   },
   {
     "name": "三星 Galaxy Z Flip 6",
@@ -421,7 +437,8 @@
     "variant_price_deltas": [
       0,
       800
-    ]
+    ],
+    "product_id": "8d682670-2334-4883-bc3b-4105620c1d78"
   },
   {
     "name": "一加 12",
@@ -446,7 +463,8 @@
       0,
       600,
       1200
-    ]
+    ],
+    "product_id": "b9484e9d-793b-4626-b5dd-760dcf482e74"
   },
   {
     "name": "realme GT5 Pro",
@@ -471,7 +489,8 @@
       0,
       500,
       1000
-    ]
+    ],
+    "product_id": "7050dd93-0739-4931-9b83-39725188d393"
   },
   {
     "name": "iQOO Neo9 Pro",
@@ -496,7 +515,8 @@
       0,
       400,
       800
-    ]
+    ],
+    "product_id": "c347e550-bd23-4034-a721-cba7d1ffe6b1"
   },
   {
     "name": "MacBook Pro 16英寸 M3 Pro",
@@ -520,7 +540,8 @@
     "variant_price_deltas": [
       0,
       5000
-    ]
+    ],
+    "product_id": "6171a81c-aaf5-4c91-b71e-0457052ee81c"
   },
   {
     "name": "MacBook Pro 14英寸 M3",
@@ -543,7 +564,8 @@
     "variant_price_deltas": [
       0,
       3000
-    ]
+    ],
+    "product_id": "dc511618-32e9-4f60-b9e3-e2b6df1d2a0b"
   },
   {
     "name": "MacBook Air M3 15英寸",
@@ -569,7 +591,8 @@
       0,
       1500,
       3000
-    ]
+    ],
+    "product_id": "78755803-8ff7-4c1f-95a0-09449bcacc12"
   },
   {
     "name": "MacBook Air M3 13英寸",
@@ -592,7 +615,8 @@
     "variant_price_deltas": [
       0,
       1500
-    ]
+    ],
+    "product_id": "ee12f31f-4339-4f79-8f13-ecb21e275ac3"
   },
   {
     "name": "华为 MateBook X Pro 2024",
@@ -615,7 +639,8 @@
     "variant_price_deltas": [
       0,
       4000
-    ]
+    ],
+    "product_id": "b3236d56-6083-4a0d-86ca-84a58d333b9a"
   },
   {
     "name": "华为 MateBook 14 2024",
@@ -638,7 +663,8 @@
     "variant_price_deltas": [
       0,
       1500
-    ]
+    ],
+    "product_id": "600b5a22-e9b6-461b-ab43-4d7729c60561"
   },
   {
     "name": "小米笔记本 Pro 16 2024",
@@ -661,7 +687,8 @@
     "variant_price_deltas": [
       0,
       2000
-    ]
+    ],
+    "product_id": "5096212a-de79-4af9-9344-fe318f03bd77"
   },
   {
     "name": "RedmiBook Pro 15 2024",
@@ -684,7 +711,8 @@
     "variant_price_deltas": [
       0,
       1000
-    ]
+    ],
+    "product_id": "e32748b7-f5c9-442f-8106-1bcd46139a5b"
   },
   {
     "name": "联想 ThinkPad X1 Carbon Gen 12",
@@ -710,7 +738,8 @@
       0,
       3000,
       7000
-    ]
+    ],
+    "product_id": "b7e0ae4a-d6d2-44a9-8cde-872844cf5e60"
   },
   {
     "name": "联想 小新 Pro 16 2024",
@@ -733,7 +762,8 @@
     "variant_price_deltas": [
       0,
       1500
-    ]
+    ],
+    "product_id": "8c4c0d1c-9863-46af-a0ce-ad5e415de11a"
   },
   {
     "name": "联想 拯救者 Y9000P 2024",
@@ -757,7 +787,8 @@
     "variant_price_deltas": [
       0,
       4000
-    ]
+    ],
+    "product_id": "f10ac0dc-f99a-4703-924d-5ba50e6ba3c8"
   },
   {
     "name": "华硕 ROG 枪神8 Plus",
@@ -783,7 +814,8 @@
       0,
       5000,
       8000
-    ]
+    ],
+    "product_id": "51ff82cc-c728-4468-a664-08a8ad143cd0"
   },
   {
     "name": "华硕 灵耀14 2024",
@@ -806,7 +838,8 @@
     "variant_price_deltas": [
       0,
       1500
-    ]
+    ],
+    "product_id": "b915ea5a-2047-4a16-b0d2-8cdb04b1a814"
   },
   {
     "name": "华为 MatePad Pro 13.2",
@@ -832,7 +865,8 @@
       0,
       1000,
       2000
-    ]
+    ],
+    "product_id": "626597be-671e-43b6-9d29-4af00a11141c"
   },
   {
     "name": "华为 MatePad Air",
@@ -856,7 +890,8 @@
     "variant_price_deltas": [
       0,
       500
-    ]
+    ],
+    "product_id": "f968612c-6761-4f0d-bdc2-e54fb197556f"
   },
   {
     "name": "iPad Pro M4 12.9英寸",
@@ -884,7 +919,8 @@
       2000,
       5000,
       7000
-    ]
+    ],
+    "product_id": "af7e6f00-9624-4290-93b0-f47fb46bf1b6"
   },
   {
     "name": "iPad Air M2 11英寸",
@@ -909,7 +945,8 @@
       0,
       1000,
       1800
-    ]
+    ],
+    "product_id": "a957f058-4934-443f-9cf1-7393fe1d7088"
   },
   {
     "name": "iPad 10代",
@@ -934,7 +971,8 @@
       0,
       800,
       1300
-    ]
+    ],
+    "product_id": "babfe998-3cbb-4f75-baf7-7ff2e2e3d167"
   },
   {
     "name": "小米平板6S Pro",
@@ -957,7 +995,8 @@
     "variant_price_deltas": [
       0,
       600
-    ]
+    ],
+    "product_id": "79de66f6-8ab4-4480-b7be-131e2e2a41a1"
   },
   {
     "name": "vivo Pad3 Pro",
@@ -980,7 +1019,8 @@
     "variant_price_deltas": [
       0,
       500
-    ]
+    ],
+    "product_id": "3925d1c2-0173-457a-8216-d40fe8c0f8d0"
   },
   {
     "name": "AirPods Pro 2代",
@@ -998,7 +1038,8 @@
       "iOS生态"
     ],
     "variant_suffixes": [],
-    "variant_price_deltas": []
+    "variant_price_deltas": [],
+    "product_id": "651a5660-a08d-4c1b-947b-928832fb419e"
   },
   {
     "name": "AirPods 3代",
@@ -1015,7 +1056,8 @@
       "iOS生态"
     ],
     "variant_suffixes": [],
-    "variant_price_deltas": []
+    "variant_price_deltas": [],
+    "product_id": "4255af48-6a85-485f-8bd1-fd10bc89acb8"
   },
   {
     "name": "华为 FreeBuds Pro 3",
@@ -1032,7 +1074,8 @@
       "Hi-Res"
     ],
     "variant_suffixes": [],
-    "variant_price_deltas": []
+    "variant_price_deltas": [],
+    "product_id": "00bc6ac1-b79d-4b54-8e9a-04eb7c97481f"
   },
   {
     "name": "小米 Buds 4 Pro",
@@ -1049,7 +1092,8 @@
       "LDAC"
     ],
     "variant_suffixes": [],
-    "variant_price_deltas": []
+    "variant_price_deltas": [],
+    "product_id": "33d0f6fc-69e1-4072-8ce2-1819cf03fc07"
   },
   {
     "name": "索尼 WH-1000XM5",
@@ -1067,7 +1111,8 @@
       "长续航"
     ],
     "variant_suffixes": [],
-    "variant_price_deltas": []
+    "variant_price_deltas": [],
+    "product_id": "f8375a49-5755-45d2-b177-87735d985d6b"
   },
   {
     "name": "索尼 WF-1000XM5",
@@ -1084,7 +1129,8 @@
       "LDAC"
     ],
     "variant_suffixes": [],
-    "variant_price_deltas": []
+    "variant_price_deltas": [],
+    "product_id": "085840a4-da30-4d23-8321-c10951d458ca"
   },
   {
     "name": "Bose QuietComfort Ultra",
@@ -1101,7 +1147,8 @@
       "舒适佩戴"
     ],
     "variant_suffixes": [],
-    "variant_price_deltas": []
+    "variant_price_deltas": [],
+    "product_id": "958bbceb-89cf-4e82-a4be-efdb078b43ce"
   },
   {
     "name": "Apple Watch Series 9",
@@ -1127,7 +1174,8 @@
       0,
       500,
       1500
-    ]
+    ],
+    "product_id": "0dc7120e-3fa1-40ec-aa2a-cf93985479a9"
   },
   {
     "name": "Apple Watch Ultra 2",
@@ -1145,7 +1193,8 @@
       "钛合金"
     ],
     "variant_suffixes": [],
-    "variant_price_deltas": []
+    "variant_price_deltas": [],
+    "product_id": "93ecda11-f37b-440b-8315-61cb2f19baaf"
   },
   {
     "name": "华为 Watch GT 4",
@@ -1168,7 +1217,8 @@
     "variant_price_deltas": [
       0,
       -300
-    ]
+    ],
+    "product_id": "b499d57d-ab36-4140-b6eb-10b616dc6dd6"
   },
   {
     "name": "小米 Watch S3",
@@ -1191,7 +1241,8 @@
     "variant_price_deltas": [
       0,
       0
-    ]
+    ],
+    "product_id": "80e41607-30d5-45df-a4e7-db715ce4a6d5"
   },
   {
     "name": "华为 Watch Ultimate",
@@ -1209,7 +1260,8 @@
       "户外"
     ],
     "variant_suffixes": [],
-    "variant_price_deltas": []
+    "variant_price_deltas": [],
+    "product_id": "47c00993-b665-4e15-a99a-4252c4feada0"
   },
   {
     "name": "男士纯棉圆领短袖T恤",
@@ -1238,7 +1290,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "3e4d5185-4b2e-40ef-9293-2a9a8d282d19"
   },
   {
     "name": "男士商务休闲长裤",
@@ -1265,7 +1318,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "079cbc35-db37-481f-ab0c-045097206d7b"
   },
   {
     "name": "男士轻薄羽绒服",
@@ -1291,7 +1345,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "c47034fc-0809-4b63-a6ca-a544ace8b33c"
   },
   {
     "name": "男士修身牛仔裤",
@@ -1321,7 +1376,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "b6be2457-3ab3-4f8b-9400-c841c90279eb"
   },
   {
     "name": "男士商务休闲西装外套",
@@ -1348,7 +1404,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "3c1849cc-8c0f-4c7c-8203-4a1ab0e53810"
   },
   {
     "name": "男士运动连帽卫衣",
@@ -1374,7 +1431,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "cd39558e-6ce6-4b7b-ab25-657021b68470"
   },
   {
     "name": "男士休闲运动鞋",
@@ -1401,7 +1459,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "c8ba510f-a6e4-40af-9081-584e4d3f5592"
   },
   {
     "name": "男士短袖Polo衫",
@@ -1428,7 +1487,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "bbd4ad16-4d2b-440e-aea4-37600198900f"
   },
   {
     "name": "男士休闲九分裤",
@@ -1454,7 +1514,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "ddfcb29f-ac5a-46eb-9d3d-c8804c812799"
   },
   {
     "name": "男士冲锋衣三合一",
@@ -1480,7 +1541,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "0c40308e-f1aa-43a7-92fd-e5525f0456f0"
   },
   {
     "name": "女士碎花连衣裙",
@@ -1508,7 +1570,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "0ed00790-7122-47dd-a0c6-ef5e7ab78412"
   },
   {
     "name": "女士高腰阔腿裤",
@@ -1536,7 +1599,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "c0cf9c73-c55b-4e3c-8c79-b2b24c7492b8"
   },
   {
     "name": "女士羊毛双面呢大衣",
@@ -1564,7 +1628,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "0928d7c8-8606-4b94-864d-a5886cb4e40a"
   },
   {
     "name": "女士修身针织衫",
@@ -1592,7 +1657,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "55e20776-0fa2-4a3b-b2cb-e7ea03214f56"
   },
   {
     "name": "女士休闲小白鞋",
@@ -1620,7 +1686,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "39188ad6-31e4-4084-b0bc-35b4050c3f23"
   },
   {
     "name": "女士长款羽绒服",
@@ -1648,7 +1715,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "6dcb9eaa-5383-40ea-bbf7-d373d39524f1"
   },
   {
     "name": "女士通勤西装套装",
@@ -1674,7 +1742,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "936951b1-ccff-4b13-bd46-47d3e6b59f41"
   },
   {
     "name": "女士雪纺衬衫",
@@ -1702,7 +1771,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "19293e8d-d027-48da-a032-524d5adc00f8"
   },
   {
     "name": "女士弹力小脚牛仔裤",
@@ -1730,7 +1800,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "2f3f1e31-204f-4706-9f36-5fe04e6c7d95"
   },
   {
     "name": "儿童纯棉长袖T恤",
@@ -1758,7 +1829,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "728faf31-f37e-412a-9e20-72282446046f"
   },
   {
     "name": "儿童运动套装",
@@ -1784,7 +1856,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "fefdd0e6-e9d7-4433-878a-d7e15ba26db7"
   },
   {
     "name": "儿童轻薄羽绒服",
@@ -1812,7 +1885,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "f9e1b0a6-74ff-4be6-bebe-71570555a8a4"
   },
   {
     "name": "儿童防滑运动鞋",
@@ -1839,7 +1913,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "59e0a916-d169-4a79-a826-b12cdeddd4ff"
   },
   {
     "name": "儿童休闲卫衣",
@@ -1865,7 +1940,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "f4f48d62-f90a-4db1-93a7-4ca44b7ca9d6"
   },
   {
     "name": "女童公主裙",
@@ -1891,7 +1967,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "7cadf159-1ee5-45e5-aab2-40266aa42282"
   },
   {
     "name": "女士内衣无钢圈文胸",
@@ -1916,7 +1993,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "75c202c9-e0ba-4c50-87cd-42efd493e039"
   },
   {
     "name": "女士无痕内裤 3条装",
@@ -1941,7 +2019,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "c7c7e6ae-2089-457f-b8f3-bd0900a4b739"
   },
   {
     "name": "男士平角内裤 4条装",
@@ -1966,7 +2045,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "116905c0-67e2-4f7a-bc23-d8cd7455b81c"
   },
   {
     "name": "女士家居服套装",
@@ -1992,7 +2072,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "5138746e-f1e3-4f2d-81e1-4a1f0710de34"
   },
   {
     "name": "女士运动内衣",
@@ -2018,7 +2099,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "5a69298c-b136-401c-992f-3e32a8cd8f71"
   },
   {
     "name": "良品铺子 每日坚果 750g",
@@ -2042,7 +2124,8 @@
     "variant_price_deltas": [
       0,
       60
-    ]
+    ],
+    "product_id": "86b26a9d-2dcf-4605-8758-16742a0bbb97"
   },
   {
     "name": "三只松鼠 巨型零食大礼包",
@@ -2065,7 +2148,8 @@
     "variant_price_deltas": [
       0,
       80
-    ]
+    ],
+    "product_id": "202e80cd-d1c2-4d5c-a241-6e170e75a2fe"
   },
   {
     "name": "乐事 薯片大礼包 12包装",
@@ -2088,7 +2172,8 @@
     "variant_price_deltas": [
       0,
       20
-    ]
+    ],
+    "product_id": "7b118b15-589a-4461-9246-2fb59eaab552"
   },
   {
     "name": "奥利奥 夹心饼干 原味 388g",
@@ -2111,7 +2196,8 @@
     "variant_price_deltas": [
       0,
       8
-    ]
+    ],
+    "product_id": "f3ab411c-9de6-49d4-8157-f2ae4e36e678"
   },
   {
     "name": "百草味 猪肉脯 250g",
@@ -2134,7 +2220,8 @@
     "variant_price_deltas": [
       0,
       20
-    ]
+    ],
+    "product_id": "7ed1f056-9eb3-4e35-b89f-073b99c344d9"
   },
   {
     "name": "伊利 安慕希 原味酸奶 205g×12盒",
@@ -2157,7 +2244,8 @@
     "variant_price_deltas": [
       0,
       30
-    ]
+    ],
+    "product_id": "c349a7e2-9de0-4086-b7d4-7ab0bcfa0975"
   },
   {
     "name": "蒙牛 特仑苏 纯牛奶 250ml×12盒",
@@ -2180,7 +2268,8 @@
     "variant_price_deltas": [
       0,
       25
-    ]
+    ],
+    "product_id": "048f8245-553a-4871-a5cd-363623546679"
   },
   {
     "name": "农夫山泉 饮用天然水 550ml×24瓶",
@@ -2203,7 +2292,8 @@
     "variant_price_deltas": [
       0,
       5
-    ]
+    ],
+    "product_id": "4c8aba7a-135c-4480-b460-67de901b52e0"
   },
   {
     "name": "星巴克 中度烘焙咖啡豆 200g",
@@ -2226,7 +2316,8 @@
     "variant_price_deltas": [
       0,
       40
-    ]
+    ],
+    "product_id": "1f3905fc-49b4-45ca-8afd-b0d989658c17"
   },
   {
     "name": "三得利 乌龙茶 500ml×15瓶",
@@ -2249,7 +2340,8 @@
     "variant_price_deltas": [
       0,
       15
-    ]
+    ],
+    "product_id": "3d5ab368-d165-4c34-af7e-75408896afd9"
   },
   {
     "name": "佳沛 新西兰阳光金奇异果 12个装",
@@ -2273,7 +2365,8 @@
     "variant_price_deltas": [
       0,
       30
-    ]
+    ],
+    "product_id": "71d9b855-33ae-47bd-a434-b1750b28c1ce"
   },
   {
     "name": "智利进口车厘子 JJ级 1kg",
@@ -2297,7 +2390,8 @@
     "variant_price_deltas": [
       0,
       80
-    ]
+    ],
+    "product_id": "496e5346-4107-4d6d-bcd7-08c0376820d0"
   },
   {
     "name": "金龙鱼 稻米油 5L",
@@ -2320,7 +2414,8 @@
     "variant_price_deltas": [
       0,
       40
-    ]
+    ],
+    "product_id": "70af3f5d-583f-4c0f-b4b0-16395d20af99"
   },
   {
     "name": "海天 金标生抽 1.9L",
@@ -2343,7 +2438,8 @@
     "variant_price_deltas": [
       0,
       12
-    ]
+    ],
+    "product_id": "5652e7bd-346c-4444-8936-ffd6c94fcf59"
   },
   {
     "name": "十月稻田 五常大米 5kg",
@@ -2368,7 +2464,8 @@
       0,
       25,
       45
-    ]
+    ],
+    "product_id": "c013f167-c8fa-4f0f-b0cb-69b7f264bf19"
   },
   {
     "name": "海底捞 火锅底料 麻辣味 200g",
@@ -2391,7 +2488,8 @@
     "variant_price_deltas": [
       0,
       8
-    ]
+    ],
+    "product_id": "3cd93c05-3891-4f41-8a23-3758b97826f3"
   },
   {
     "name": "青岛啤酒 经典 500ml×12罐",
@@ -2414,7 +2512,8 @@
     "variant_price_deltas": [
       0,
       30
-    ]
+    ],
+    "product_id": "2abbb750-bb16-41fa-b7ec-3bfb9ae142ec"
   },
   {
     "name": "茅台 飞天 53度 500ml",
@@ -2438,7 +2537,8 @@
     "variant_price_deltas": [
       0,
       500
-    ]
+    ],
+    "product_id": "a0686fd6-024e-42cf-96ef-79cf75a7a3a5"
   },
   {
     "name": "拉菲 传奇 波尔多干红葡萄酒 750ml",
@@ -2462,7 +2562,8 @@
     "variant_price_deltas": [
       0,
       100
-    ]
+    ],
+    "product_id": "5dc7e5ee-a722-4f8c-8141-0ce343b0fd74"
   },
   {
     "name": "RIO 锐澳 微醺鸡尾酒 330ml×8罐",
@@ -2486,7 +2587,8 @@
     "variant_price_deltas": [
       0,
       25
-    ]
+    ],
+    "product_id": "2fcf0c46-3548-477c-bfb9-17939de53a1f"
   },
   {
     "name": "水星家纺 纯棉四件套 1.8m床",
@@ -2512,7 +2614,8 @@
       0,
       50,
       100
-    ]
+    ],
+    "product_id": "84a2e798-9270-41d8-bfff-83466f82951b"
   },
   {
     "name": "罗莱 蚕丝被 200×230cm",
@@ -2536,7 +2639,8 @@
     "variant_price_deltas": [
       0,
       400
-    ]
+    ],
+    "product_id": "5630e766-b0f6-4dc4-82af-be440a8326fb"
   },
   {
     "name": "梦洁 乳胶枕 一对装",
@@ -2559,7 +2663,8 @@
     "variant_price_deltas": [
       0,
       100
-    ]
+    ],
+    "product_id": "790016d7-b2ee-4976-958b-a435363d3d8b"
   },
   {
     "name": "南极人 法兰绒毛毯 150×200cm",
@@ -2583,7 +2688,8 @@
     "variant_price_deltas": [
       0,
       40
-    ]
+    ],
+    "product_id": "1128425d-8480-442f-8eeb-5a2ee26afdcc"
   },
   {
     "name": "苏泊尔 不粘炒锅 32cm",
@@ -2609,7 +2715,8 @@
       0,
       50,
       100
-    ]
+    ],
+    "product_id": "0e38e658-6939-4ebb-8d7d-9a87725625c5"
   },
   {
     "name": "九阳 破壁机 多功能",
@@ -2633,7 +2740,8 @@
     "variant_price_deltas": [
       0,
       300
-    ]
+    ],
+    "product_id": "2c70b7d9-1de7-4244-834f-018935a303b3"
   },
   {
     "name": "双立人 刀具套装 7件套",
@@ -2657,7 +2765,8 @@
     "variant_price_deltas": [
       0,
       500
-    ]
+    ],
+    "product_id": "f01fd939-6471-491d-ace4-4daf8c370254"
   },
   {
     "name": "膳魔师 不锈钢保温杯 500ml",
@@ -2682,7 +2791,8 @@
       0,
       0,
       50
-    ]
+    ],
+    "product_id": "d32686d3-3c70-424a-b150-c94fbfe3b7cb"
   },
   {
     "name": "小米 米家IH电饭煲 4L",
@@ -2705,7 +2815,8 @@
     "variant_price_deltas": [
       0,
       100
-    ]
+    ],
+    "product_id": "4cdf0478-ee57-4eea-bf26-037bf38a9dfb"
   },
   {
     "name": "林氏家居 实木餐桌 1.4m",
@@ -2731,7 +2842,8 @@
       0,
       200,
       600
-    ]
+    ],
+    "product_id": "9225ab64-b969-4f01-9adb-a3a0ab8dd045"
   },
   {
     "name": "源氏木语 实木双人床 1.8m",
@@ -2757,7 +2869,8 @@
       0,
       300,
       300
-    ]
+    ],
+    "product_id": "bfb2d599-e17f-4716-b257-251d79d9007b"
   },
   {
     "name": "全友 布艺沙发 三人位",
@@ -2781,7 +2894,8 @@
     "variant_price_deltas": [
       0,
       1500
-    ]
+    ],
+    "product_id": "2171ac8b-66cc-4feb-8804-f8d4ee09095f"
   },
   {
     "name": "网易严选 人体工学椅",
@@ -2805,7 +2919,8 @@
     "variant_price_deltas": [
       0,
       400
-    ]
+    ],
+    "product_id": "7dd33fee-e84d-4310-8969-5964d963c42d"
   },
   {
     "name": "太力 真空压缩袋 11件套",
@@ -2829,7 +2944,8 @@
     "variant_price_deltas": [
       0,
       40
-    ]
+    ],
+    "product_id": "70bba536-6cb3-4067-90fc-c4e3d3c72e00"
   },
   {
     "name": "爱丽思 抽屉式收纳柜 5层",
@@ -2853,7 +2969,8 @@
     "variant_price_deltas": [
       0,
       120
-    ]
+    ],
+    "product_id": "210935e0-eac6-4a84-a6b7-ff33b0b960d4"
   },
   {
     "name": "飞利浦 LED吸顶灯 36W",
@@ -2879,7 +2996,8 @@
       0,
       150,
       300
-    ]
+    ],
+    "product_id": "7b28667a-a035-45ad-bf90-ec7ddda4e409"
   },
   {
     "name": "小米 米家台灯 Pro",
@@ -2903,7 +3021,8 @@
     "variant_price_deltas": [
       0,
       0
-    ]
+    ],
+    "product_id": "546f13de-9641-44e8-a10c-f90288949ffa"
   },
   {
     "name": "洁丽雅 纯棉毛巾 3条装",
@@ -2927,7 +3046,8 @@
     "variant_price_deltas": [
       0,
       25
-    ]
+    ],
+    "product_id": "6040b446-c499-42e9-a3c2-663372cde8d9"
   },
   {
     "name": "雅诗兰黛 小棕瓶精华 50ml",
@@ -2953,7 +3073,8 @@
       0,
       200,
       400
-    ]
+    ],
+    "product_id": "4d8a0b30-a7eb-479d-92f5-70a3094627f6"
   },
   {
     "name": "兰蔻 小黑瓶肌底精华 50ml",
@@ -2979,7 +3100,8 @@
       0,
       250,
       500
-    ]
+    ],
+    "product_id": "42634488-72ca-4f09-af64-8506acf7c36a"
   },
   {
     "name": "SK-II 神仙水 230ml",
@@ -3005,7 +3127,8 @@
       0,
       300,
       500
-    ]
+    ],
+    "product_id": "7e19c0ac-fe9a-4348-ae69-eab66227b037"
   },
   {
     "name": "资生堂 红腰子精华 50ml",
@@ -3030,7 +3153,8 @@
       0,
       180,
       300
-    ]
+    ],
+    "product_id": "817d8b64-e121-4138-84a9-6d5eaf7c679d"
   },
   {
     "name": "海蓝之谜 经典面霜 60ml",
@@ -3056,7 +3180,8 @@
       0,
       1000,
       2000
-    ]
+    ],
+    "product_id": "de77af39-33b8-48f3-993f-28dd3d9dab66"
   },
   {
     "name": "科颜氏 高保湿面霜 125ml",
@@ -3079,7 +3204,8 @@
     "variant_price_deltas": [
       0,
       150
-    ]
+    ],
+    "product_id": "31525ce4-e846-4b6d-9f32-011460e1e106"
   },
   {
     "name": "薇诺娜 舒敏保湿特护霜 50g",
@@ -3103,7 +3229,8 @@
     "variant_price_deltas": [
       0,
       80
-    ]
+    ],
+    "product_id": "a87f8e14-72b2-4131-9edd-6654070dedf2"
   },
   {
     "name": "完美日记 小细跟口红 L01",
@@ -3129,7 +3256,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "21c5f445-3567-49d3-9f2e-e3928a1de4fc"
   },
   {
     "name": "MAC 子弹头口红 #Chili",
@@ -3155,7 +3283,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "49fdec79-8be1-4e9a-ad46-c7ab0f85bcaa"
   },
   {
     "name": "DIOR 烈艳蓝金唇膏 #999",
@@ -3181,7 +3310,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "554e6dff-8712-4456-9fa2-cb6abf1a194c"
   },
   {
     "name": "花西子 空气蜜粉 03号",
@@ -3205,7 +3335,8 @@
     "variant_price_deltas": [
       0,
       0
-    ]
+    ],
+    "product_id": "88ffd2d7-7273-4029-aa60-611c8ff8eece"
   },
   {
     "name": "阿玛尼 权力持妆粉底液 30ml",
@@ -3231,7 +3362,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "26e1ad71-c074-4c30-aa32-e53bb76dafeb"
   },
   {
     "name": "珀莱雅 双抗精华 30ml",
@@ -3255,7 +3387,8 @@
     "variant_price_deltas": [
       0,
       80
-    ]
+    ],
+    "product_id": "72677879-a7af-45e7-a102-b984e0d051c1"
   },
   {
     "name": "潘婷 3分钟奇迹护发素 180ml",
@@ -3278,7 +3411,8 @@
     "variant_price_deltas": [
       0,
       25
-    ]
+    ],
+    "product_id": "a3e54c93-3213-4bca-b61c-cc70246e83dc"
   },
   {
     "name": "施华蔻 多效修护洗发水 600ml",
@@ -3301,7 +3435,8 @@
     "variant_price_deltas": [
       0,
       40
-    ]
+    ],
+    "product_id": "006f1254-4ed4-4ea2-a59f-1820d598c93c"
   },
   {
     "name": "多芬 滋润沐浴露 1kg",
@@ -3325,7 +3460,8 @@
     "variant_price_deltas": [
       0,
       15
-    ]
+    ],
+    "product_id": "42ebe15a-3628-4fba-87c2-de5fc7059a4b"
   },
   {
     "name": "舒肤佳 纯白清香沐浴露 720ml",
@@ -3348,7 +3484,8 @@
     "variant_price_deltas": [
       0,
       15
-    ]
+    ],
+    "product_id": "ef5e1ce2-bb18-4c87-aaec-9861558edb36"
   },
   {
     "name": "云南白药 牙膏 薄荷清爽 180g",
@@ -3372,7 +3509,8 @@
     "variant_price_deltas": [
       0,
       20
-    ]
+    ],
+    "product_id": "ce6bf840-9cb6-473b-945b-34abc6730a67"
   },
   {
     "name": "飞利浦 电动牙刷 HX6730",
@@ -3396,7 +3534,8 @@
     "variant_price_deltas": [
       0,
       120
-    ]
+    ],
+    "product_id": "3e121964-a052-449d-b3c3-8a9e7a0f9819"
   },
   {
     "name": "吉列 锋隐致顺 剃须刀 1刀架+5刀头",
@@ -3420,7 +3559,8 @@
     "variant_price_deltas": [
       0,
       80
-    ]
+    ],
+    "product_id": "d835cb8e-55e0-427c-8e4c-c6b21a988ae2"
   },
   {
     "name": "妮维雅 男士水活多效洁面乳 100g",
@@ -3444,7 +3584,8 @@
     "variant_price_deltas": [
       0,
       20
-    ]
+    ],
+    "product_id": "fe0f5e79-7339-449b-9479-e88fe2188c10"
   },
   {
     "name": "爱他美 卓萃 幼儿配方奶粉 3段 800g",
@@ -3468,7 +3609,8 @@
     "variant_price_deltas": [
       0,
       150
-    ]
+    ],
+    "product_id": "43dd274b-1a10-4f52-b04a-7372925c40a3"
   },
   {
     "name": "飞鹤 星飞帆 婴幼儿配方奶粉 3段 900g",
@@ -3492,7 +3634,8 @@
     "variant_price_deltas": [
       0,
       60
-    ]
+    ],
+    "product_id": "8faf53b1-65ad-4c47-946d-1fa117a726ba"
   },
   {
     "name": "美素佳儿 皇家 婴儿配方奶粉 2段 800g",
@@ -3515,7 +3658,8 @@
     "variant_price_deltas": [
       0,
       150
-    ]
+    ],
+    "product_id": "03105796-b0a5-41f4-9488-1b12c4ca6b53"
   },
   {
     "name": "嘉宝 米粉 钙铁锌 225g",
@@ -3538,7 +3682,8 @@
     "variant_price_deltas": [
       0,
       25
-    ]
+    ],
+    "product_id": "f8295dbd-7d0b-412f-bdf9-a58ec346eb3a"
   },
   {
     "name": "花王 妙而舒 纸尿裤 L码 54片",
@@ -3562,7 +3707,8 @@
     "variant_price_deltas": [
       0,
       60
-    ]
+    ],
+    "product_id": "0b974f2b-8d32-4fba-8958-03e3b4f6fda0"
   },
   {
     "name": "帮宝适 一级帮 拉拉裤 XL码 40片",
@@ -3585,7 +3731,8 @@
     "variant_price_deltas": [
       0,
       70
-    ]
+    ],
+    "product_id": "9a2eaaf9-4b76-4eeb-9a66-d06fc86e8e83"
   },
   {
     "name": "babycare 婴儿湿巾 80抽×6包",
@@ -3609,7 +3756,8 @@
     "variant_price_deltas": [
       0,
       30
-    ]
+    ],
+    "product_id": "174ab55a-fecc-4ffa-9b00-65b6223187bc"
   },
   {
     "name": "好孩子 婴儿推车 轻便折叠",
@@ -3633,7 +3781,8 @@
     "variant_price_deltas": [
       0,
       400
-    ]
+    ],
+    "product_id": "182ce39c-681c-4db8-aef5-b74ea20bdc27"
   },
   {
     "name": "Cybex 婴儿安全座椅 Sirona S",
@@ -3657,7 +3806,8 @@
     "variant_price_deltas": [
       0,
       800
-    ]
+    ],
+    "product_id": "9b1aa15d-e03b-4249-bfd1-bfdeeb984ada"
   },
   {
     "name": "贝亲 宽口径玻璃奶瓶 240ml",
@@ -3681,7 +3831,8 @@
     "variant_price_deltas": [
       0,
       30
-    ]
+    ],
+    "product_id": "3cf2a8a4-634e-418b-8bd0-973c86be46b0"
   },
   {
     "name": "美德乐 丝韵翼 双边电动吸奶器",
@@ -3705,7 +3856,8 @@
     "variant_price_deltas": [
       0,
       600
-    ]
+    ],
+    "product_id": "ffdb0f26-f16b-44cb-aab9-89a0b5ab7f20"
   },
   {
     "name": "Nike Air Force 1 '07 经典板鞋",
@@ -3730,7 +3882,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "53645146-dc8c-46cf-b96b-bd57c6bb62e3"
   },
   {
     "name": "Adidas Ultraboost 跑鞋",
@@ -3755,7 +3908,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "7223aba4-4bd4-4b91-9447-18ecd9567cbc"
   },
   {
     "name": "New Balance 574 经典复古跑鞋",
@@ -3780,7 +3934,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "4083b6f8-b4f2-4356-a13b-5967f368de8d"
   },
   {
     "name": "安踏 C37 软跑鞋",
@@ -3806,7 +3961,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "a8fdb83d-dddd-4f2f-8ea6-c93e9d308727"
   },
   {
     "name": "李宁 超轻21 跑鞋",
@@ -3830,7 +3986,8 @@
     "variant_price_deltas": [
       0,
       0
-    ]
+    ],
+    "product_id": "d379edcf-8df3-4013-a469-14549e9095dd"
   },
   {
     "name": "特步 160X 5.0 碳板竞速跑鞋",
@@ -3853,7 +4010,8 @@
     "variant_price_deltas": [
       0,
       0
-    ]
+    ],
+    "product_id": "5f022e70-60ae-4d2a-8bc4-326ff280d65d"
   },
   {
     "name": "Keep 智能跑步机 K3",
@@ -3877,7 +4035,8 @@
     "variant_price_deltas": [
       0,
       800
-    ]
+    ],
+    "product_id": "ce02c1d5-42d7-4721-9b1e-5c303c1dbf9d"
   },
   {
     "name": "麦瑞克 划船机 MR-950",
@@ -3901,7 +4060,8 @@
     "variant_price_deltas": [
       0,
       500
-    ]
+    ],
+    "product_id": "7c57e539-1498-436f-b3cf-e92dad13271a"
   },
   {
     "name": "迪卡侬 可调节哑铃 20kg",
@@ -3924,7 +4084,8 @@
     "variant_price_deltas": [
       0,
       150
-    ]
+    ],
+    "product_id": "691d73a0-44be-4654-805e-dc20d94dafa3"
   },
   {
     "name": "YOTTOY 瑜伽垫 加厚 185×80cm",
@@ -3948,7 +4109,8 @@
     "variant_price_deltas": [
       0,
       50
-    ]
+    ],
+    "product_id": "503ae148-aac1-40c8-b799-93374966e48d"
   },
   {
     "name": "北面 1996 经典羽绒服 户外冲锋衣",
@@ -3974,7 +4136,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "4e2515a7-9946-42a7-b1b6-e5cedc2846d1"
   },
   {
     "name": "哥伦比亚 三合一冲锋衣",
@@ -4000,7 +4163,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "6edb8cbc-5b9c-4fe2-bca1-b5dbc296fc45"
   },
   {
     "name": "迪卡侬 速干T恤 MH500",
@@ -4026,7 +4190,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "52637b97-ac03-4eac-9a1f-01358ad75849"
   },
   {
     "name": "佳明 Forerunner 965 运动手表",
@@ -4050,7 +4215,8 @@
     "variant_price_deltas": [
       0,
       0
-    ]
+    ],
+    "product_id": "168f852a-98b6-4162-9348-8a497cea58be"
   },
   {
     "name": "大疆 Osmo Action 5 Pro 运动相机",
@@ -4074,7 +4240,8 @@
     "variant_price_deltas": [
       0,
       500
-    ]
+    ],
+    "product_id": "98cc431d-12c8-4601-af0e-8631e9752eb7"
   },
   {
     "name": "捷安特 ATX 860 山地自行车",
@@ -4097,7 +4264,8 @@
     "variant_price_deltas": [
       0,
       300
-    ]
+    ],
+    "product_id": "5f4a44e2-c331-4933-bc39-ffe4047c2362"
   },
   {
     "name": "凤凰 折叠自行车 20寸",
@@ -4123,7 +4291,8 @@
       0,
       0,
       0
-    ]
+    ],
+    "product_id": "42ae5473-06b1-47fc-b73e-c8bf71aa7057"
   },
   {
     "name": "崔克 Marlin 5 山地车",
@@ -4146,7 +4315,8 @@
     "variant_price_deltas": [
       0,
       200
-    ]
+    ],
+    "product_id": "f9c19092-b3e2-43cf-871d-1e768ea75612"
   },
   {
     "name": "三体 全集 刘慈欣 科幻小说",
@@ -4170,7 +4340,8 @@
     "variant_price_deltas": [
       0,
       50
-    ]
+    ],
+    "product_id": "0ab6d059-d0c0-491a-be3b-1e7242aa2fea"
   },
   {
     "name": "活着 余华 长篇小说",
@@ -4194,7 +4365,8 @@
     "variant_price_deltas": [
       0,
       15
-    ]
+    ],
+    "product_id": "d8d38d61-4fd5-4517-8326-6ee52a0605ef"
   },
   {
     "name": "百年孤独 加西亚·马尔克斯",
@@ -4217,7 +4389,8 @@
     "variant_price_deltas": [
       0,
       30
-    ]
+    ],
+    "product_id": "3449763e-0564-49d7-9ff8-3e10eb6f060d"
   },
   {
     "name": "平凡的世界 路遥 全三册",
@@ -4241,7 +4414,8 @@
     "variant_price_deltas": [
       0,
       40
-    ]
+    ],
+    "product_id": "7629bdff-737a-4ac3-af71-81e41715939a"
   },
   {
     "name": "围城 钱钟书",
@@ -4265,7 +4439,8 @@
     "variant_price_deltas": [
       0,
       18
-    ]
+    ],
+    "product_id": "03449e8d-2419-4399-bfa1-7ffac8715704"
   },
   {
     "name": "明朝那些事儿 全集 当年明月",
@@ -4289,7 +4464,8 @@
     "variant_price_deltas": [
       0,
       100
-    ]
+    ],
+    "product_id": "8e98ab37-3134-4651-9451-14879545df51"
   },
   {
     "name": "新东方 考研英语词汇 词根+联想",
@@ -4313,7 +4489,8 @@
     "variant_price_deltas": [
       0,
       10
-    ]
+    ],
+    "product_id": "c8daba65-2b7a-47a9-96c9-21d6613a50d2"
   },
   {
     "name": "五年高考三年模拟 数学",
@@ -4337,7 +4514,8 @@
     "variant_price_deltas": [
       0,
       15
-    ]
+    ],
+    "product_id": "d7e7eccd-464e-4470-a82a-a19e9987c78c"
   },
   {
     "name": "新华字典 第12版 双色本",
@@ -4361,7 +4539,8 @@
     "variant_price_deltas": [
       0,
       15
-    ]
+    ],
+    "product_id": "33a6315b-c7ad-4e69-ad84-c25999fda8b4"
   },
   {
     "name": "猜猜我有多爱你 绘本",
@@ -4385,7 +4564,8 @@
     "variant_price_deltas": [
       0,
       -10
-    ]
+    ],
+    "product_id": "b0fd34e5-44bd-4730-92b7-7c49dacb2c9a"
   },
   {
     "name": "不一样的卡梅拉 第一季 全套12册",
@@ -4409,7 +4589,8 @@
     "variant_price_deltas": [
       0,
       50
-    ]
+    ],
+    "product_id": "77738d44-edfa-4f15-863a-c3fff803d3f7"
   },
   {
     "name": "哈利波特 全集 中文版 全7册",
@@ -4433,7 +4614,8 @@
     "variant_price_deltas": [
       0,
       150
-    ]
+    ],
+    "product_id": "d12b4378-35b7-42dd-8a2a-f570c5a3f08a"
   },
   {
     "name": "Kindle Paperwhite 电子书阅读器 第11代",
@@ -4457,7 +4639,8 @@
     "variant_price_deltas": [
       0,
       200
-    ]
+    ],
+    "product_id": "d39f4ea9-a737-499e-a9be-73766240f1cc"
   },
   {
     "name": "晨光 按动中性笔 0.5mm 12支装",
@@ -4481,7 +4664,8 @@
     "variant_price_deltas": [
       0,
       0
-    ]
+    ],
+    "product_id": "e192d843-8791-444e-b3a2-0b98c569698d"
   },
   {
     "name": "国誉 Campus笔记本 5本装 A5",
@@ -4505,7 +4689,8 @@
     "variant_price_deltas": [
       0,
       10
-    ]
+    ],
+    "product_id": "e41e1e16-9fcb-4067-a9c8-58f1b4e488e6"
   },
   {
     "name": "乐高 机械组 兰博基尼 42161",
@@ -4529,7 +4714,8 @@
     "variant_price_deltas": [
       0,
       200
-    ]
+    ],
+    "product_id": "77470cb0-8e05-481c-92a4-216818bfd0a6"
   },
   {
     "name": "泡泡玛特 盲盒 毕奇系列",
@@ -4553,6 +4739,7 @@
     "variant_price_deltas": [
       0,
       500
-    ]
+    ],
+    "product_id": "3640e048-6c06-45e9-a705-1be0e04e8fdd"
   }
 ]
