@@ -46,8 +46,17 @@ def load_products(products_path):
     return products
 
 
-def select_order_items(products):
-    """从商品池中选择订单明细项：1-5 个商品，quantity 加权分布"""
+def select_order_items(products, used_product_ids=None):
+    """从商品池中选择订单明细项：1-5 个商品，quantity 加权分布
+
+    使用按分类的分层抽样 + 商品使用频率跟踪：
+    - 按分类大小比例分配每个分类的选择名额
+    - 每个分类内优先选择使用次数最少的商品
+    - 同一订单内不重复选择同一 product_id
+    """
+    if used_product_ids is None:
+        used_product_ids = {}
+
     num_items = weighted_choice([
         (1, 30),   # 30% 只买 1 件
         (2, 25),   # 25% 买 2 件
@@ -56,7 +65,77 @@ def select_order_items(products):
         (5, 10),   # 10% 买 5 件
     ])
 
-    selected = random.sample(products, min(num_items, len(products)))
+    # 将商品按 category 分组
+    from collections import defaultdict
+    cat_groups = defaultdict(list)
+    for p in products:
+        cat_groups[p.get('category', '其他')].append(p)
+    categories = list(cat_groups.keys())
+    num_categories = len(categories)
+
+    # 按分类大小比例分配选择名额（每个分类至少 1 个，如果 num_items >= num_categories）
+    max_per_order = min(num_items, len(products))
+    cat_slots = {cat: 0 for cat in categories}
+    remaining = max_per_order
+
+    # 第 1 步：每个分类至少有机会被考虑（但不强制分配名额给所有分类）
+    # 当订单项数少于分类数时，随机选部分分类
+    if remaining <= num_categories:
+        # 随机打乱分类，取前 remaining 个
+        shuffled_cats = random.sample(categories, remaining)
+        for cat in shuffled_cats:
+            cat_slots[cat] = 1
+            remaining -= 1
+    else:
+        # 每个分类至少 1 个
+        for cat in categories:
+            cat_slots[cat] = 1
+            remaining -= 1
+
+        # 剩余名额按分类大小比例分配
+        total_products = len(products)
+        for cat in categories:
+            available = len(cat_groups[cat]) - 1  # 已有 1 个名额
+            if available <= 0:
+                continue
+            alloc = int(remaining * len(cat_groups[cat]) / total_products)
+            alloc = min(alloc, available)
+            if alloc > 0:
+                cat_slots[cat] += alloc
+                remaining -= alloc
+
+        # 分配余数，随机选分类
+        cats_with_room = [c for c in categories
+                          if cat_slots[c] < len(cat_groups[c])]
+        random.shuffle(cats_with_room)
+        for cat in cats_with_room:
+            if remaining <= 0:
+                break
+            cat_slots[cat] += 1
+            remaining -= 1
+
+    # 从每个分类中选择商品（选择使用次数最少的）
+    selected = []
+    selected_ids = set()
+
+    for cat, n in cat_slots.items():
+        if n <= 0:
+            continue
+
+        # 按使用次数升序排列，相同次数则随机打乱（避免每次都选同一个）
+        items = sorted(cat_groups[cat],
+                       key=lambda p: (used_product_ids.get(p['product_id'], 0),
+                                      random.random()))
+
+        picked = 0
+        for p in items:
+            if p['product_id'] not in selected_ids and picked < n:
+                selected.append(p)
+                selected_ids.add(p['product_id'])
+                picked += 1
+
+    # 打乱选择结果（避免总是同类商品相邻）
+    random.shuffle(selected)
 
     items = []
     for product in selected:
@@ -154,9 +233,9 @@ def generate_logistics(status, order_created_at):
     }
 
 
-def generate_order(products, date_range_days=90):
+def generate_order(products, date_range_days=90, used_product_ids=None):
     """生成单条完整订单"""
-    items = select_order_items(products)
+    items = select_order_items(products, used_product_ids)
 
     # 计算金额
     order_amount = round(sum(item['subtotal'] for item in items), 2)
@@ -247,15 +326,16 @@ def generate_order(products, date_range_days=90):
 
 
 def generate_orders(products, count, date_range_days=90):
-    """批量生成订单"""
+    """批量生成订单，跟踪商品使用次数以避免某些商品占比过高"""
     orders = []
     seen_ids = set()
+    used_product_ids = {}  # product_id -> 被使用次数
 
     for i in range(count):
         # 重试机制：如果 order_id 重复则重新生成
         max_retries = 10
         for _ in range(max_retries):
-            order = generate_order(products, date_range_days)
+            order = generate_order(products, date_range_days, used_product_ids)
             if order['order_id'] not in seen_ids:
                 break
             # 重新生成 order_id
@@ -263,6 +343,11 @@ def generate_orders(products, count, date_range_days=90):
 
         seen_ids.add(order['order_id'])
         orders.append(order)
+
+        # 更新商品使用次数
+        for item in order['items']:
+            pid = item['product_id']
+            used_product_ids[pid] = used_product_ids.get(pid, 0) + 1
 
         if (i + 1) % max(1, count // 10) == 0:
             print(f"  进度: {i + 1}/{count}")

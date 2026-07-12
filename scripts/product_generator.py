@@ -109,47 +109,161 @@ def generate_product(item, is_variant=False, variant_suffix="", variant_price_de
 
 
 def generate_products(library, count):
-    """从商品库生成指定数量的商品"""
+    """从商品库生成指定数量的商品，按分类均衡分布，限制单商品变体数量"""
+    from collections import defaultdict
+
     products = []
     seen_ids = set()
     lib_size = len(library)
 
+    # 按分类分组
+    cat_groups = defaultdict(list)
+    for item in library:
+        cat_groups[item['category']].append(item)
+    categories = sorted(cat_groups.keys(), key=lambda c: len(cat_groups[c]))
+    num_categories = len(categories)
+
+    # 跟踪每个基础商品的使用次数（按 library 中预置的 product_id）
+    product_use_count = defaultdict(int)
+
+    # 每个基础商品最多出现的次数（含直采 + 变体）
+    MAX_PER_PRODUCT = 4
+
     if count <= lib_size:
-        sampled = random.sample(library, count)
-        for item in sampled:
-            product = generate_product(item, is_variant=False)
-            products.append(product)
-            seen_ids.add(product['product_id'])
+        # ============================================================
+        # 情况 A：数量不超过库大小 → 按分类比例分层抽样
+        # 每个分类至少分配 1 个名额（小分类不会被完全忽略）
+        # ============================================================
+        slots = {cat: 0 for cat in categories}
+        remaining = count
+
+        # 第 1 步：每个分类至少 1 个
+        for cat in categories:
+            if remaining > 0:
+                alloc = min(1, len(cat_groups[cat]))
+                slots[cat] = alloc
+                remaining -= alloc
+
+        # 第 2 步：按分类大小比例分配剩余名额
+        if remaining > 0:
+            for cat in categories:
+                available = len(cat_groups[cat]) - slots[cat]
+                if available <= 0:
+                    continue
+                # 按该分类占比计算理想配额
+                ideal = int(count * len(cat_groups[cat]) / lib_size)
+                extra = max(0, ideal - slots[cat])
+                extra = min(extra, available, remaining)
+                if extra > 0:
+                    slots[cat] += extra
+                    remaining -= extra
+
+        # 第 3 步：如果还有剩余，从小分类开始轮流分配
+        # （小分类优先获得额外名额，缩小分类间差距）
+        idx = 0
+        while remaining > 0:
+            cat = categories[idx % num_categories]
+            if slots[cat] < len(cat_groups[cat]):
+                slots[cat] += 1
+                remaining -= 1
+            idx += 1
+
+        # 从每个分类中抽样
+        for cat, n in slots.items():
+            if n <= 0:
+                continue
+            sampled = random.sample(cat_groups[cat], n)
+            for item in sampled:
+                product = generate_product(item, is_variant=False)
+                if product['product_id'] not in seen_ids:
+                    seen_ids.add(product['product_id'])
+                    products.append(product)
+                    pid = item.get('product_id', '')
+                    product_use_count[pid] += 1
     else:
+        # ============================================================
+        # 情况 B：数量超过库大小 → 先全量直采，再按分类均衡扩展变体
+        # 扩展名额按 inverse category size 分配，让小分类获得更多变体
+        # ============================================================
+
+        # 第 1 步：全量直采所有库中商品
         for item in library:
             product = generate_product(item, is_variant=False)
             products.append(product)
             seen_ids.add(product['product_id'])
+            pid = item.get('product_id', '')
+            product_use_count[pid] += 1
 
         remaining = count - lib_size
-        max_attempts = remaining * 3
-        attempts = 0
 
-        while len(products) < count and attempts < max_attempts:
-            attempts += 1
-            item = random.choice(library)
-            suffixes = item.get('variant_suffixes', [])
-            deltas = item.get('variant_price_deltas', [])
-            if not suffixes:
-                suffixes = ["标准版", "升级版", "Pro版", "Lite版"]
-                deltas = [0, 50, 100, -30]
+        # 第 2 步：每个分类的扩展名额按分类大小的倒数加权分配
+        # 小分类获得更多名额 → 最终分布更均衡
+        cat_extra_slots = {cat: 0 for cat in categories}
+        weights = {cat: 1.0 / len(cat_groups[cat]) for cat in categories}
+        total_weight = sum(weights.values())
 
-            idx = random.randint(0, len(suffixes) - 1)
-            suffix = suffixes[idx]
-            delta = deltas[idx] if idx < len(deltas) else 0
+        for cat in categories:
+            alloc = int(remaining * weights[cat] / total_weight)
+            cat_extra_slots[cat] = alloc
 
-            product = generate_product(item, is_variant=True, variant_suffix=suffix, variant_price_delta=delta)
-            if product['product_id'] not in seen_ids:
-                seen_ids.add(product['product_id'])
-                products.append(product)
+        # 分配余数，从小分类开始
+        allocated = sum(cat_extra_slots.values())
+        leftover = remaining - allocated
+        for cat in categories:
+            if leftover <= 0:
+                break
+            cat_extra_slots[cat] += 1
+            leftover -= 1
+
+        # 第 3 步：按分类生成变体，每个分类内轮询商品 + 限制单商品出现次数
+        for cat, need in cat_extra_slots.items():
+            if need <= 0:
+                continue
+
+            cat_items = cat_groups[cat]
+            generated = 0
+            attempts = 0
+            max_attempts = need * 15  # 充足的尝试次数
+
+            item_idx = 0      # 轮询索引，确保同类商品轮流使用
+            variant_idx = 0   # 变体索引，确保每个变体都被尝试
+
+            while generated < need and attempts < max_attempts:
+                attempts += 1
+
+                # 轮询选择商品
+                item = cat_items[item_idx % len(cat_items)]
+                item_idx += 1
+
+                pid = item.get('product_id', '')
+                if product_use_count[pid] >= MAX_PER_PRODUCT:
+                    continue
+
+                suffixes = item.get('variant_suffixes', [])
+                deltas = item.get('variant_price_deltas', [])
+                if not suffixes:
+                    suffixes = ["标准版", "升级版", "Pro版", "Lite版"]
+                    deltas = [0, 50, 100, -30]
+
+                # 轮询选择变体
+                v_idx = variant_idx % len(suffixes)
+                variant_idx += 1
+                suffix = suffixes[v_idx]
+                delta = deltas[v_idx] if v_idx < len(deltas) else 0
+
+                product = generate_product(item, is_variant=True,
+                                           variant_suffix=suffix,
+                                           variant_price_delta=delta)
+                if product['product_id'] not in seen_ids:
+                    seen_ids.add(product['product_id'])
+                    product_use_count[pid] += 1
+                    products.append(product)
+                    generated += 1
 
         if len(products) < count:
-            print(f"[WARNING] Only generated {len(products)}/{count} products (ran out of variants)")
+            print(f"[WARNING] Only generated {len(products)}/{count} products "
+                  f"(ran out of variants, consider adding more variant_suffixes "
+                  f"or increasing MAX_PER_PRODUCT)")
 
     return products
 
